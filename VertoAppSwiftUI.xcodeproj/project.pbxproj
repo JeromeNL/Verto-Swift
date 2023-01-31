@@ -14,6 +14,7 @@
 		4C6A38772989443700E94E64 /* VertoAppSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A38762989443700E94E64 /* VertoAppSwiftUITests.swift */; };
 		4C6A38812989443700E94E64 /* VertoAppSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A38802989443700E94E64 /* VertoAppSwiftUIUITests.swift */; };
 		4C6A38832989443700E94E64 /* VertoAppSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A38822989443700E94E64 /* VertoAppSwiftUIUITestsLaunchTests.swift */; };
+		4C6A3891298944F800E94E64 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4C6A3890298944F800E94E64 /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C6A3891298944F800E94E64 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = VertoAppSwiftUI;
+			packageProductDependencies = (
+				4C6A3890298944F800E94E64 /* OpenAISwift */,
+			);
 			productName = VertoAppSwiftUI;
 			productReference = 4C6A38622989443500E94E64 /* VertoAppSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 4C6A38592989443500E94E64;
+			packageReferences = (
+				4C6A388F298944F700E94E64 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 4C6A38632989443500E94E64 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -583,6 +591,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C6A388F298944F700E94E64 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C6A3890298944F800E94E64 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C6A388F298944F700E94E64 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4C6A385A2989443500E94E64 /* Project object */;
 }
