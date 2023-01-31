@@ -18,12 +18,18 @@ struct HomeView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
+                    
+                    
+                    
                     Text("Translate")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.primary)
                     .padding(5)
                     .padding(.leading, 10)
+                    
+                    
+                  
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
@@ -31,7 +37,15 @@ struct HomeView: View {
                 
                
                 inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
+                
+                Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }
+                
+                
                 inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
+                
+              
                 Spacer()
                 optionButtons
                     .padding(.bottom, 35)
