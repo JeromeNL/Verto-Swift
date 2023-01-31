@@ -63,7 +63,7 @@ struct HomeView: View {
         guard !translateInput.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        viewModel.send(text: translateInput) { response in
+        viewModel.send(text: "Translate "+translateInput+" from "+currentInputLanguage+" to "+currentOutputLanguage) { response in
             DispatchQueue.main.async {
                 translateOutput = response
             }
