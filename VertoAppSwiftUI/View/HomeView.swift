@@ -12,18 +12,23 @@ struct HomeView: View {
     @State var translateOutput: String = ""
     @State var currentInputLanguage: String = "English"
     @State var currentOutputLanguage: String = "German"
+    @ObservedObject var viewModel = ChatGptViewModel()
+    
+    
     
     var body: some View {
         ZStack {
             Color("DefaultBackground")
             VStack{
                 HStack() {
+                    
                     Text("Translate")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.primary)
-                    .padding(5)
-                    .padding(.leading, 10)
+                        .padding(5)
+                        .padding(.leading, 10)
+                    
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
@@ -31,7 +36,15 @@ struct HomeView: View {
                 
                
                 inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
+                
+                Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
+                    send()
+                }
+                
+                
                 inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
+                
+              
                 Spacer()
                 optionButtons
                     .padding(.bottom, 35)
@@ -40,8 +53,25 @@ struct HomeView: View {
                
             }
         }
+        .onAppear {
+            viewModel.setup()
+        }
+        .padding()
     }
+    
+    func send() {
+        guard !translateInput.trimmingCharacters(in: .whitespaces).isEmpty else {
+            return
+        }
+        viewModel.send(text: "Translate "+translateInput+" from "+currentInputLanguage+" to "+currentOutputLanguage) { response in
+            DispatchQueue.main.async {
+                translateOutput = response
+            }
+        }
+    }
+    
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
