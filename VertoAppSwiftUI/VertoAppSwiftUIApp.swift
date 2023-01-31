@@ -11,7 +11,8 @@ import SwiftUI
 struct VertoAppSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            HomeView()
         }
     }
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0444AD29894CF600DB498A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0444AC29894CF600DB498A /* HomeView.swift */; };
+		4C0444AF298969D100DB498A /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0444AE298969D100DB498A /* ArticleView.swift */; };
+		4C0444B1298969E000DB498A /* SynonymsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0444B0298969E000DB498A /* SynonymsView.swift */; };
+		4C0444B3298987B700DB498A /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0444B2298987B700DB498A /* GeneralView.swift */; };
 		4C6A38662989443500E94E64 /* VertoAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A38652989443500E94E64 /* VertoAppSwiftUIApp.swift */; };
 		4C6A38682989443500E94E64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A38672989443500E94E64 /* ContentView.swift */; };
 		4C6A386A2989443600E94E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A38692989443600E94E64 /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C0444AC29894CF600DB498A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4C0444AE298969D100DB498A /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		4C0444B0298969E000DB498A /* SynonymsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynonymsView.swift; sourceTree = "<group>"; };
+		4C0444B2298987B700DB498A /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		4C6A38622989443500E94E64 /* VertoAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VertoAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6A38652989443500E94E64 /* VertoAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertoAppSwiftUIApp.swift; sourceTree = "<group>"; };
 		4C6A38672989443500E94E64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +91,10 @@
 		4C0444AA29894BC800DB498A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4C0444AC29894CF600DB498A /* HomeView.swift */,
+				4C0444AE298969D100DB498A /* ArticleView.swift */,
+				4C0444B0298969E000DB498A /* SynonymsView.swift */,
+				4C0444B2298987B700DB498A /* GeneralView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,8 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0444B1298969E000DB498A /* SynonymsView.swift in Sources */,
+				4C0444AD29894CF600DB498A /* HomeView.swift in Sources */,
 				4C6A38682989443500E94E64 /* ContentView.swift in Sources */,
+				4C0444B3298987B700DB498A /* GeneralView.swift in Sources */,
 				4C6A38662989443500E94E64 /* VertoAppSwiftUIApp.swift in Sources */,
+				4C0444AF298969D100DB498A /* ArticleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
