@@ -33,8 +33,6 @@ struct ContentView: View {
         guard !text.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        
-        
         models.append("Me: \(text)")
         viewModel.send(text: text) { response in
             DispatchQueue.main.async {
