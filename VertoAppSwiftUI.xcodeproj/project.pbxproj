@@ -73,6 +73,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C0444A929894BBC00DB498A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C0444AA29894BC800DB498A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4C0444AB29894BCF00DB498A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4C6A38592989443500E94E64 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +117,9 @@
 		4C6A38642989443500E94E64 /* VertoAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				4C0444A929894BBC00DB498A /* Model */,
+				4C0444AA29894BC800DB498A /* View */,
+				4C0444AB29894BCF00DB498A /* ViewModel */,
 				4C6A38652989443500E94E64 /* VertoAppSwiftUIApp.swift */,
 				4C6A38672989443500E94E64 /* ContentView.swift */,
 				4C6A38692989443600E94E64 /* Assets.xcassets */,

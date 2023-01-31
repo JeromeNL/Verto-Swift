@@ -40,9 +40,9 @@ struct ContentView: View {
             Spacer()
 
             HStack {
-                TextField("Type here...", text: $text)
+                TextField("Type hier ", text: $text)
                     .disableAutocorrection(true)
-                Button("Send") {
+                Button("Verstuur") {
                     send()
                 }
             }
