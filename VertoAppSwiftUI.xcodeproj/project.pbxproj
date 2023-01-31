@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C6A38662989443500E94E64 /* VertoAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A38652989443500E94E64 /* VertoAppSwiftUIApp.swift */; };
+		4C6A38682989443500E94E64 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A38672989443500E94E64 /* ContentView.swift */; };
+		4C6A386A2989443600E94E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A38692989443600E94E64 /* Assets.xcassets */; };
+		4C6A386D2989443600E94E64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A386C2989443600E94E64 /* Preview Assets.xcassets */; };
+		4C6A38772989443700E94E64 /* VertoAppSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A38762989443700E94E64 /* VertoAppSwiftUITests.swift */; };
+		4C6A38812989443700E94E64 /* VertoAppSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A38802989443700E94E64 /* VertoAppSwiftUIUITests.swift */; };
+		4C6A38832989443700E94E64 /* VertoAppSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A38822989443700E94E64 /* VertoAppSwiftUIUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C6A38732989443700E94E64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C6A385A2989443500E94E64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C6A38612989443500E94E64;
+			remoteInfo = VertoAppSwiftUI;
+		};
+		4C6A387D2989443700E94E64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C6A385A2989443500E94E64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C6A38612989443500E94E64;
+			remoteInfo = VertoAppSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C6A38622989443500E94E64 /* VertoAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VertoAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6A38652989443500E94E64 /* VertoAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertoAppSwiftUIApp.swift; sourceTree = "<group>"; };
+		4C6A38672989443500E94E64 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C6A38692989443600E94E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C6A386C2989443600E94E64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C6A38722989443700E94E64 /* VertoAppSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VertoAppSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6A38762989443700E94E64 /* VertoAppSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertoAppSwiftUITests.swift; sourceTree = "<group>"; };
+		4C6A387C2989443700E94E64 /* VertoAppSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VertoAppSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6A38802989443700E94E64 /* VertoAppSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertoAppSwiftUIUITests.swift; sourceTree = "<group>"; };
+		4C6A38822989443700E94E64 /* VertoAppSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertoAppSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C6A385F2989443500E94E64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C6A386F2989443700E94E64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C6A38792989443700E94E64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C6A38592989443500E94E64 = {
+			isa = PBXGroup;
+			children = (
+				4C6A38642989443500E94E64 /* VertoAppSwiftUI */,
+				4C6A38752989443700E94E64 /* VertoAppSwiftUITests */,
+				4C6A387F2989443700E94E64 /* VertoAppSwiftUIUITests */,
+				4C6A38632989443500E94E64 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C6A38632989443500E94E64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C6A38622989443500E94E64 /* VertoAppSwiftUI.app */,
+				4C6A38722989443700E94E64 /* VertoAppSwiftUITests.xctest */,
+				4C6A387C2989443700E94E64 /* VertoAppSwiftUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C6A38642989443500E94E64 /* VertoAppSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				4C6A38652989443500E94E64 /* VertoAppSwiftUIApp.swift */,
+				4C6A38672989443500E94E64 /* ContentView.swift */,
+				4C6A38692989443600E94E64 /* Assets.xcassets */,
+				4C6A386B2989443600E94E64 /* Preview Content */,
+			);
+			path = VertoAppSwiftUI;
+			sourceTree = "<group>";
+		};
+		4C6A386B2989443600E94E64 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4C6A386C2989443600E94E64 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C6A38752989443700E94E64 /* VertoAppSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C6A38762989443700E94E64 /* VertoAppSwiftUITests.swift */,
+			);
+			path = VertoAppSwiftUITests;
+			sourceTree = "<group>";
+		};
+		4C6A387F2989443700E94E64 /* VertoAppSwiftUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C6A38802989443700E94E64 /* VertoAppSwiftUIUITests.swift */,
+				4C6A38822989443700E94E64 /* VertoAppSwiftUIUITestsLaunchTests.swift */,
+			);
+			path = VertoAppSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C6A38612989443500E94E64 /* VertoAppSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C6A38862989443700E94E64 /* Build configuration list for PBXNativeTarget "VertoAppSwiftUI" */;
+			buildPhases = (
+				4C6A385E2989443500E94E64 /* Sources */,
+				4C6A385F2989443500E94E64 /* Frameworks */,
+				4C6A38602989443500E94E64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VertoAppSwiftUI;
+			productName = VertoAppSwiftUI;
+			productReference = 4C6A38622989443500E94E64 /* VertoAppSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C6A38712989443700E94E64 /* VertoAppSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C6A38892989443700E94E64 /* Build configuration list for PBXNativeTarget "VertoAppSwiftUITests" */;
+			buildPhases = (
+				4C6A386E2989443700E94E64 /* Sources */,
+				4C6A386F2989443700E94E64 /* Frameworks */,
+				4C6A38702989443700E94E64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C6A38742989443700E94E64 /* PBXTargetDependency */,
+			);
+			name = VertoAppSwiftUITests;
+			productName = VertoAppSwiftUITests;
+			productReference = 4C6A38722989443700E94E64 /* VertoAppSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4C6A387B2989443700E94E64 /* VertoAppSwiftUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C6A388C2989443700E94E64 /* Build configuration list for PBXNativeTarget "VertoAppSwiftUIUITests" */;
+			buildPhases = (
+				4C6A38782989443700E94E64 /* Sources */,
+				4C6A38792989443700E94E64 /* Frameworks */,
+				4C6A387A2989443700E94E64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C6A387E2989443700E94E64 /* PBXTargetDependency */,
+			);
+			name = VertoAppSwiftUIUITests;
+			productName = VertoAppSwiftUIUITests;
+			productReference = 4C6A387C2989443700E94E64 /* VertoAppSwiftUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C6A385A2989443500E94E64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					4C6A38612989443500E94E64 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					4C6A38712989443700E94E64 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 4C6A38612989443500E94E64;
+					};
+					4C6A387B2989443700E94E64 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 4C6A38612989443500E94E64;
+					};
+				};
+			};
+			buildConfigurationList = 4C6A385D2989443500E94E64 /* Build configuration list for PBXProject "VertoAppSwiftUI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C6A38592989443500E94E64;
+			productRefGroup = 4C6A38632989443500E94E64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C6A38612989443500E94E64 /* VertoAppSwiftUI */,
+				4C6A38712989443700E94E64 /* VertoAppSwiftUITests */,
+				4C6A387B2989443700E94E64 /* VertoAppSwiftUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C6A38602989443500E94E64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C6A386D2989443600E94E64 /* Preview Assets.xcassets in Resources */,
+				4C6A386A2989443600E94E64 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C6A38702989443700E94E64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C6A387A2989443700E94E64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C6A385E2989443500E94E64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C6A38682989443500E94E64 /* ContentView.swift in Sources */,
+				4C6A38662989443500E94E64 /* VertoAppSwiftUIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C6A386E2989443700E94E64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C6A38772989443700E94E64 /* VertoAppSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C6A38782989443700E94E64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C6A38812989443700E94E64 /* VertoAppSwiftUIUITests.swift in Sources */,
+				4C6A38832989443700E94E64 /* VertoAppSwiftUIUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C6A38742989443700E94E64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C6A38612989443500E94E64 /* VertoAppSwiftUI */;
+			targetProxy = 4C6A38732989443700E94E64 /* PBXContainerItemProxy */;
+		};
+		4C6A387E2989443700E94E64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C6A38612989443500E94E64 /* VertoAppSwiftUI */;
+			targetProxy = 4C6A387D2989443700E94E64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4C6A38842989443700E94E64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C6A38852989443700E94E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C6A38872989443700E94E64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VertoAppSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 3DM5372VZ5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.joramkwetters.VertoAppSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C6A38882989443700E94E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VertoAppSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 3DM5372VZ5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.joramkwetters.VertoAppSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4C6A388A2989443700E94E64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3DM5372VZ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.joramkwetters.VertoAppSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VertoAppSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VertoAppSwiftUI";
+			};
+			name = Debug;
+		};
+		4C6A388B2989443700E94E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3DM5372VZ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.joramkwetters.VertoAppSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VertoAppSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VertoAppSwiftUI";
+			};
+			name = Release;
+		};
+		4C6A388D2989443700E94E64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3DM5372VZ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.joramkwetters.VertoAppSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VertoAppSwiftUI;
+			};
+			name = Debug;
+		};
+		4C6A388E2989443700E94E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3DM5372VZ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.joramkwetters.VertoAppSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VertoAppSwiftUI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C6A385D2989443500E94E64 /* Build configuration list for PBXProject "VertoAppSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C6A38842989443700E94E64 /* Debug */,
+				4C6A38852989443700E94E64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C6A38862989443700E94E64 /* Build configuration list for PBXNativeTarget "VertoAppSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C6A38872989443700E94E64 /* Debug */,
+				4C6A38882989443700E94E64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C6A38892989443700E94E64 /* Build configuration list for PBXNativeTarget "VertoAppSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C6A388A2989443700E94E64 /* Debug */,
+				4C6A388B2989443700E94E64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C6A388C2989443700E94E64 /* Build configuration list for PBXNativeTarget "VertoAppSwiftUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C6A388D2989443700E94E64 /* Debug */,
+				4C6A388E2989443700E94E64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C6A385A2989443500E94E64 /* Project object */;
+}
