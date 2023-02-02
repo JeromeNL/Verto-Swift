@@ -1,7 +1,7 @@
 import OpenAISwift
 import SwiftUI
 
-final class ChatGptViewModel: ObservableObject {
+final class ChatGptModel: ObservableObject {
     init() {}
 
     private var client: OpenAISwift?

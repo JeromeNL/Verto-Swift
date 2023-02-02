@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct HomeView: View {
     @State var translateInput: String = ""
     @State var translateOutput: String = ""
     @State var currentInputLanguage: String = "English"
     @State var currentOutputLanguage: String = "German"
-    @ObservedObject var viewModel = ChatGptViewModel()
+    @ObservedObject var chatGptModel = ChatGptModel()
+   
     
     
     
@@ -39,6 +41,7 @@ struct HomeView: View {
                 
                 Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
                     send()
+                   speak()
                 }
                 
                 
@@ -54,7 +57,7 @@ struct HomeView: View {
             }
         }
         .onAppear {
-            viewModel.setup()
+            chatGptModel.setup()
         }
         .padding()
     }
@@ -63,11 +66,20 @@ struct HomeView: View {
         guard !translateInput.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        viewModel.send(text: "Translate "+translateInput+" from "+currentInputLanguage+" to "+currentOutputLanguage) { response in
+        chatGptModel.send(text: "Translate "+translateInput+" from "+currentInputLanguage+" to "+currentOutputLanguage) { response in
             DispatchQueue.main.async {
                 translateOutput = response
             }
         }
+    }
+    
+    func speak() {
+        let utterance = AVSpeechUtterance(string: "text")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        utterance.rate = 0.1
+
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
     }
     
 }
@@ -157,7 +169,8 @@ extension HomeView{
     
     private func functionButtonItem(widthHeight: Double, icon: String) -> some View{
         Button(action: {
-            
+
+      
         }, label: {
             ZStack {
                 Circle()

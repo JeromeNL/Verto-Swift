@@ -3,7 +3,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @ObservedObject var viewModel = ChatGptViewModel()
+    @ObservedObject var viewModel = ChatGptModel()
     @State var text = ""
     @State var models = [String]()
 
