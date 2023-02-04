@@ -12,7 +12,7 @@ struct VertoAppSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             //ContentView()
-            HomeView()
+            UrbanView()
         }
     }
 }
