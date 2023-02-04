@@ -14,8 +14,7 @@ struct HomeView: View {
     @State var currentOutputLanguage: String = "German"
     @ObservedObject var viewModel = ChatGptViewModel()
     
-    
-    
+
     var body: some View {
         ZStack {
             Color("DefaultBackground")
@@ -39,13 +38,9 @@ struct HomeView: View {
                     .onSubmit {
                         send()
                     }
-                
 
-                
-                
                 inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
-                
-              
+                              
                 Spacer()
                 optionButtons
                     .padding(.bottom, 35)
