@@ -54,7 +54,7 @@ struct ArticleView: View {
         guard !translateInput.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        viewModel.send(text: "Geef het lidwoord voor het woord"+translateInput+" in het "+currentInputLanguage) { response in
+        viewModel.send(text: "Geef het bijpassende lidwoord voor het " + currentInputLanguage + "e woord " + translateInput + " geef alleen het lidwoord terug") { response in
             DispatchQueue.main.async {
                 translateOutput = response
             }

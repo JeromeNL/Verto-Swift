@@ -41,6 +41,5 @@ extension GeneralView{
                     Text("synonyms")
             }
         }
-        
     }
 }
