@@ -121,7 +121,6 @@ extension HomeView{
 
             }.foregroundColor(.primary)
                 .frame(width: 200, alignment: .leading)
-                //.background(Color.red)
             
             ZStack(alignment: .top) {
                 let displayText = isEnabled ? "Type your text" : ""
@@ -130,6 +129,7 @@ extension HomeView{
                     .disabled(!isEnabled)
                     .padding(5)
                     .padding(.top, 5)
+                    
                     
             }
             .frame(width: 350, height: 175, alignment: .top)
