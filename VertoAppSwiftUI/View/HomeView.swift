@@ -36,10 +36,11 @@ struct HomeView: View {
                 
                
                 inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
+                    .onSubmit {
+                        send()
+                    }
                 
-                Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
-                    send()
-                }
+
                 
                 
                 inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
@@ -120,7 +121,6 @@ extension HomeView{
 
             }.foregroundColor(.primary)
                 .frame(width: 200, alignment: .leading)
-                //.background(Color.red)
             
             ZStack(alignment: .top) {
                 let displayText = isEnabled ? "Type your text" : ""
@@ -129,7 +129,7 @@ extension HomeView{
                     .disabled(!isEnabled)
                     .padding(5)
                     .padding(.top, 5)
-                    //.background(Color.red)
+                    
                     
             }
             .frame(width: 350, height: 175, alignment: .top)
