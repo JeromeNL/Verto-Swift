@@ -119,8 +119,7 @@ extension ArticleView{
                     .disabled(!isEnabled)
                     .padding(5)
                     .padding(.top, 5)
-                 
-                    }
+                    
                     
             }
             .frame(width: 350, height: 70, alignment: .top)
