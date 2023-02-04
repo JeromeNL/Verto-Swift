@@ -34,7 +34,9 @@ struct SynonymsView: View {
                     }
 
                 Spacer()
-                Text(translateOutput).font(.largeTitle).fontWeight(.bold)
+                Text(translateOutput)
+                    .font(.title)
+                    .fontWeight(.bold)
                 Spacer()
                 Spacer()
                 optionButtons
@@ -54,7 +56,7 @@ struct SynonymsView: View {
         guard !translateInput.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        viewModel.send(text: "Geef het bijpassende lidwoord voor het " + currentInputLanguage + "e woord " + translateInput + " geef alleen het lidwoord terug") { response in
+        viewModel.send(text: "Geef 3 relevante synoniemen voor het" + currentInputLanguage + " woord " + translateInput) { response in
             DispatchQueue.main.async {
                 translateOutput = response
             }

@@ -27,6 +27,9 @@ struct HomeView: View {
                         .foregroundColor(.primary)
                         .padding(5)
                         .padding(.leading, 10)
+                        .onTapGesture(count: 5) {
+                                // open ChatGPT with pop-up sheet
+                            }
                     
                     Spacer()
                 }
