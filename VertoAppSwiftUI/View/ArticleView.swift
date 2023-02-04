@@ -119,6 +119,7 @@ extension ArticleView{
                     .disabled(!isEnabled)
                     .padding(5)
                     .padding(.top, 5)
+                    .disableAutocorrection(true)
                     
                     
             }
