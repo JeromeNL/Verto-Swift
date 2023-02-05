@@ -366,7 +366,16 @@ extension HomeView{
                 .padding(.leading, 10)
         })
         .sheet(isPresented: $showEasterEgg , content:{
-            VStack{
+            VStack(alignment: .leading){
+                ZStack{
+                    Image(systemName: "xmark")
+                        .frame(width: 20, height: 20)
+                        .padding(.top, 15)
+                        .padding(.leading, 15)
+                        .onTapGesture(perform: {
+                            showEasterEgg = false
+                        })
+                }
                 ContentView()
             }
         })

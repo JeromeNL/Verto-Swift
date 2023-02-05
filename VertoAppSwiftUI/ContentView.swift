@@ -6,9 +6,15 @@ struct ContentView: View {
     @ObservedObject var viewModel = ChatGptViewModel()
     @State var text = ""
     @State var models = [String]()
+    
 
     var body: some View {
         VStack(alignment: .leading) {
+           
+            Text("ChatGPT")
+                .font(.title)
+                .fontWeight(.bold)
+            Divider()
             ForEach(models, id: \.self) { string in
                 Text(string)
             }
