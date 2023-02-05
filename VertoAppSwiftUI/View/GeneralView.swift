@@ -24,7 +24,6 @@ struct GeneralView_Previews: PreviewProvider {
 }
 
 
-
 extension GeneralView{
     
     var bottomMenuItemsGeneral: some View {

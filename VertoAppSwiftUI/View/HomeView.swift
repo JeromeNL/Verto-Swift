@@ -14,6 +14,7 @@ struct HomeView: View {
     @State var currentOutputLanguage: String = "German"
     @ObservedObject var viewModel = ChatGptViewModel()
     @State private var showWelcomeView = false
+    @State private var showMoreOptions = false
     @State private var showSettingsSheet = false
     @State private var sheetHeight:CGFloat = 250
     @State private var showEasterEgg = false
@@ -184,17 +185,15 @@ extension HomeView{
                             showEasterEgg = false
                         })
                 }
-                ContentView()
+                    ContentView()
             }
         })
-           
     }
     
     var moreOptions: some View {
         NavigationView {
             ZStack {
                 Color.blue
-                
                 VStack {
                     Image(systemName: "ellipsis.circle")
                         .resizable()
@@ -202,9 +201,14 @@ extension HomeView{
                         .toolbar{
                             ToolbarItem(placement: .navigationBarTrailing) {
                                 Menu {
-                                    Button(action: {}, label:{
+                                    Button(action: {
+                                        showMoreOptions.toggle()
+                                    }, label:{
                                         Label("Language Improver", systemImage: "plus.message.fill")
                                     })
+                                    .sheet (isPresented: $showMoreOptions){
+                                      
+                                    }
                                     
                                     Button(action: {}, label:{
                                         Label("Formal Maker", systemImage: "checkmark.message.fill")
@@ -283,11 +287,12 @@ extension HomeView{
                 Menu {
                     HStack {
                         Button {
-                           
+                            
                         } label: {
                             Text("Light ")
                             Image(systemName: "lightbulb")
                         }
+                        
                     }
                     HStack {
                         Button {
@@ -365,8 +370,6 @@ extension HomeView{
                                   .padding(15)
                                   .background(Color.black)
                               .clipShape(Circle())
-                                
-                                
                             }
                             HStack {
                                 Text("@JeromeNL")
