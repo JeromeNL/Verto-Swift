@@ -22,28 +22,37 @@ struct SynonymsView: View {
                         .padding(5)
                         .padding(.leading, 10)
                     
+                    
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
+                .cornerRadius(10)
                 
-               
                 inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
                     .onSubmit {
                         send()
                     }
 
                 Spacer()
-                Text(translateOutput)
-                    .font(.title)
-                    .fontWeight(.bold)
+                
+                
+                
+//                Text(translateOutput)
+//                    .font(.title)
+//                    .fontWeight(.bold)
+                let arrayOfStrings = translateOutput.components(separatedBy: ", ")
+                List{
+                    ForEach(arrayOfStrings, id: \.self) { tag in
+                        Text(tag.capitalized)
+                                }
+                }
+                .scrollContentBackground(.hidden)
+              
                 Spacer()
                 Spacer()
                 optionButtons
                     .padding(.bottom, 35)
-                
-                
-               
             }
         }
         .onAppear {
@@ -56,7 +65,7 @@ struct SynonymsView: View {
         guard !translateInput.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        viewModel.send(text: "Geef 3 relevante synoniemen voor het" + currentInputLanguage + " woord " + translateInput) { response in
+        viewModel.send(text: "Give 3 relevant synonyms for the" + currentInputLanguage + " word " + translateInput + ". Give the synonyms comma separated without other information in " + currentInputLanguage) { response in
             DispatchQueue.main.async {
                 translateOutput = response
             }

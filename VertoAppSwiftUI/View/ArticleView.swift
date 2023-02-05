@@ -22,10 +22,12 @@ struct ArticleView: View {
                         .padding(5)
                         .padding(.leading, 10)
                     
+                    
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
+                .cornerRadius(10)
                 
                
                 inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)

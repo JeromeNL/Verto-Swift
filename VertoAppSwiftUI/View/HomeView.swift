@@ -388,11 +388,8 @@ extension HomeView{
                         // NATIVE LANGUAGE SELECTOR
                         languagePicker
                         
-                        
                         // DARK/LIGHT MODE
                         lightDarkModeSelector
-                        
-                        
                         
                         HStack{
                             Button(action: {
@@ -404,6 +401,7 @@ extension HomeView{
                                        .fontWeight(.bold)
                                     Image(systemName: "text.justify")
                                 }
+                                .foregroundColor(.primary)
                                
                             })
                             

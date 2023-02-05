@@ -46,12 +46,6 @@ extension GeneralView{
             }
         }
     }
-    
-//    var sideMenuView: some View{
-//
-//    }
 }
-
-
 
 

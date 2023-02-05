@@ -21,11 +21,14 @@ struct ContentView: View {
 
             Spacer()
 
-            HStack {
-                TextField("Type hier ", text: $text)
-                    .disableAutocorrection(true)
-                Button("Verstuur") {
-                    send()
+            VStack {
+                Divider()
+                HStack {
+                    TextField("Type here ", text: $text)
+                        .disableAutocorrection(true)
+                    Button("Send") {
+                        send()
+                    }
                 }
             }
         }
