@@ -12,8 +12,8 @@
 		4C0444B1298969E000DB498A /* SynonymsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0444B0298969E000DB498A /* SynonymsView.swift */; };
 		4C0444B3298987B700DB498A /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0444B2298987B700DB498A /* GeneralView.swift */; };
 		4C10218B298ED89800D75C8B /* PopupMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10218A298ED89800D75C8B /* PopupMenu.swift */; };
+		4C14575E29905DB800FB72D2 /* FormalMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C14575D29905DB800FB72D2 /* FormalMakerView.swift */; };
 		4C1B01D1298FBA9E00151D6E /* LanguageImproverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B01D0298FBA9E00151D6E /* LanguageImproverView.swift */; };
-		4C1B01D3298FBAC700151D6E /* FormalMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B01D2298FBAC700151D6E /* FormalMakerView.swift */; };
 		4C1B01D7298FBAEB00151D6E /* TextFinisherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B01D6298FBAEB00151D6E /* TextFinisherView.swift */; };
 		4C1B01DA298FF6F500151D6E /* LaunchScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1B01D9298FF6F500151D6E /* LaunchScreenView.storyboard */; };
 		4C6A38662989443500E94E64 /* VertoAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6A38652989443500E94E64 /* VertoAppSwiftUIApp.swift */; };
@@ -52,8 +52,8 @@
 		4C0444B0298969E000DB498A /* SynonymsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynonymsView.swift; sourceTree = "<group>"; };
 		4C0444B2298987B700DB498A /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		4C10218A298ED89800D75C8B /* PopupMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMenu.swift; sourceTree = "<group>"; };
+		4C14575D29905DB800FB72D2 /* FormalMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormalMakerView.swift; sourceTree = "<group>"; };
 		4C1B01D0298FBA9E00151D6E /* LanguageImproverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageImproverView.swift; sourceTree = "<group>"; };
-		4C1B01D2298FBAC700151D6E /* FormalMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormalMakerView.swift; sourceTree = "<group>"; };
 		4C1B01D6298FBAEB00151D6E /* TextFinisherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFinisherView.swift; sourceTree = "<group>"; };
 		4C1B01D8298FF6A200151D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4C1B01D9298FF6F500151D6E /* LaunchScreenView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenView.storyboard; sourceTree = "<group>"; };
@@ -115,9 +115,9 @@
 				4C0444B2298987B700DB498A /* GeneralView.swift */,
 				4C10218A298ED89800D75C8B /* PopupMenu.swift */,
 				4C1B01D0298FBA9E00151D6E /* LanguageImproverView.swift */,
-				4C1B01D2298FBAC700151D6E /* FormalMakerView.swift */,
 				4C1B01D6298FBAEB00151D6E /* TextFinisherView.swift */,
 				4C1B01D9298FF6F500151D6E /* LaunchScreenView.storyboard */,
+				4C14575D29905DB800FB72D2 /* FormalMakerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,9 +335,9 @@
 				550DCFAB2989A0E50083BE1F /* ChatGptViewModel.swift in Sources */,
 				4C0444B3298987B700DB498A /* GeneralView.swift in Sources */,
 				55C0D440298E86B300AAD57F /* UrbanView.swift in Sources */,
+				4C14575E29905DB800FB72D2 /* FormalMakerView.swift in Sources */,
 				4C1B01D1298FBA9E00151D6E /* LanguageImproverView.swift in Sources */,
 				4C1B01D7298FBAEB00151D6E /* TextFinisherView.swift in Sources */,
-				4C1B01D3298FBAC700151D6E /* FormalMakerView.swift in Sources */,
 				4C6A38662989443500E94E64 /* VertoAppSwiftUIApp.swift in Sources */,
 				4C0444AF298969D100DB498A /* ArticleView.swift in Sources */,
 				4C10218B298ED89800D75C8B /* PopupMenu.swift in Sources */,

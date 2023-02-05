@@ -14,7 +14,6 @@ struct VertoAppSwiftUIApp: App {
             NavigationView{
                 GeneralView()
             }
-           
         }
     }
 }
