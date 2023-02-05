@@ -13,28 +13,223 @@ struct HomeView: View {
     @State var currentInputLanguage: String = "English"
     @State var currentOutputLanguage: String = "German"
     @ObservedObject var viewModel = ChatGptViewModel()
+    @State private var showWelcomeView = false
+    @State private var showSettingsSheet = false
+    @State private var sheetHeight:CGFloat = 250
+    @State private var showEasterEgg = false
+    @State private var TitleClicks = 0
     
+    
+    var animation: Animation {
+        Animation.linear
+    }
 
     var body: some View {
         ZStack {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    
-                    Text("Translate")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.primary)
-                        .padding(5)
-                        .padding(.leading, 10)
-                        .onTapGesture(count: 5) {
-                                // open ChatGPT with pop-up sheet
-                            }
-                    
+                    translateTitle
                     Spacer()
+                    moreOptions
+                    Button(action: {
+                        showSettingsSheet.toggle()
+                        
+                    }, label: {
+                        Image(systemName: "gearshape")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(.black)
+                            .padding(.horizontal, 10)
+                            .rotationEffect(Angle.degrees(showSettingsSheet ? 90 : 0))
+                            .animation(animation)
+                    })
+                    .sheet(isPresented: $showSettingsSheet, content: {
+                        VStack() {
+                            HStack(){
+                                Image(systemName: "xmark")
+                                    .onTapGesture(perform: {
+                                        showSettingsSheet = false;
+                                    })
+                            }
+                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                            .padding(.leading, 10)
+                            //.background(Color.green)
+                            .padding(.bottom, 10)
+                            
+                            
+                            HStack() {
+                                VStack() {
+                                
+                                    
+                                    VStack {
+                                        ZStack(alignment: .bottomTrailing) {
+                                            Image(systemName: "person")
+                                              .resizable()
+                                              .frame(width: 50, height: 50)
+                                              .foregroundColor(.white)
+                                              .padding(15)
+                                              .background(Color.black)
+                                          .clipShape(Circle())
+                                            
+                                            
+                                        }
+                                        //.background(Color.red)
+                                        HStack {
+                                            Text("@JeromeNL")
+//                                                Image(systemName: "pencil")
+//                                                    .resizable()
+//                                                .frame(width: 17, height: 17)
+                                            
+                                        }
+                                    }
+                                   
+                                    VStack{
+                                        VStack{
+                                            Text("Active since: ")
+                                                .fontWeight(.semibold)
+                                            Text("25-02-2023")
+                                        }
+                                        .padding(.top, 10)
+                                       
+                                        VStack{
+                                            Text("Native language:")
+                                                .fontWeight(.semibold)
+                                            Text("Dutch 🇳🇱")
+                                        }
+                                       
+                                    }
+                                   
+                                }
+                                .frame(width: 170, height: 260)
+                                .background(Color("LightGraybackground"))
+                                .cornerRadius(10)
+                                
+                                VStack{
+                                    // NATIVE LANGUAGE SELECTOR
+                                    HStack{
+                                        Menu {
+                                            Button {
+                                               
+                                            } label: {
+                                                Text("English 🇬🇧")
+                                               
+                                            }
+                                            Button {
+                                                
+                                            } label: {
+                                                Text("Dutch 🇳🇱")
+                                                
+                                            }
+                                            Button {
+                                                
+                                            } label: {
+                                                Text("German 🇩🇪")
+                                                
+                                            }
+                                            Button {
+                                               
+                                            } label: {
+                                                Text("French 🇫🇷")
+                                                
+                                            }
+                                        } label: {
+                                            HStack(){
+                                                Text("Change Native Language")
+                                                    .font(.subheadline)
+                                                   .fontWeight(.bold)
+                                                   
+                                                Image(systemName: "ellipsis.message")
+                                            }
+                                            .frame(maxWidth: .infinity, alignment: .center)
+
+                                        }.foregroundColor(.primary)
+                                            .frame(width: 170, alignment: .leading)
+                                        
+                                    }
+                                    .frame(width: 170, height: 55)
+                                    .background(Color("LightGraybackground"))
+                                    .cornerRadius(10)
+                                    
+                                    // DARK/LIGHT MODE
+                                    HStack{
+                                        HStack{
+                                            Menu {
+                                                HStack {
+                                                    Button {
+                                                       
+                                                    } label: {
+                                                        Text("Light ")
+                                                        Image(systemName: "lightbulb")
+                                                    }
+                                                }
+                                                HStack {
+                                                    Button {
+                                                       
+                                                    } label: {
+                                                        Text("Dark ")
+                                                        Image(systemName: "lightbulb.fill")
+                                                    }
+                                                }
+                                                HStack {
+                                                    Button {
+                                                       
+                                                    } label: {
+                                                        Text("Device default ")
+                                                        Image(systemName: "iphone.gen3")
+                                                    }
+                                                }
+                                                
+                                            } label: {
+                                                HStack(){
+                                                    Text("Change Mode")
+                                                        .font(.subheadline)
+                                                       .fontWeight(.bold)
+                                                       
+                                                    Image(systemName: "lightbulb")
+                                                }
+                                                .frame(maxWidth: .infinity, alignment: .center)
+
+                                            }.foregroundColor(.primary)
+                                                .frame(width: 170, alignment: .leading)
+                                            
+                                        }
+                                        .frame(width: 170, height: 55)
+                                        .background(Color("LightGraybackground"))
+                                        .cornerRadius(10)
+                                    }
+                                    .frame(width: 170, height: 55)
+                                    .background(Color("LightGraybackground"))
+                                    .cornerRadius(10)
+                                    
+                                    HStack{
+                                        Text("TEST")
+                                    }
+                                    .frame(width: 170, height: 55)
+                                    .background(Color("LightGraybackground"))
+                                    .cornerRadius(10)
+                                    
+                                    HStack{
+                                        Text("TEST")
+                                    }
+                                    .frame(width: 170, height:55)
+                                    .background(Color("LightGraybackground"))
+                                    .cornerRadius(10)
+                                }
+                                
+                            }
+                        }
+                        .scrollDisabled(true)
+                        .presentationDetents([.height(325)])
+
+                            
+                    })
+                        
+                    
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
+                .cornerRadius(10)
                 
                
                 inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
@@ -48,8 +243,6 @@ struct HomeView: View {
                 optionButtons
                     .padding(.bottom, 35)
                 
-                
-               
             }
         }
         .onAppear {
@@ -68,6 +261,7 @@ struct HomeView: View {
             }
         }
     }
+    
     
 }
 
@@ -152,6 +346,59 @@ extension HomeView{
         .frame(height: 100)
         .frame(maxWidth: .infinity)
         .background(Color.white)
+    }
+    
+    var translateTitle: some View {
+        Button(action: {
+            TitleClicks += 1
+            if(TitleClicks == 5){
+                showEasterEgg = true
+            } else if(TitleClicks > 5){
+                TitleClicks = 1
+            }
+            
+        }, label: {
+            Text("Translate")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.primary)
+                .padding(5)
+                .padding(.leading, 10)
+        })
+        .sheet(isPresented: $showEasterEgg , content:{
+            VStack{
+                ContentView()
+            }
+        })
+           
+    }
+    
+    var moreOptions: some View {
+        Button(action: {
+                showWelcomeView.toggle()
+
+        }, label: {
+            Image(systemName: "menubar.arrow.up.rectangle")
+                .resizable()
+                .frame(width: 30, height: 30)
+                .foregroundColor(.black)
+                .padding(.horizontal, 0)
+                .rotationEffect(Angle.degrees(showWelcomeView ? 180 : 0))
+                .animation(animation)
+
+        })
+        .sheet(isPresented: $showWelcomeView, content: {
+
+            VStack() {
+                
+
+                Spacer()
+            }
+            .scrollDisabled(true)
+            .presentationDetents([.height(CGFloat(sheetHeight))])
+            .cornerRadius(20)
+
+        })
     }
     
     private func functionButtonItem(widthHeight: Double, icon: String) -> some View{

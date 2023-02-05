@@ -13,7 +13,10 @@ struct VertoAppSwiftUIApp: App {
         WindowGroup {
             //ContentView()
             //UrbanView()
-            GeneralView()
+            NavigationView{
+                GeneralView()
+            }
+           
         }
     }
 }
