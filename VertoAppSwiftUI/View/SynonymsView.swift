@@ -65,7 +65,7 @@ struct SynonymsView: View {
         guard !translateInput.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        viewModel.send(text: "Give 3 relevant synonyms for the" + currentInputLanguage + " word " + translateInput + ". Give the synonyms comma separated without other information in " + currentInputLanguage) { response in
+        viewModel.send(text: "Give 3 relevant synonyms for the " + currentInputLanguage + " word " + translateInput + ". Give the synonyms comma separated without other information in " + currentInputLanguage) { response in
             DispatchQueue.main.async {
                 translateOutput = response
             }
@@ -131,7 +131,6 @@ extension SynonymsView{
                     .padding(5)
                     .padding(.top, 5)
                     .disableAutocorrection(true)
-                    
                     
             }
             .frame(width: 350, height: 70, alignment: .top)

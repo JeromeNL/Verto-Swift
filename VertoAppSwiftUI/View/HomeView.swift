@@ -191,32 +191,45 @@ extension HomeView{
     }
     
     var moreOptions: some View {
-        Button(action: {
-                showWelcomeView.toggle()
-
-        }, label: {
-            Image(systemName: "menubar.arrow.up.rectangle")
-                .resizable()
-                .frame(width: 30, height: 30)
-                .foregroundColor(.black)
-                .padding(.horizontal, 0)
-                .rotationEffect(Angle.degrees(showWelcomeView ? 180 : 0))
-                .animation(animation)
-
-        })
-        .sheet(isPresented: $showWelcomeView, content: {
-
-            VStack() {
+        NavigationView {
+            ZStack {
+                Color.blue
                 
-
-                Spacer()
+                VStack {
+                    Image(systemName: "ellipsis.circle")
+                        .resizable()
+                        .frame(width: 0, height: 0)
+                        .toolbar{
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Menu {
+                                    Button(action: {}, label:{
+                                        Label("Language Improver", systemImage: "plus.message.fill")
+                                    })
+                                    
+                                    Button(action: {}, label:{
+                                        Label("Formal Maker", systemImage: "checkmark.message.fill")
+                                    })
+                                    
+                                    Button(action: {}, label:{
+                                        Label("Text Finisher", systemImage: "ellipsis.message.fill")
+                                    })
+                                } label: {
+                                    Image(systemName: "ellipsis.circle")
+                                        .resizable()
+                                        .frame(width: 30, height: 30)
+                                        .background(.blue)
+                                }
+                                .foregroundColor(.black)
+                            }
+                        }
+                }
             }
-            .scrollDisabled(true)
-            .presentationDetents([.height(CGFloat(sheetHeight))])
-            .cornerRadius(20)
-
-        })
+            .frame(width: 50, height: 100)
+            .background(.blue)
+        }
+        .frame(width: 50, height: 40)
     }
+       
     
     var languagePicker: some View{
         HStack{
