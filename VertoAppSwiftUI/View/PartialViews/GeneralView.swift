@@ -1,10 +1,3 @@
-//
-//  GeneralView.swift
-//  VertoAppSwiftUI
-//
-//  Created by Joram Kwetters on 31/01/2023.
-//
-
 import SwiftUI
 
 struct GeneralView: View {
