@@ -1,12 +1,12 @@
 
 import SwiftUI
 
-struct ArticleView: View {
+struct UrbanView: View {
     @State var translateInput: String = ""
     @State var translateOutput: String = ""
     @State var currentInputLanguage: String = "English"
     @State var currentOutputLanguage: String = "German"
-    @ObservedObject var viewModel = ChatGptViewModel()
+    @ObservedObject var viewModel = UrbanViewModel()
     
 
     var body: some View {
@@ -15,19 +15,17 @@ struct ArticleView: View {
             VStack{
                 HStack() {
                     
-                    Text("Articles")
+                    Text("Urbans")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.primary)
                         .padding(5)
                         .padding(.leading, 10)
                     
-                    
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
-                .cornerRadius(10)
                 
                
                 inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
@@ -47,32 +45,26 @@ struct ArticleView: View {
             }
         }
         .onAppear {
-            viewModel.setup()
+           
         }
         .padding()
     }
     
     func send() {
-        guard !translateInput.trimmingCharacters(in: .whitespaces).isEmpty else {
-            return
+        viewModel.send(text: "test")
         }
-        viewModel.send(text: "Geef het bijpassende lidwoord voor het " + currentInputLanguage + "e woord " + translateInput + " geef alleen het lidwoord terug") { response in
-            DispatchQueue.main.async {
-                translateOutput = response
-            }
-        }
-    }
+    
     
 }
 
 
-struct ArticleView_Previews: PreviewProvider {
+struct UrbanView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleView()
+        UrbanView()
     }
 }
 
-extension ArticleView{
+extension UrbanView{
      
     private func inputTextField(isEnabled: Bool, selectedLanguage: String) -> some View{
         VStack(alignment: .leading) {
@@ -121,7 +113,6 @@ extension ArticleView{
                     .disabled(!isEnabled)
                     .padding(5)
                     .padding(.top, 5)
-                    .disableAutocorrection(true)
                     
                     
             }

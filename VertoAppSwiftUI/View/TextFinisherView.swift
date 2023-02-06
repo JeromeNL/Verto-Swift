@@ -1,27 +1,26 @@
 
 import SwiftUI
 
-struct ArticleView: View {
+struct TextFinisherView: View {
     @State var translateInput: String = ""
-    @State var translateOutput: String = ""
     @State var currentInputLanguage: String = "English"
     @State var currentOutputLanguage: String = "German"
+    @State var displayText = "Type your text"
+    @State var translateResult = ""
     @ObservedObject var viewModel = ChatGptViewModel()
     
-
+    
     var body: some View {
         ZStack {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    
-                    Text("Articles")
+                    Text("Finisher")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.primary)
                         .padding(5)
                         .padding(.leading, 10)
-                    
                     
                     Spacer()
                 }
@@ -29,21 +28,14 @@ struct ArticleView: View {
                 .background(Color.blue)
                 .cornerRadius(10)
                 
-               
-                inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
+                inputTextField(selectedLanguage: currentInputLanguage)
                     .onSubmit {
                         send()
                     }
 
-                Spacer()
-                Text(translateOutput).font(.largeTitle).fontWeight(.bold)
-                Spacer()
-                Spacer()
+               Spacer()
                 optionButtons
                     .padding(.bottom, 35)
-                
-                
-               
             }
         }
         .onAppear {
@@ -56,47 +48,46 @@ struct ArticleView: View {
         guard !translateInput.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        viewModel.send(text: "Geef het bijpassende lidwoord voor het " + currentInputLanguage + "e woord " + translateInput + " geef alleen het lidwoord terug") { response in
+        viewModel.send(text: "Finish the following " + currentInputLanguage + " text: " + translateInput + ".") { response in
             DispatchQueue.main.async {
-                translateOutput = response
+                translateInput += response
             }
         }
     }
-    
 }
 
 
-struct ArticleView_Previews: PreviewProvider {
+struct TextFinisherView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleView()
+        TextFinisherView()
     }
 }
 
-extension ArticleView{
+extension TextFinisherView{
      
-    private func inputTextField(isEnabled: Bool, selectedLanguage: String) -> some View{
+    private func inputTextField(selectedLanguage: String) -> some View{
         VStack(alignment: .leading) {
             Menu {
                 Button {
-                    isEnabled ? (currentInputLanguage = "English") : (currentOutputLanguage = "English")
+                    currentInputLanguage = "English"
                 } label: {
                     Text("English 🇬🇧")
                    
                 }
                 Button {
-                    isEnabled ? (currentInputLanguage = "Dutch") : (currentOutputLanguage = "Dutch")
+                     currentInputLanguage = "Dutch"
                 } label: {
                     Text("Dutch 🇳🇱")
                     
                 }
                 Button {
-                    isEnabled ? (currentInputLanguage = "German") : (currentOutputLanguage = "German")
+                     currentInputLanguage = "German"
                 } label: {
                     Text("German 🇩🇪")
                     
                 }
                 Button {
-                    isEnabled ? (currentInputLanguage = "French") : (currentOutputLanguage = "French")
+                    currentInputLanguage = "French"
                 } label: {
                     Text("French 🇫🇷")
                     
@@ -114,24 +105,20 @@ extension ArticleView{
             }.foregroundColor(.primary)
                 .frame(width: 200, alignment: .leading)
             
+            
             ZStack(alignment: .top) {
-                let displayText = isEnabled ? "Type your text" : ""
-               
-                TextField(displayText, text: (isEnabled ? $translateInput : $translateOutput), axis: .vertical)
-                    .disabled(!isEnabled)
+                
+                TextField(displayText, text: ($translateInput), axis: .vertical)
                     .padding(5)
                     .padding(.top, 5)
                     .disableAutocorrection(true)
-                    
-                    
             }
-            .frame(width: 350, height: 70, alignment: .top)
+            .frame(width: 350, height: 450, alignment: .top)
             .background()
             .cornerRadius(15)
         .shadow(color: Color.gray, radius: 5.0, x: 0, y: 5)
         }
         .padding(.top, 10)
-        
     }
     
     var optionButtons: some View {

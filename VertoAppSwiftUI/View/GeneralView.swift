@@ -10,7 +10,9 @@ import SwiftUI
 struct GeneralView: View {
     var body: some View {
         
-        bottomMenuItemsGeneral
+        VStack {
+            bottomMenuItemsGeneral
+        }
         
     }
 }
@@ -20,6 +22,7 @@ struct GeneralView_Previews: PreviewProvider {
         GeneralView()
     }
 }
+
 
 extension GeneralView{
     
@@ -41,6 +44,7 @@ extension GeneralView{
                     Text("synonyms")
             }
         }
-        
     }
 }
+
+

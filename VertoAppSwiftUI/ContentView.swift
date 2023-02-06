@@ -6,20 +6,29 @@ struct ContentView: View {
     @ObservedObject var viewModel = ChatGptViewModel()
     @State var text = ""
     @State var models = [String]()
+    
 
     var body: some View {
         VStack(alignment: .leading) {
+           
+            Text("ChatGPT")
+                .font(.title)
+                .fontWeight(.bold)
+            Divider()
             ForEach(models, id: \.self) { string in
                 Text(string)
             }
 
             Spacer()
 
-            HStack {
-                TextField("Type hier ", text: $text)
-                    .disableAutocorrection(true)
-                Button("Verstuur") {
-                    send()
+            VStack {
+                Divider()
+                HStack {
+                    TextField("Type here ", text: $text)
+                        .disableAutocorrection(true)
+                    Button("Send") {
+                        send()
+                    }
                 }
             }
         }

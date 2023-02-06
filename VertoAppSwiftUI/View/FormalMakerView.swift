@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  FormalMakerView.swift
 //  VertoAppSwiftUI
 //
 //  Created by Joram Kwetters on 31/01/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct FormalMakerView: View {
     @State var translateInput: String = ""
     @State var translateOutput: String = ""
     @State var currentInputLanguage: String = "English"
@@ -20,8 +20,6 @@ struct HomeView: View {
     @State private var showEasterEgg = false
     @State private var TitleClicks = 0
     
-    let translateTitleText:LocalizedStringKey = "translateTitleText"
-    
     
     
     var animation: Animation {
@@ -33,10 +31,10 @@ struct HomeView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    translateTitle
+                    formalTitle
                     Spacer()
-                    moreOptions
-                    settingsView
+                   // moreOptions
+                   //settingsView
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
@@ -48,7 +46,7 @@ struct HomeView: View {
                         send()
                     }
 
-                inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
+                inputTextField(isEnabled: false, selectedLanguage: "")
                               
                 Spacer()
                 optionButtons
@@ -66,7 +64,7 @@ struct HomeView: View {
         guard !translateInput.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        viewModel.send(text: "Translate "+translateInput+" from "+currentInputLanguage+" to "+currentOutputLanguage) { response in
+        viewModel.send(text: "Make this " + currentInputLanguage + " text more formal: " + translateInput) { response in
             DispatchQueue.main.async {
                 translateOutput = response
             }
@@ -77,53 +75,55 @@ struct HomeView: View {
 }
 
 
-struct HomeView_Previews: PreviewProvider {
+struct FormalMakerView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        FormalMakerView()
     }
 }
 
-extension HomeView{
+extension FormalMakerView{
      
     private func inputTextField(isEnabled: Bool, selectedLanguage: String) -> some View{
         VStack(alignment: .leading) {
-            Menu {
-                Button {
-                    isEnabled ? (currentInputLanguage = "English") : (currentOutputLanguage = "English")
-                } label: {
-                    Text("English 🇬🇧")
-                   
-                }
-                Button {
-                    isEnabled ? (currentInputLanguage = "Dutch") : (currentOutputLanguage = "Dutch")
-                } label: {
-                    Text("Dutch 🇳🇱")
-                    
-                }
-                Button {
-                    isEnabled ? (currentInputLanguage = "German") : (currentOutputLanguage = "German")
-                } label: {
-                    Text("German 🇩🇪")
-                    
-                }
-                Button {
-                    isEnabled ? (currentInputLanguage = "French") : (currentOutputLanguage = "French")
-                } label: {
-                    Text("French 🇫🇷")
-                    
-                }
-            } label: {
-                HStack(){
-                    Text(selectedLanguage)
-                        .font(.title2)
-                       .fontWeight(.bold)
+            if(isEnabled){
+                Menu {
+                    Button {
+                        isEnabled ? (currentInputLanguage = "English") : (currentOutputLanguage = "English")
+                    } label: {
+                        Text("English 🇬🇧")
                        
-                    Image(systemName: "ellipsis.message")
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    Button {
+                        isEnabled ? (currentInputLanguage = "Dutch") : (currentOutputLanguage = "Dutch")
+                    } label: {
+                        Text("Dutch 🇳🇱")
+                        
+                    }
+                    Button {
+                        isEnabled ? (currentInputLanguage = "German") : (currentOutputLanguage = "German")
+                    } label: {
+                        Text("German 🇩🇪")
+                        
+                    }
+                    Button {
+                        isEnabled ? (currentInputLanguage = "French") : (currentOutputLanguage = "French")
+                    } label: {
+                        Text("French 🇫🇷")
+                        
+                    }
+                } label: {
+                    HStack(){
+                        Text(selectedLanguage)
+                            .font(.title2)
+                           .fontWeight(.bold)
+                           
+                        Image(systemName: "ellipsis.message")
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
 
-            }.foregroundColor(.primary)
-                .frame(width: 200, alignment: .leading)
+                }.foregroundColor(.primary)
+                    .frame(width: 200, alignment: .leading)
+            }
             
             ZStack(alignment: .top) {
                 let displayText = isEnabled ? "Type your text" : ""
@@ -159,37 +159,13 @@ extension HomeView{
         .background(Color.white)
     }
     
-    var translateTitle: some View {
-        Button(action: {
-            TitleClicks += 1
-            if(TitleClicks == 5){
-                showEasterEgg = true
-            } else if(TitleClicks > 5){
-                TitleClicks = 1
-            }
-            
-        }, label: {
-            Text(translateTitleText)
+    var formalTitle: some View {
+            Text("Formal")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.primary)
                 .padding(5)
                 .padding(.leading, 10)
-        })
-        .sheet(isPresented: $showEasterEgg , content:{
-            VStack(alignment: .leading){
-                ZStack{
-                    Image(systemName: "xmark")
-                        .frame(width: 20, height: 20)
-                        .padding(.top, 15)
-                        .padding(.leading, 15)
-                        .onTapGesture(perform: {
-                            showEasterEgg = false
-                        })
-                }
-                    ContentView()
-            }
-        })
     }
     
     var moreOptions: some View {
