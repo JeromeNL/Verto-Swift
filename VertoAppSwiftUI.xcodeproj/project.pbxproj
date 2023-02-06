@@ -13,6 +13,7 @@
 		4C0444B3298987B700DB498A /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0444B2298987B700DB498A /* GeneralView.swift */; };
 		4C10218B298ED89800D75C8B /* PopupMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C10218A298ED89800D75C8B /* PopupMenu.swift */; };
 		4C14575E29905DB800FB72D2 /* FormalMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C14575D29905DB800FB72D2 /* FormalMakerView.swift */; };
+		4C14576129910EF100FB72D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C14576329910EF100FB72D2 /* Localizable.strings */; };
 		4C1B01D1298FBA9E00151D6E /* LanguageImproverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B01D0298FBA9E00151D6E /* LanguageImproverView.swift */; };
 		4C1B01D7298FBAEB00151D6E /* TextFinisherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B01D6298FBAEB00151D6E /* TextFinisherView.swift */; };
 		4C1B01DA298FF6F500151D6E /* LaunchScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1B01D9298FF6F500151D6E /* LaunchScreenView.storyboard */; };
@@ -53,6 +54,8 @@
 		4C0444B2298987B700DB498A /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		4C10218A298ED89800D75C8B /* PopupMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMenu.swift; sourceTree = "<group>"; };
 		4C14575D29905DB800FB72D2 /* FormalMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormalMakerView.swift; sourceTree = "<group>"; };
+		4C14576229910EF100FB72D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C14576429910EFB00FB72D2 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C1B01D0298FBA9E00151D6E /* LanguageImproverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageImproverView.swift; sourceTree = "<group>"; };
 		4C1B01D6298FBAEB00151D6E /* TextFinisherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFinisherView.swift; sourceTree = "<group>"; };
 		4C1B01D8298FF6A200151D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 				55C0D43F298E86B300AAD57F /* UrbanView.swift */,
 				4C0444B2298987B700DB498A /* GeneralView.swift */,
 				4C10218A298ED89800D75C8B /* PopupMenu.swift */,
+				4C14576329910EF100FB72D2 /* Localizable.strings */,
 				4C1B01D0298FBA9E00151D6E /* LanguageImproverView.swift */,
 				4C1B01D6298FBAEB00151D6E /* TextFinisherView.swift */,
 				4C1B01D9298FF6F500151D6E /* LaunchScreenView.storyboard */,
@@ -280,6 +284,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
 			);
 			mainGroup = 4C6A38592989443500E94E64;
 			packageReferences = (
@@ -302,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C6A386D2989443600E94E64 /* Preview Assets.xcassets in Resources */,
+				4C14576129910EF100FB72D2 /* Localizable.strings in Resources */,
 				4C6A386A2989443600E94E64 /* Assets.xcassets in Resources */,
 				4C1B01DA298FF6F500151D6E /* LaunchScreenView.storyboard in Resources */,
 			);
@@ -375,6 +381,18 @@
 			targetProxy = 4C6A387D2989443700E94E64 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C14576329910EF100FB72D2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C14576229910EF100FB72D2 /* en */,
+				4C14576429910EFB00FB72D2 /* nl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4C6A38842989443700E94E64 /* Debug */ = {
@@ -499,7 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VertoAppSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = 235Q5A33V6;
+				DEVELOPMENT_TEAM = 3DM5372VZ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VertoAppSwiftUI/Info.plist;

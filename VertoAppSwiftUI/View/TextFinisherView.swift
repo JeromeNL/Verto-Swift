@@ -106,7 +106,6 @@ extension TextFinisherView{
                 .frame(width: 200, alignment: .leading)
             
             
-            
             ZStack(alignment: .top) {
                 
                 TextField(displayText, text: ($translateInput), axis: .vertical)

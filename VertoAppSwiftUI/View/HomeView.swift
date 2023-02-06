@@ -20,6 +20,8 @@ struct HomeView: View {
     @State private var showEasterEgg = false
     @State private var TitleClicks = 0
     
+    let translateTitleText:LocalizedStringKey = "translateTitleText"
+    
     
     
     var animation: Animation {
@@ -167,7 +169,7 @@ extension HomeView{
             }
             
         }, label: {
-            Text("Translate")
+            Text(translateTitleText)
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.primary)
