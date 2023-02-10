@@ -9,10 +9,10 @@ import SwiftUI
 
 struct TextLanguageView {
     
-    @State var translateInput: String = ""
-    @State var translateOutput: String = ""
-    @State var currentInputLanguage: String = "English"
-    @State var currentOutputLanguage: String = "German"
+    @State var translateInput1: String = ""
+    @State var translateOutput1: String = ""
+    @State var currentInputLanguage1: String = "English"
+    @State var currentOutputLanguage1: String = "German"
     
     
     
@@ -20,22 +20,22 @@ struct TextLanguageView {
         VStack(alignment: .leading) {
             Menu {
                 Button {
-                    isEnabled ? (currentInputLanguage = "English") : (currentOutputLanguage = "English")
+                    isEnabled ? (currentInputLanguage1 = "English") : (currentOutputLanguage1 = "English")
                 } label: {
                     Text("English 🇬🇧")
                 }
                 Button {
-                    isEnabled ? (currentInputLanguage = "Dutch") : (currentOutputLanguage = "Dutch")
+                    isEnabled ? (currentInputLanguage1 = "Dutch") : (currentOutputLanguage1 = "Dutch")
                 } label: {
                     Text("Dutch 🇳🇱")
                 }
                 Button {
-                    isEnabled ? (currentInputLanguage = "German") : (currentOutputLanguage = "German")
+                    isEnabled ? (currentInputLanguage1 = "German") : (currentOutputLanguage1 = "German")
                 } label: {
                     Text("German 🇩🇪")
                 }
                 Button {
-                    isEnabled ? (currentInputLanguage = "French") : (currentOutputLanguage = "French")
+                    isEnabled ? (currentInputLanguage1 = "French") : (currentOutputLanguage1 = "French")
                 } label: {
                     Text("French 🇫🇷")
                 }
@@ -43,16 +43,28 @@ struct TextLanguageView {
                 HStack {
                     Text(selectedLanguage).font(.title2).fontWeight(.bold)
                     Image(systemName: "ellipsis.message")
-                }.frame(maxWidth: .infinity, alignment: .leading)
-            }.foregroundColor(.primary).frame(width: 200, alignment: .leading)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .foregroundColor(.primary).frame(width: 200, alignment: .leading)
+            
             ZStack(alignment: .top) {
                 let displayText = isEnabled ? "Type your text" : ""
                 TextField(
-                    displayText, text: (isEnabled ? $translateInput : $translateOutput), axis: .vertical
-                ).disabled(!isEnabled).padding(5).padding(.top, 5).disableAutocorrection(true)
-            }.frame(width: 350, height: 175, alignment: .top).background().cornerRadius(15).shadow(
+                    displayText, text: (isEnabled ? $translateInput1 : $translateOutput1), axis: .vertical
+                )
+                .disabled(!isEnabled)
+                .padding(5)
+                .padding(.top, 5)
+                .disableAutocorrection(true)
+            }
+            .frame(width: 350, height: 175, alignment: .top)
+            .background()
+            .cornerRadius(15)
+            .shadow(
                 color: Color.gray, radius: 5.0, x: 0, y: 5)
-        }.padding(.top, 10)
+        }
+        .padding(.top, 10)
     }
     
 

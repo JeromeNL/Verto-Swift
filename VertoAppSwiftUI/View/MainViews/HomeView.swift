@@ -27,10 +27,10 @@ struct HomeView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    TitleEasterEggView().body
+                    TitleEasterEggView(displayTitle: "Translate")
                     Spacer()
-                    OptionsView().body
-                    SettingsView().body
+                    OptionsView()
+                    SettingsView()
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)

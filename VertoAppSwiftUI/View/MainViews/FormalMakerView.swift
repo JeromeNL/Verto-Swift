@@ -31,10 +31,10 @@ struct FormalMakerView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    TitleEasterEggView().body
+                    TitleEasterEggView(displayTitle: "FormalMaker")
                     Spacer()
-                    OptionsView().body
-                    SettingsView().body
+                    OptionsView()
+                    SettingsView()
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
@@ -50,7 +50,7 @@ struct FormalMakerView: View {
                               
            
                 Spacer()
-                 OptionButtonView().body
+                 OptionButtonView()
                      .padding(.bottom, 35)
                 
             }

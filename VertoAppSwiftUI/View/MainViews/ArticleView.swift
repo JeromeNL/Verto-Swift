@@ -15,7 +15,7 @@ struct ArticleView: View {
             VStack{
                 HStack() {
                     
-                    TitleEasterEggView().body
+                    TitleEasterEggView(displayTitle: "Article")
                     
                     Spacer()
                 }
@@ -33,7 +33,7 @@ struct ArticleView: View {
                 Text(translateOutput).font(.largeTitle).fontWeight(.bold)
                 Spacer()
                 Spacer()
-                OptionButtonView().body
+                OptionButtonView()
                     .padding(.bottom, 35)
                 
                 

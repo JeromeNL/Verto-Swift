@@ -15,10 +15,10 @@ struct TextFinisherView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    TitleEasterEggView().body
+                    TitleEasterEggView(displayTitle: "Finisher")
                     Spacer()
-                    OptionsView().body
-                    SettingsView().body
+                    OptionsView()
+                    SettingsView()
                     
               
                 }
@@ -32,7 +32,7 @@ struct TextFinisherView: View {
                     }
 
                Spacer()
-                OptionButtonView().body
+                OptionButtonView()
                     .padding(.bottom, 35)
             }
         }

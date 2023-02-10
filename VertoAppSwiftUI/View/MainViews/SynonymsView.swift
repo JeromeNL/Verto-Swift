@@ -15,7 +15,7 @@ struct SynonymsView: View {
             VStack{
                 HStack() {
                     
-                    TitleEasterEggView().body
+                    TitleEasterEggView(displayTitle: "Synonyms")
                     
                     
                     Spacer()
@@ -42,7 +42,7 @@ struct SynonymsView: View {
               
                 Spacer()
                 Spacer()
-                OptionButtonView().body
+                OptionButtonView()
                     .padding(.bottom, 35)
             }
         }

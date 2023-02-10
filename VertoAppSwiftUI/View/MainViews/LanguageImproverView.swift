@@ -31,10 +31,10 @@ struct LanguageImproverView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    TitleEasterEggView().body
+                    TitleEasterEggView(displayTitle: "Improver")
                     Spacer()
-                    OptionsView().body
-                    SettingsView().body
+                    OptionsView()
+                    SettingsView()
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
@@ -49,7 +49,7 @@ struct LanguageImproverView: View {
                 TextLanguageView().inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
                               
                 Spacer()
-                OptionButtonView().body
+                OptionButtonView()
                     .padding(.bottom, 35)
                    
                 
