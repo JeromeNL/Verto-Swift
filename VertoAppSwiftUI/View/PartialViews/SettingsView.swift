@@ -12,6 +12,7 @@ struct SettingsView: View {
     //@State private var sheetHeight:CGFloat = 250
     //@State private var showEasterEgg = false
     //@State private var TitleClicks = 0
+    @State var myBind = ""
     var animation: Animation {
         Animation.linear
     }
@@ -72,11 +73,9 @@ struct SettingsView: View {
                                 VStack{
                                     Text("Native language:")
                                         .fontWeight(.semibold)
-                                    Text("Dutch 🇳🇱")
+                                    Text(myBind)
                                 }
-                               
                             }
-                           
                         }
                         .frame(width: 170, height: 260)
                         .background(Color("LightGraybackground"))
@@ -86,10 +85,10 @@ struct SettingsView: View {
                         
                         VStack{
                             // NATIVE LANGUAGE SELECTOR
-                            LanguagePickerView().body
+                            LanguagePickerView(myBindVar: $myBind)
                             
                             // DARK/LIGHT MODE
-                            LightSelecterView().body
+                            LightSelecterView()
                             
                             HStack{
                                 Button(action: {

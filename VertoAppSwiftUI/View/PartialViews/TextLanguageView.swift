@@ -15,7 +15,6 @@ struct TextLanguageView {
     @State var currentOutputLanguage1: String = "German"
     
     
-    
     public func inputTextField(isEnabled: Bool, selectedLanguage: String) -> some View {
         VStack(alignment: .leading) {
             Menu {
