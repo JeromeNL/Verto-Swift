@@ -9,30 +9,29 @@ import SwiftUI
 
 struct LanguagePickerView: View {
     @Binding var myBindVar: String
-    
     var body: some View {
       HStack{
                 Menu {
                     Button {
-                        self.myBindVar = "English"
+                        self.myBindVar = "English 🇬🇧"
                     } label: {
                         Text("English 🇬🇧")
                        
                     }
                     Button {
-                        self.myBindVar = "Dutch"
+                        self.myBindVar = "Dutch 🇳🇱"
                     } label: {
                         Text("Dutch 🇳🇱")
                         
                     }
                     Button {
-                        self.myBindVar = "German"
+                        self.myBindVar = "German 🇩🇪"
                     } label: {
                         Text("German 🇩🇪")
                         
                     }
                     Button {
-                        self.myBindVar = "French"
+                        self.myBindVar = "French 🇫🇷"
                     } label: {
                         Text("French 🇫🇷")
                         

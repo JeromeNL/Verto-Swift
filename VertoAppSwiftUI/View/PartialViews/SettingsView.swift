@@ -12,7 +12,8 @@ struct SettingsView: View {
     //@State private var sheetHeight:CGFloat = 250
     //@State private var showEasterEgg = false
     //@State private var TitleClicks = 0
-    @State var myBind = ""
+    @State var myBind = "Dutch 🇳🇱"
+    @State var lightSelectorBinding = "light"
     var animation: Animation {
         Animation.linear
     }
@@ -88,7 +89,7 @@ struct SettingsView: View {
                             LanguagePickerView(myBindVar: $myBind)
                             
                             // DARK/LIGHT MODE
-                            LightSelecterView()
+                            LightSelecterView(lightSelectorBinding: $lightSelectorBinding)
                             
                             HStack{
                                 Button(action: {
