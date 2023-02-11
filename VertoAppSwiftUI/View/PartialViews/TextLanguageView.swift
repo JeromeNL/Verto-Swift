@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TextLanguageView {
     
-    @Binding var translateInput1: String 
+    @Binding var translateInput1: String
     @Binding var translateOutput1: String
     @Binding var currentInputLanguage1: String
     @Binding var currentOutputLanguage1: String
