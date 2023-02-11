@@ -9,10 +9,10 @@ import SwiftUI
 
 struct TextLanguageView {
     
-    @State var translateInput1: String = ""
-    @State var translateOutput1: String = ""
-    @State var currentInputLanguage1: String = "English"
-    @State var currentOutputLanguage1: String = "German"
+    @Binding var translateInput1: String 
+    @Binding var translateOutput1: String
+    @Binding var currentInputLanguage1: String
+    @Binding var currentOutputLanguage1: String
     
     
     public func inputTextField(isEnabled: Bool, selectedLanguage: String) -> some View {
