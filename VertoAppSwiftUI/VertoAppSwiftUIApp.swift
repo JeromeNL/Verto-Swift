@@ -6,6 +6,7 @@ struct VertoAppSwiftUIApp: App {
         WindowGroup {
             NavigationView{
                 GeneralView()
+                // Test
             }
         }
     }
