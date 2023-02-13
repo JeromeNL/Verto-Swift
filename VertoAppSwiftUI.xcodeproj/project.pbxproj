@@ -33,6 +33,10 @@
 		55B48CB22999B17E004FDBDF /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CB02999B17E004FDBDF /* NewsArticle.swift */; };
 		55B48CB62999B463004FDBDF /* MainNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CB52999B463004FDBDF /* MainNewsView.swift */; };
 		55B48CB82999B707004FDBDF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CB72999B707004FDBDF /* APIClient.swift */; };
+		55B48CF32999CC22004FDBDF /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CF22999CC22004FDBDF /* ScanData.swift */; };
+		55B48CF52999CC54004FDBDF /* ImageAiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CF42999CC54004FDBDF /* ImageAiView.swift */; };
+		55B48CF72999CCBE004FDBDF /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CF62999CCBE004FDBDF /* ScannerView.swift */; };
+		55B48CF92999CD00004FDBDF /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CF82999CD00004FDBDF /* TextRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		55B48CB02999B17E004FDBDF /* NewsArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsArticle.swift; path = "../../../../../../Downloads/SpaceNews-main/SpaceNews/Views/NewsArticle.swift"; sourceTree = "<group>"; };
 		55B48CB52999B463004FDBDF /* MainNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsView.swift; sourceTree = "<group>"; };
 		55B48CB72999B707004FDBDF /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = "../../../../../Downloads/SpaceNews-main/SpaceNews/API/APIClient.swift"; sourceTree = "<group>"; };
+		55B48CF22999CC22004FDBDF /* ScanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
+		55B48CF42999CC54004FDBDF /* ImageAiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAiView.swift; sourceTree = "<group>"; };
+		55B48CF62999CCBE004FDBDF /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		55B48CF82999CD00004FDBDF /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,7 @@
 		4C0444A929894BBC00DB498A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55B48CF22999CC22004FDBDF /* ScanData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +182,7 @@
 			children = (
 				55B48CB72999B707004FDBDF /* APIClient.swift */,
 				550DCFAA2989A0E50083BE1F /* ChatGptViewModel.swift */,
+				55B48CF82999CD00004FDBDF /* TextRecognizer.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,6 +198,7 @@
 				4C1B01D6298FBAEB00151D6E /* TextFinisherView.swift */,
 				4C14575D29905DB800FB72D2 /* FormalMakerView.swift */,
 				55B48CB52999B463004FDBDF /* MainNewsView.swift */,
+				55B48CF42999CC54004FDBDF /* ImageAiView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -195,6 +206,7 @@
 		5551894E29917F6000EF4D1E /* PartialViews */ = {
 			isa = PBXGroup;
 			children = (
+				55B48CF62999CCBE004FDBDF /* ScannerView.swift */,
 				55B48CB02999B17E004FDBDF /* NewsArticle.swift */,
 				55B48CAF2999B17E004FDBDF /* NewsView.swift */,
 				4C0444B2298987B700DB498A /* GeneralView.swift */,
@@ -350,12 +362,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0444B1298969E000DB498A /* SynonymsView.swift in Sources */,
+				55B48CF52999CC54004FDBDF /* ImageAiView.swift in Sources */,
+				55B48CF92999CD00004FDBDF /* TextRecognizer.swift in Sources */,
 				5551895A2991873400EF4D1E /* OptionButtonView.swift in Sources */,
 				4C0444AD29894CF600DB498A /* HomeView.swift in Sources */,
 				55B48CB12999B17E004FDBDF /* NewsView.swift in Sources */,
+				55B48CF32999CC22004FDBDF /* ScanData.swift in Sources */,
 				4C6A38682989443500E94E64 /* ContentView.swift in Sources */,
 				555189562991836300EF4D1E /* OptionsView.swift in Sources */,
 				55B48CB62999B463004FDBDF /* MainNewsView.swift in Sources */,
+				55B48CF72999CCBE004FDBDF /* ScannerView.swift in Sources */,
 				550DCFAB2989A0E50083BE1F /* ChatGptViewModel.swift in Sources */,
 				55B48CB82999B707004FDBDF /* APIClient.swift in Sources */,
 				55518952299180E200EF4D1E /* LanguagePickerView.swift in Sources */,
