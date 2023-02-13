@@ -20,12 +20,15 @@ struct TextLanguageView {
     let german:LocalizedStringKey = "German";
     let french:LocalizedStringKey = "French";
     
+    let defaults = UserDefaults.standard
+    
     
     public func inputTextField(isEnabled: Bool, outputLanguageSelectorDisabled: Bool = false, selectedLanguage: String) -> some View {
         VStack(alignment: .leading) {
             Menu {
                 Button {
                     isEnabled ? (currentInputLanguage1 = "English") : (currentOutputLanguage1 = "English")
+                    
                 } label: {
                     Text(LocalizedStringKey("English").stringValue() + " 🇬🇧")
                 }

@@ -12,7 +12,7 @@ struct SettingsView: View {
     
     let defaults2 = UserDefaults.standard;
     
-    @State var myBind = "🇳🇱"
+    @State var nativeLanguageBind = ""
     @State var lightSelectorBinding = ""
     
     
@@ -77,7 +77,22 @@ struct SettingsView: View {
                                     Text(nativeLanguage)
                                         .fontWeight(.semibold)
                                     
-                                    Text(myBind)
+                                    if(nativeLanguageBind == ""){
+                                        let lang = (defaults2.string(forKey: DefaultsKeys.nativeLanguage) ?? nativeLanguageBind)
+                                        
+                                        if(lang == "german"){
+                                            Text("🇩🇪");
+                                        } else if (lang == "dutch"){
+                                            Text("🇳🇱");
+                                        } else if (lang == "french"){
+                                            Text("🇫🇷");
+                                        } else if (lang == "english"){
+                                            Text("🇬🇧");
+                                        }
+                                    } else{
+                                        Text(nativeLanguageBind)
+                                    }
+                                   
                                 }
                             }
                         }
@@ -89,7 +104,7 @@ struct SettingsView: View {
                         
                         VStack{
                             // NATIVE LANGUAGE SELECTOR
-                            LanguagePickerView(myBindVar: $myBind)
+                            LanguagePickerView(myBindVar: $nativeLanguageBind)
                             
                             // DARK/LIGHT MODE
                             LightSelecterView(lightSelectorBinding: $lightSelectorBinding)
