@@ -20,6 +20,7 @@
 		4C6A386A2989443600E94E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A38692989443600E94E64 /* Assets.xcassets */; };
 		4C6A386D2989443600E94E64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A386C2989443600E94E64 /* Preview Assets.xcassets */; };
 		4C6A3891298944F800E94E64 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4C6A3890298944F800E94E64 /* OpenAISwift */; };
+		4C6CDEE7299AEAEA0027D189 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6CDEE6299AEAEA0027D189 /* DefaultsKeys.swift */; };
 		550DCFAB2989A0E50083BE1F /* ChatGptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DCFAA2989A0E50083BE1F /* ChatGptViewModel.swift */; };
 		555189502991800000EF4D1E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551894F2991800000EF4D1E /* SettingsView.swift */; };
 		55518952299180E200EF4D1E /* LanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55518951299180E200EF4D1E /* LanguagePickerView.swift */; };
@@ -64,6 +65,7 @@
 		4C6A386C2989443600E94E64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C6A38722989443700E94E64 /* VertoAppSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VertoAppSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6A387C2989443700E94E64 /* VertoAppSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VertoAppSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6CDEE6299AEAEA0027D189 /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = SOURCE_ROOT; };
 		550DCFAA2989A0E50083BE1F /* ChatGptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptViewModel.swift; sourceTree = "<group>"; };
 		5551894A299179F600EF4D1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		5551894F2991800000EF4D1E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		4C0444A929894BBC00DB498A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4C6CDEE6299AEAEA0027D189 /* DefaultsKeys.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0444B1298969E000DB498A /* SynonymsView.swift in Sources */,
+				4C6CDEE7299AEAEA0027D189 /* DefaultsKeys.swift in Sources */,
 				5551895A2991873400EF4D1E /* OptionButtonView.swift in Sources */,
 				4C0444AD29894CF600DB498A /* HomeView.swift in Sources */,
 				4C6A38682989443500E94E64 /* ContentView.swift in Sources */,

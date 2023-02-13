@@ -45,10 +45,7 @@ struct TextLanguageView {
                     Text(LocalizedStringKey("French").stringValue() + " 🇫🇷")
                 }
             } label: {
-                // prints Localized value of `KEY_NAME_HERE`
-                // DOESNT print `KEY_NAME_HERE`
                 HStack {
-                    
                     Text(outputLanguageSelectorDisabled ? LocalizedStringKey("Improved").stringValue() : selectedLanguage).font(.title2).fontWeight(.bold)
                     Image(systemName: "ellipsis.message")
                 }
@@ -78,6 +75,7 @@ struct TextLanguageView {
     
 
 }
+
 
 extension LocalizedStringKey {
     var stringKey: String? {

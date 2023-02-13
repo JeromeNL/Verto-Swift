@@ -4,21 +4,18 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
-
-    //@State private var showWelcomeView = false
-    //@State private var showMoreOptions = false
     @State private var showSettingsSheet2 = false
     let sourceCode:LocalizedStringKey = "SourceCode"
     let logOut:LocalizedStringKey = "LogOut";
     let activeSince:LocalizedStringKey = "ActiveSince";
     let nativeLanguage:LocalizedStringKey = "NativeLanguage";
     
-    //@State private var sheetHeight:CGFloat = 250
-    //@State private var showEasterEgg = false
-    //@State private var TitleClicks = 0
+    let defaults2 = UserDefaults.standard;
+    
     @State var myBind = "🇳🇱"
-    @State var lightSelectorBinding = "light"
+    @State var lightSelectorBinding = ""
+    
+    
     var animation: Animation {
         Animation.linear
     }
