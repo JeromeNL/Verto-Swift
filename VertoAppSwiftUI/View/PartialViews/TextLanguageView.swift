@@ -15,6 +15,11 @@ struct TextLanguageView {
     @Binding var currentOutputLanguage1: String
     let typeHereText:LocalizedStringKey = "TypeHereText"
     let improved:LocalizedStringKey = "Improved";
+    let english:LocalizedStringKey = "English";
+    let dutch:LocalizedStringKey = "Dutch";
+    let german:LocalizedStringKey = "German";
+    let french:LocalizedStringKey = "French";
+    
     
     public func inputTextField(isEnabled: Bool, outputLanguageSelectorDisabled: Bool = false, selectedLanguage: String) -> some View {
         VStack(alignment: .leading) {
@@ -22,26 +27,29 @@ struct TextLanguageView {
                 Button {
                     isEnabled ? (currentInputLanguage1 = "English") : (currentOutputLanguage1 = "English")
                 } label: {
-                    Text("English 🇬🇧")
+                    Text(LocalizedStringKey("English").stringValue() + " 🇬🇧")
                 }
                 Button {
                     isEnabled ? (currentInputLanguage1 = "Dutch") : (currentOutputLanguage1 = "Dutch")
                 } label: {
-                    Text("Dutch 🇳🇱")
+                    Text(LocalizedStringKey("Dutch").stringValue() + " 🇳🇱")
                 }
                 Button {
                     isEnabled ? (currentInputLanguage1 = "German") : (currentOutputLanguage1 = "German")
                 } label: {
-                    Text("German 🇩🇪")
+                    Text(LocalizedStringKey("German").stringValue() + " 🇩🇪")
                 }
                 Button {
                     isEnabled ? (currentInputLanguage1 = "French") : (currentOutputLanguage1 = "French")
                 } label: {
-                    Text("French 🇫🇷")
+                    Text(LocalizedStringKey("French").stringValue() + " 🇫🇷")
                 }
             } label: {
+                // prints Localized value of `KEY_NAME_HERE`
+                // DOESNT print `KEY_NAME_HERE`
                 HStack {
-                    Text(selectedLanguage).font(.title2).fontWeight(.bold)
+                    
+                    Text(outputLanguageSelectorDisabled ? LocalizedStringKey("Improved").stringValue() : selectedLanguage).font(.title2).fontWeight(.bold)
                     Image(systemName: "ellipsis.message")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -69,4 +77,29 @@ struct TextLanguageView {
     }
     
 
+}
+
+extension LocalizedStringKey {
+    var stringKey: String? {
+        Mirror(reflecting: self).children.first(where: { $0.label == "key" })?.value as? String
+    }
+}
+
+extension String {
+    static func localizedString(for key: String,
+                                locale: Locale = .current) -> String {
+        
+        let language = locale.languageCode
+        let path = Bundle.main.path(forResource: language, ofType: "lproj")!
+        let bundle = Bundle(path: path)!
+        let localizedString = NSLocalizedString(key, bundle: bundle, comment: "")
+        
+        return localizedString
+    }
+}
+
+extension LocalizedStringKey {
+    func stringValue(locale: Locale = .current) -> String {
+        return .localizedString(for: self.stringKey!, locale: locale)
+    }
 }

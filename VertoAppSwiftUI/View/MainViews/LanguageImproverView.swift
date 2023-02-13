@@ -46,7 +46,7 @@ struct LanguageImproverView: View {
                         send()
                     }
                 
-                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
+                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, outputLanguageSelectorDisabled: true, selectedLanguage: currentOutputLanguage)
                               
                 Spacer()
                 OptionButtonView()
@@ -81,6 +81,7 @@ struct LanguageImproverView_Previews: PreviewProvider {
         LanguageImproverView()
     }
 }
+
 
 
     

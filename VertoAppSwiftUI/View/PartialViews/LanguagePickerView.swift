@@ -9,32 +9,36 @@ import SwiftUI
 
 struct LanguagePickerView: View {
     let changeNativeText:LocalizedStringKey = "ChangeNativeText"
+    let english:LocalizedStringKey = "English";
+    let dutch:LocalizedStringKey = "Dutch";
+    let german:LocalizedStringKey = "German";
+    let french:LocalizedStringKey = "French";
     @Binding var myBindVar: String
     var body: some View {
       HStack{
                 Menu {
                     Button {
-                        self.myBindVar = "English 🇬🇧"
+                        self.myBindVar = "🇬🇧"
                     } label: {
-                        Text("English 🇬🇧")
+                        Text(LocalizedStringKey("English").stringValue() + " 🇬🇧")
                        
                     }
                     Button {
-                        self.myBindVar = "Dutch 🇳🇱"
+                        self.myBindVar = "🇳🇱"
                     } label: {
-                        Text("Dutch 🇳🇱")
+                        Text(LocalizedStringKey("Dutch").stringValue() + " 🇳🇱")
                         
                     }
                     Button {
-                        self.myBindVar = "German 🇩🇪"
+                        self.myBindVar = "🇩🇪"
                     } label: {
-                        Text("German 🇩🇪")
+                        Text(LocalizedStringKey("German").stringValue() + " 🇩🇪")
                         
                     }
                     Button {
-                        self.myBindVar = "French 🇫🇷"
+                        self.myBindVar = "🇫🇷"
                     } label: {
-                        Text("French 🇫🇷")
+                        Text(LocalizedStringKey("French").stringValue() + " 🇫🇷")
                         
                     }
                 } label: {
@@ -63,3 +67,29 @@ struct LanguagePickerView: View {
 //        LanguagePickerView(myBindVar: )
 //    }
 //}
+
+extension LocalizedStringKey {
+    var stringKey2: String? {
+        Mirror(reflecting: self).children.first(where: { $0.label == "key" })?.value as? String
+    }
+}
+
+extension String {
+    static func localizedString2(for key: String,
+                                locale: Locale = .current) -> String {
+        
+        let language = locale.languageCode
+        let path = Bundle.main.path(forResource: language, ofType: "lproj")!
+        let bundle = Bundle(path: path)!
+        let localizedString = NSLocalizedString(key, bundle: bundle, comment: "")
+        
+        return localizedString
+    }
+}
+
+extension LocalizedStringKey {
+    func stringValue2(locale: Locale = .current) -> String {
+        return .localizedString(for: self.stringKey!, locale: locale)
+    }
+}
+

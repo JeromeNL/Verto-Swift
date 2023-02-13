@@ -17,7 +17,7 @@ struct SettingsView: View {
     //@State private var sheetHeight:CGFloat = 250
     //@State private var showEasterEgg = false
     //@State private var TitleClicks = 0
-    @State var myBind = "Dutch 🇳🇱"
+    @State var myBind = "🇳🇱"
     @State var lightSelectorBinding = "light"
     var animation: Animation {
         Animation.linear
@@ -79,6 +79,7 @@ struct SettingsView: View {
                                 VStack{
                                     Text(nativeLanguage)
                                         .fontWeight(.semibold)
+                                    
                                     Text(myBind)
                                 }
                             }
