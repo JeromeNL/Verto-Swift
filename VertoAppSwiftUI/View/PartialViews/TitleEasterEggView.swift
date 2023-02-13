@@ -8,16 +8,22 @@
 import SwiftUI
 
 struct TitleEasterEggView: View {
+    
+    
     @State private var TitleClicks = 0
-    @State private var showEasterEgg = false
-    let translateTitleText:LocalizedStringKey = "translateTitleText"
+    @State private var showEasterEgg2 = false
+    var translateTitleText:LocalizedStringKey = "empty"
+    
+    init(displayTitle:String) {
+        translateTitleText = LocalizedStringKey(displayTitle);
+    }
     
     var body: some View {
-
+            
             Button(action: {
                 TitleClicks += 1
                 if(TitleClicks == 5){
-                    showEasterEgg = true
+                    showEasterEgg2 = true
                 } else if(TitleClicks > 5){
                     TitleClicks = 1
                 }
@@ -30,7 +36,7 @@ struct TitleEasterEggView: View {
                     .padding(5)
                     .padding(.leading, 10)
             })
-            .sheet(isPresented: $showEasterEgg , content:{
+            .sheet(isPresented: $showEasterEgg2 , content:{
                 VStack(alignment: .leading){
                     ZStack{
                         Image(systemName: "xmark")
@@ -38,7 +44,7 @@ struct TitleEasterEggView: View {
                             .padding(.top, 15)
                             .padding(.leading, 15)
                             .onTapGesture(perform: {
-                                showEasterEgg = false
+                                showEasterEgg2 = false
                             })
                     }
                         ContentView()
@@ -50,6 +56,6 @@ struct TitleEasterEggView: View {
 
 struct TitleEasterEggView_Previews: PreviewProvider {
     static var previews: some View {
-        TitleEasterEggView()
+        TitleEasterEggView(displayTitle: "testje")
     }
 }

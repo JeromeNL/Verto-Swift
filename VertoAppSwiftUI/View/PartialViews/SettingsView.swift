@@ -6,21 +6,23 @@ import SwiftUI
 struct SettingsView: View {
     
 
-    @State private var showWelcomeView = false
-    @State private var showMoreOptions = false
-    @State private var showSettingsSheet = false
-    @State private var sheetHeight:CGFloat = 250
-    @State private var showEasterEgg = false
-    @State private var TitleClicks = 0
+    //@State private var showWelcomeView = false
+    //@State private var showMoreOptions = false
+    @State private var showSettingsSheet2 = false
+    //@State private var sheetHeight:CGFloat = 250
+    //@State private var showEasterEgg = false
+    //@State private var TitleClicks = 0
+    @State var myBind = "Dutch 🇳🇱"
+    @State var lightSelectorBinding = "light"
     var animation: Animation {
         Animation.linear
     }
 
 
     var body: some View {
- 
+        
             Button(action: {
-                showSettingsSheet.toggle()
+                showSettingsSheet2.toggle()
                 
             }, label: {
                 Image(systemName: "gearshape")
@@ -28,15 +30,15 @@ struct SettingsView: View {
                     .frame(width: 30, height: 30)
                     .foregroundColor(.black)
                     .padding(.horizontal, 10)
-                    .rotationEffect(Angle.degrees(showSettingsSheet ? 90 : 0))
+                    .rotationEffect(Angle.degrees(showSettingsSheet2 ? 90 : 0))
                     .animation(animation)
             })
-            .sheet(isPresented: $showSettingsSheet, content: {
+            .sheet(isPresented: $showSettingsSheet2, content: {
                 VStack() {
                     HStack(){
                         Image(systemName: "xmark")
                             .onTapGesture(perform: {
-                                showSettingsSheet = false;
+                                showSettingsSheet2 = false;
                             })
                     }
                     .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -72,11 +74,9 @@ struct SettingsView: View {
                                 VStack{
                                     Text("Native language:")
                                         .fontWeight(.semibold)
-                                    Text("Dutch 🇳🇱")
+                                    Text(myBind)
                                 }
-                               
                             }
-                           
                         }
                         .frame(width: 170, height: 260)
                         .background(Color("LightGraybackground"))
@@ -86,10 +86,10 @@ struct SettingsView: View {
                         
                         VStack{
                             // NATIVE LANGUAGE SELECTOR
-                            LanguagePickerView().body
+                            LanguagePickerView(myBindVar: $myBind)
                             
                             // DARK/LIGHT MODE
-                            LightSelecterView().body
+                            LightSelecterView(lightSelectorBinding: $lightSelectorBinding)
                             
                             HStack{
                                 Button(action: {

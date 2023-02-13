@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OptionsView: View {
     @State private var showMoreOptions = false
+    @State private var showImprover = false
     var body: some View {
         
             NavigationView {
@@ -21,20 +22,28 @@ struct OptionsView: View {
                             .toolbar{
                                 ToolbarItem(placement: .navigationBarTrailing) {
                                     Menu {
+                                                       
                                         Button(action: {
+                                            print("IMPROVER")
                                             showMoreOptions.toggle()
+                                           
                                         }, label:{
                                             Label("Language Improver", systemImage: "plus.message.fill")
                                         })
-                                        .sheet (isPresented: $showMoreOptions){
-                                          
-                                        }
+                                        .sheet(isPresented: $showImprover, content: {
+                                            Text("Improver")
+                                        }) .scrollDisabled(true)
+                                            .presentationDetents([.height(325)]);
                                         
-                                        Button(action: {}, label:{
+                                        Button(action: {
+                                            print("FORMAL")
+                                        }, label:{
                                             Label("Formal Maker", systemImage: "checkmark.message.fill")
                                         })
                                         
-                                        Button(action: {}, label:{
+                                        Button(action: {
+                                            print("FINISHER")
+                                        }, label:{
                                             Label("Text Finisher", systemImage: "ellipsis.message.fill")
                                         })
                                     } label: {

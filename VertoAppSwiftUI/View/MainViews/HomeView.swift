@@ -12,7 +12,7 @@ struct HomeView: View {
     @State private var showSettingsSheet = false
     @State private var sheetHeight:CGFloat = 250
     @State private var showEasterEgg = false
-
+    
     
     let translateTitleText:LocalizedStringKey = "translateTitleText"
     
@@ -27,21 +27,21 @@ struct HomeView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    TitleEasterEggView().body
+                    TitleEasterEggView(displayTitle: "Translate")
                     Spacer()
-                    OptionsView().body
-                    SettingsView().body
+                    OptionsView()
+                    SettingsView()
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
                 .cornerRadius(10)
                
-                TextLanguageView().inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
+                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
                     .onSubmit {
                         send()
                     }
 
-                TextLanguageView().inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
+                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
                               
                 Spacer()
                 OptionButtonView().body

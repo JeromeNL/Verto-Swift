@@ -3,6 +3,7 @@ import SwiftUI
 
 struct TextFinisherView: View {
     @State var translateInput: String = ""
+    @State var translateOutput: String = ""
     @State var currentInputLanguage: String = "English"
     @State var currentOutputLanguage: String = "German"
     @State var displayText = "Type your text"
@@ -15,10 +16,10 @@ struct TextFinisherView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    TitleEasterEggView().body
+                    TitleEasterEggView(displayTitle: "Finisher")
                     Spacer()
-                    OptionsView().body
-                    SettingsView().body
+                    OptionsView()
+                    SettingsView()
                     
               
                 }
@@ -26,13 +27,13 @@ struct TextFinisherView: View {
                 .background(Color.blue)
                 .cornerRadius(10)
                 
-                TextLanguageView().inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
+                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
                     .onSubmit {
                         send()
                     }
 
                Spacer()
-                OptionButtonView().body
+                OptionButtonView()
                     .padding(.bottom, 35)
             }
         }

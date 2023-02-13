@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct LightSelecterView: View {
+    @Binding var lightSelectorBinding: String
     var body: some View {
-
             HStack{
                 HStack{
                     Menu {
                         HStack {
                             Button {
-                                
+                                self.lightSelectorBinding = "light"
                             } label: {
                                 Text("Light ")
                                 Image(systemName: "lightbulb")
@@ -24,7 +24,7 @@ struct LightSelecterView: View {
                         }
                         HStack {
                             Button {
-                               
+                                self.lightSelectorBinding = "dark"
                             } label: {
                                 Text("Dark ")
                                 Image(systemName: "lightbulb.fill")
@@ -32,7 +32,7 @@ struct LightSelecterView: View {
                         }
                         HStack {
                             Button {
-                               
+                                self.lightSelectorBinding = "device"
                             } label: {
                                 Text("Device default ")
                                 Image(systemName: "iphone.gen3")
@@ -44,8 +44,15 @@ struct LightSelecterView: View {
                             Text("Change Mode")
                                 .font(.subheadline)
                                .fontWeight(.bold)
-                               
-                            Image(systemName: "lightbulb")
+                            
+                            if(self.lightSelectorBinding == "light"){
+                                Image(systemName: "lightbulb")
+                            } else if (self.lightSelectorBinding == "dark"){
+                                Image(systemName: "lightbulb.fill")
+                            } else if(self.lightSelectorBinding == "device"){
+                                Image(systemName: "iphone.gen3")
+                            }
+                            
                         }
                         .frame(maxWidth: .infinity, alignment: .center)
 
@@ -64,8 +71,8 @@ struct LightSelecterView: View {
     }
 }
 
-struct LightSelecterView_Previews: PreviewProvider {
-    static var previews: some View {
-        LightSelecterView()
-    }
-}
+//struct LightSelecterView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LightSelecterView()
+//    }
+//}
