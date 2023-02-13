@@ -9,6 +9,10 @@ import SwiftUI
 
 struct LightSelecterView: View {
     @Binding var lightSelectorBinding: String
+    let changeLightMode:LocalizedStringKey = "ChangeLightMode"
+    let light:LocalizedStringKey = "Light"
+    let dark:LocalizedStringKey = "Dark"
+    let device:LocalizedStringKey = "Device"
     var body: some View {
             HStack{
                 HStack{
@@ -17,7 +21,7 @@ struct LightSelecterView: View {
                             Button {
                                 self.lightSelectorBinding = "light"
                             } label: {
-                                Text("Light ")
+                                Text(light)
                                 Image(systemName: "lightbulb")
                             }
                             
@@ -26,7 +30,7 @@ struct LightSelecterView: View {
                             Button {
                                 self.lightSelectorBinding = "dark"
                             } label: {
-                                Text("Dark ")
+                                Text(dark)
                                 Image(systemName: "lightbulb.fill")
                             }
                         }
@@ -34,14 +38,14 @@ struct LightSelecterView: View {
                             Button {
                                 self.lightSelectorBinding = "device"
                             } label: {
-                                Text("Device default ")
+                                Text(device)
                                 Image(systemName: "iphone.gen3")
                             }
                         }
                         
                     } label: {
                         HStack(){
-                            Text("Change Mode")
+                            Text(changeLightMode)
                                 .font(.subheadline)
                                .fontWeight(.bold)
                             

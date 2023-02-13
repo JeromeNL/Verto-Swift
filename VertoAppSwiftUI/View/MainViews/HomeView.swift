@@ -14,7 +14,7 @@ struct HomeView: View {
     @State private var showEasterEgg = false
     
     
-    let translateTitleText:LocalizedStringKey = "translateTitleText"
+    
     
     
     
@@ -29,7 +29,6 @@ struct HomeView: View {
                 HStack() {
                     TitleEasterEggView(displayTitle: "Translate")
                     Spacer()
-                    OptionsView()
                     SettingsView()
                 }
                 .frame(maxWidth: .infinity)

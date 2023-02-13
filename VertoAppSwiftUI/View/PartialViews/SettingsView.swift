@@ -9,6 +9,11 @@ struct SettingsView: View {
     //@State private var showWelcomeView = false
     //@State private var showMoreOptions = false
     @State private var showSettingsSheet2 = false
+    let sourceCode:LocalizedStringKey = "SourceCode"
+    let logOut:LocalizedStringKey = "LogOut";
+    let activeSince:LocalizedStringKey = "ActiveSince";
+    let nativeLanguage:LocalizedStringKey = "NativeLanguage";
+    
     //@State private var sheetHeight:CGFloat = 250
     //@State private var showEasterEgg = false
     //@State private var TitleClicks = 0
@@ -65,14 +70,14 @@ struct SettingsView: View {
                            
                             VStack{
                                 VStack{
-                                    Text("Active since: ")
+                                    Text(activeSince)
                                         .fontWeight(.semibold)
                                     Text("25-02-2023")
                                 }
                                 .padding(.top, 10)
                                
                                 VStack{
-                                    Text("Native language:")
+                                    Text(nativeLanguage)
                                         .fontWeight(.semibold)
                                     Text(myBind)
                                 }
@@ -96,7 +101,7 @@ struct SettingsView: View {
                                    
                                 }, label: {
                                     Link(destination: URL(string: "https://github.com/jeromenl")!) {
-                                        Text("Source Code")
+                                        Text(sourceCode)
                                            .font(.subheadline)
                                            .fontWeight(.bold)
                                         Image(systemName: "text.justify")
@@ -111,7 +116,7 @@ struct SettingsView: View {
                             .cornerRadius(10)
                             
                             HStack{
-                                Text("Logout")
+                                Text(logOut)
                                     .font(.subheadline)
                                    .fontWeight(.bold)
                                 Image(systemName: "rectangle.portrait.and.arrow.right")

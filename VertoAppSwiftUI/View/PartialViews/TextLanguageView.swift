@@ -13,9 +13,10 @@ struct TextLanguageView {
     @Binding var translateOutput1: String
     @Binding var currentInputLanguage1: String
     @Binding var currentOutputLanguage1: String
+    let typeHereText:LocalizedStringKey = "TypeHereText"
+    let improved:LocalizedStringKey = "Improved";
     
-    
-    public func inputTextField(isEnabled: Bool, selectedLanguage: String) -> some View {
+    public func inputTextField(isEnabled: Bool, outputLanguageSelectorDisabled: Bool = false, selectedLanguage: String) -> some View {
         VStack(alignment: .leading) {
             Menu {
                 Button {
@@ -46,9 +47,10 @@ struct TextLanguageView {
                 .frame(maxWidth: .infinity, alignment: .leading)
             }
             .foregroundColor(.primary).frame(width: 200, alignment: .leading)
+            .disabled(outputLanguageSelectorDisabled)
             
             ZStack(alignment: .top) {
-                let displayText = isEnabled ? "Type your text" : ""
+                let displayText = isEnabled ? typeHereText : ""
                 TextField(
                     displayText, text: (isEnabled ? $translateInput1 : $translateOutput1), axis: .vertical
                 )

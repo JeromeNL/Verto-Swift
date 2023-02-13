@@ -11,7 +11,7 @@ struct FormalMakerView: View {
     @State var translateInput: String = ""
     @State var translateOutput: String = ""
     @State var currentInputLanguage: String = "English"
-    @State var currentOutputLanguage: String = "German"
+    @State var currentOutputLanguage: String = "Improved"
     @ObservedObject var viewModel = ChatGptViewModel()
     @State private var showWelcomeView = false
     @State private var showMoreOptions = false
@@ -31,9 +31,9 @@ struct FormalMakerView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    TitleEasterEggView(displayTitle: "FormalMaker")
+                    TitleEasterEggView(displayTitle: "Formal")
                     Spacer()
-                    OptionsView()
+                    //OptionsView()
                     SettingsView()
                 }
                 .frame(maxWidth: .infinity)
@@ -45,9 +45,8 @@ struct FormalMakerView: View {
                     .onSubmit {
                         send()
                     }
-
-                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
-                              
+                
+                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, outputLanguageSelectorDisabled: true, selectedLanguage: currentOutputLanguage)
            
                 Spacer()
                  OptionButtonView()

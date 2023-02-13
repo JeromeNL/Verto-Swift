@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LanguagePickerView: View {
+    let changeNativeText:LocalizedStringKey = "ChangeNativeText"
     @Binding var myBindVar: String
     var body: some View {
       HStack{
@@ -38,7 +39,7 @@ struct LanguagePickerView: View {
                     }
                 } label: {
                     HStack(){
-                        Text("Change Native Language")
+                        Text(changeNativeText)
                             .font(.subheadline)
                            .fontWeight(.bold)
                            

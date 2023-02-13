@@ -6,6 +6,8 @@ struct ContentView: View {
     @ObservedObject var viewModel = ChatGptViewModel()
     @State var text = ""
     @State var models = [String]()
+    let sendButtonText:LocalizedStringKey = "SendButtonText"
+    let typeHereText:LocalizedStringKey = "TypeHereText"
     
 
     var body: some View {
@@ -24,9 +26,9 @@ struct ContentView: View {
             VStack {
                 Divider()
                 HStack {
-                    TextField("Type here ", text: $text)
+                    TextField(typeHereText, text: $text)
                         .disableAutocorrection(true)
-                    Button("Send") {
+                    Button(sendButtonText) {
                         send()
                     }
                 }

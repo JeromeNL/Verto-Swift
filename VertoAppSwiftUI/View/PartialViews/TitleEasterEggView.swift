@@ -20,36 +20,40 @@ struct TitleEasterEggView: View {
     
     var body: some View {
             
+        HStack {
             Button(action: {
-                TitleClicks += 1
-                if(TitleClicks == 5){
-                    showEasterEgg2 = true
-                } else if(TitleClicks > 5){
-                    TitleClicks = 1
-                }
-                
-            }, label: {
-                Text(translateTitleText)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(.primary)
-                    .padding(5)
-                    .padding(.leading, 10)
-            })
-            .sheet(isPresented: $showEasterEgg2 , content:{
-                VStack(alignment: .leading){
-                    ZStack{
-                        Image(systemName: "xmark")
-                            .frame(width: 20, height: 20)
-                            .padding(.top, 15)
-                            .padding(.leading, 15)
-                            .onTapGesture(perform: {
-                                showEasterEgg2 = false
-                            })
+                    TitleClicks += 1
+                    if(TitleClicks == 5){
+                        showEasterEgg2 = true
+                    } else if(TitleClicks > 5){
+                        TitleClicks = 1
                     }
-                        ContentView()
-                }
+                    
+                }, label: {
+                    Text(translateTitleText)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.primary)
+                        .padding(5)
+                        //.padding(.leading, 10)
+                        .frame(width: 175)
+                })
+                .sheet(isPresented: $showEasterEgg2 , content:{
+                    VStack(alignment: .leading){
+                        ZStack{
+                            Image(systemName: "xmark")
+                                .frame(width: 20, height: 20)
+                                .padding(.top, 15)
+                                .padding(.leading, 15)
+                                .onTapGesture(perform: {
+                                    showEasterEgg2 = false
+                                })
+                        }
+                            ContentView()
+                    }
             })
+            Spacer()
+        }
         }
     
 }

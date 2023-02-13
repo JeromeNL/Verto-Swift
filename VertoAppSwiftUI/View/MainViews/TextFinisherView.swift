@@ -18,7 +18,7 @@ struct TextFinisherView: View {
                 HStack() {
                     TitleEasterEggView(displayTitle: "Finisher")
                     Spacer()
-                    OptionsView()
+                    //OptionsView()
                     SettingsView()
                     
               

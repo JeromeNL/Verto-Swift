@@ -7,4 +7,22 @@
 */
 
 
-"translateTitleText" = "Translate";
+"TranslateTitleText" = "Translate";
+"SendButtonText" = "Send";
+"TypeHereText" = "Type here..";
+"ChangeNativeText" = "Change Native Language";
+"ChangeLightMode" = "Change mode";
+"SourceCode" = "SourceCode";
+"LogOut" = "Log out";
+"ActiveSince" = "Active since:";
+"NativeLanguage" = "Native Language:";
+"Light" = "Light";
+"Dark" = "Dark";
+"Device" = "Device default";
+"Translate" = "Translate";
+"Article" = "Article";
+"Synonyms" = "Synonyms";
+"Improver" = "Improver";
+"Finisher" = "Finisher";
+"Formal" = "Formal";
+"Improved" = "Improved";

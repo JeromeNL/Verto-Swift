@@ -22,7 +22,6 @@ struct OptionsView: View {
                             .toolbar{
                                 ToolbarItem(placement: .navigationBarTrailing) {
                                     Menu {
-                                                       
                                         Button(action: {
                                             print("IMPROVER")
                                             showMoreOptions.toggle()
@@ -30,10 +29,7 @@ struct OptionsView: View {
                                         }, label:{
                                             Label("Language Improver", systemImage: "plus.message.fill")
                                         })
-                                        .sheet(isPresented: $showImprover, content: {
-                                            Text("Improver")
-                                        }) .scrollDisabled(true)
-                                            .presentationDetents([.height(325)]);
+                                       
                                         
                                         Button(action: {
                                             print("FORMAL")

@@ -14,9 +14,7 @@ struct ArticleView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    
                     TitleEasterEggView(displayTitle: "Article")
-                    
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)

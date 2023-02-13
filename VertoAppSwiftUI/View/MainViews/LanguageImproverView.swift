@@ -33,7 +33,7 @@ struct LanguageImproverView: View {
                 HStack() {
                     TitleEasterEggView(displayTitle: "Improver")
                     Spacer()
-                    OptionsView()
+                    //OptionsView()
                     SettingsView()
                 }
                 .frame(maxWidth: .infinity)
