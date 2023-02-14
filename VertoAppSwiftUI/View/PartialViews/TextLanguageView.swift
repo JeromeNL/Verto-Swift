@@ -22,6 +22,8 @@ struct TextLanguageView {
     
     let defaults = UserDefaults.standard
     
+    let languageLocal = languageToLocal()
+    
     
     public func inputTextField(isEnabled: Bool, outputLanguageSelectorDisabled: Bool = false, selectedLanguage: String) -> some View {
         VStack(alignment: .leading) {
@@ -49,7 +51,7 @@ struct TextLanguageView {
                 }
             } label: {
                 HStack {
-                    Text(outputLanguageSelectorDisabled ? LocalizedStringKey("Improved").stringValue() : selectedLanguage).font(.title2).fontWeight(.bold)
+                    Text(outputLanguageSelectorDisabled ? LocalizedStringKey("Improved").stringValue() : languageLocal.englishNameToLocal(englishLangName: selectedLanguage)).font(.title2).fontWeight(.bold)
                     Image(systemName: "ellipsis.message")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
