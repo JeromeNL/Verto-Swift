@@ -1,44 +1,45 @@
-//
-//  LanguagePickerView.swift
-//  VertoAppSwiftUI
-//
-//  Created by janique van den oever on 06/02/2023.
-//
-
 import SwiftUI
 
 struct LanguagePickerView: View {
+    let changeNativeText:LocalizedStringKey = "ChangeNativeText"
+    let defaults = UserDefaults.standard
+    let english:LocalizedStringKey = "English";
+    let dutch:LocalizedStringKey = "Dutch";
+    let german:LocalizedStringKey = "German";
+    let french:LocalizedStringKey = "French";
     @Binding var myBindVar: String
     var body: some View {
       HStack{
                 Menu {
                     Button {
-                        self.myBindVar = "English 🇬🇧"
+                        self.myBindVar = "🇬🇧"
+                        defaults.set("english", forKey: DefaultsKeys.nativeLanguage)
                     } label: {
-                        Text("English 🇬🇧")
-                       
+                        Text(LocalizedStringKey("English").stringValue() + " 🇬🇧")
                     }
                     Button {
-                        self.myBindVar = "Dutch 🇳🇱"
+                        self.myBindVar = "🇳🇱"
+                        defaults.set("dutch", forKey: DefaultsKeys.nativeLanguage)
                     } label: {
-                        Text("Dutch 🇳🇱")
+                        Text(LocalizedStringKey("Dutch").stringValue() + " 🇳🇱")
                         
                     }
                     Button {
-                        self.myBindVar = "German 🇩🇪"
+                        self.myBindVar = "🇩🇪"
+                        defaults.set("german", forKey: DefaultsKeys.nativeLanguage)
                     } label: {
-                        Text("German 🇩🇪")
+                        Text(LocalizedStringKey("German").stringValue() + " 🇩🇪")
                         
                     }
                     Button {
-                        self.myBindVar = "French 🇫🇷"
+                        self.myBindVar = "🇫🇷"
+                        defaults.set("french", forKey: DefaultsKeys.nativeLanguage)
                     } label: {
-                        Text("French 🇫🇷")
-                        
+                        Text(LocalizedStringKey("French").stringValue() + " 🇫🇷")
                     }
                 } label: {
                     HStack(){
-                        Text("Change Native Language")
+                        Text(changeNativeText)
                             .font(.subheadline)
                            .fontWeight(.bold)
                            
@@ -53,12 +54,8 @@ struct LanguagePickerView: View {
             .frame(width: 170, height: 55)
             .background(Color("LightGraybackground"))
             .cornerRadius(10)
-        
+       
     }
 }
 
-//struct LanguagePickerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LanguagePickerView(myBindVar: )
-//    }
-//}
+

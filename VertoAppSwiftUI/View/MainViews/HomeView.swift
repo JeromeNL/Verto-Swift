@@ -4,7 +4,7 @@ import SwiftUI
 struct HomeView: View {
     @State var translateInput: String = ""
     @State var translateOutput: String = ""
-    @State var currentInputLanguage: String = "English"
+    @State var currentInputLanguage: String = ""
     @State var currentOutputLanguage: String = "German"
     @ObservedObject var viewModel = ChatGptViewModel()
     @State private var showWelcomeView = false
@@ -13,11 +13,7 @@ struct HomeView: View {
     @State private var sheetHeight:CGFloat = 250
     @State private var showEasterEgg = false
     
-    
-    let translateTitleText:LocalizedStringKey = "translateTitleText"
-    
-    
-    
+  
     var animation: Animation {
         Animation.linear
     }
@@ -29,7 +25,6 @@ struct HomeView: View {
                 HStack() {
                     TitleEasterEggView(displayTitle: "Translate")
                     Spacer()
-                    OptionsView()
                     SettingsView()
                 }
                 .frame(maxWidth: .infinity)
@@ -46,7 +41,6 @@ struct HomeView: View {
                 Spacer()
                 OptionButtonView().body
                     .padding(.bottom, 35)
-                
             }
         }
         .onAppear {
@@ -65,25 +59,12 @@ struct HomeView: View {
             }
         }
     }
-    
-    
 }
 
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-        
-        
-        
     }
 }
-
-extension HomeView{
-     
-    
-    
-
-}
-    
   

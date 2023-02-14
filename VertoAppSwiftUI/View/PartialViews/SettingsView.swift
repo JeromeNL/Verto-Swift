@@ -1,26 +1,19 @@
-
-
-
 import SwiftUI
 
 struct SettingsView: View {
-    
-
-    //@State private var showWelcomeView = false
-    //@State private var showMoreOptions = false
     @State private var showSettingsSheet2 = false
-    //@State private var sheetHeight:CGFloat = 250
-    //@State private var showEasterEgg = false
-    //@State private var TitleClicks = 0
-    @State var myBind = "Dutch 🇳🇱"
-    @State var lightSelectorBinding = "light"
+    @State var nativeLanguageBind = ""
+    @State var lightSelectorBinding = ""
+    let sourceCode:LocalizedStringKey = "SourceCode"
+    let logOut:LocalizedStringKey = "LogOut";
+    let activeSince:LocalizedStringKey = "ActiveSince";
+    let nativeLanguage:LocalizedStringKey = "NativeLanguage";
+    let defaults2 = UserDefaults.standard;
     var animation: Animation {
         Animation.linear
     }
 
-
     var body: some View {
-        
             Button(action: {
                 showSettingsSheet2.toggle()
                 
@@ -59,22 +52,36 @@ struct SettingsView: View {
                                 }
                                 HStack {
                                     Text("@JeromeNL")
-                                    
                                 }
                             }
                            
                             VStack{
                                 VStack{
-                                    Text("Active since: ")
+                                    Text(activeSince)
                                         .fontWeight(.semibold)
                                     Text("25-02-2023")
                                 }
                                 .padding(.top, 10)
                                
                                 VStack{
-                                    Text("Native language:")
+                                    Text(nativeLanguage)
                                         .fontWeight(.semibold)
-                                    Text(myBind)
+                                    
+                                    if(nativeLanguageBind == ""){
+                                        let lang = (defaults2.string(forKey: DefaultsKeys.nativeLanguage) ?? nativeLanguageBind)
+                                        
+                                        if(lang == "german"){
+                                            Text("🇩🇪");
+                                        } else if (lang == "dutch"){
+                                            Text("🇳🇱");
+                                        } else if (lang == "french"){
+                                            Text("🇫🇷");
+                                        } else if (lang == "english"){
+                                            Text("🇬🇧");
+                                        }
+                                    } else{
+                                        Text(nativeLanguageBind)
+                                    }
                                 }
                             }
                         }
@@ -86,7 +93,7 @@ struct SettingsView: View {
                         
                         VStack{
                             // NATIVE LANGUAGE SELECTOR
-                            LanguagePickerView(myBindVar: $myBind)
+                            LanguagePickerView(myBindVar: $nativeLanguageBind)
                             
                             // DARK/LIGHT MODE
                             LightSelecterView(lightSelectorBinding: $lightSelectorBinding)
@@ -96,22 +103,20 @@ struct SettingsView: View {
                                    
                                 }, label: {
                                     Link(destination: URL(string: "https://github.com/jeromenl")!) {
-                                        Text("Source Code")
+                                        Text(sourceCode)
                                            .font(.subheadline)
                                            .fontWeight(.bold)
                                         Image(systemName: "text.justify")
                                     }
                                     .foregroundColor(.primary)
-                                   
                                 })
-                                
                             }
                             .frame(width: 170, height:55)
                             .background(Color("LightGraybackground"))
                             .cornerRadius(10)
                             
                             HStack{
-                                Text("Logout")
+                                Text(logOut)
                                     .font(.subheadline)
                                    .fontWeight(.bold)
                                 Image(systemName: "rectangle.portrait.and.arrow.right")
@@ -127,7 +132,6 @@ struct SettingsView: View {
                 .presentationDetents([.height(325)])
             })
         }
-        
     }
 
 
