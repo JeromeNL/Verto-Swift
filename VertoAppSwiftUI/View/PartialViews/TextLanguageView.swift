@@ -20,7 +20,7 @@ struct TextLanguageView {
                 Button {
                     isEnabled ? (currentInputLanguage1 = "English") : (currentOutputLanguage1 = "English")
                 } label: {
-                    Text(LocalizedStringKey("English").stringValue() + " 🇬🇧")
+                    Text( LocalizedStringKey("English").stringValue() + " 🇬🇧")
                 }
                 Button {
                     isEnabled ? (currentInputLanguage1 = "Dutch") : (currentOutputLanguage1 = "Dutch")
@@ -94,7 +94,7 @@ extension LocalizedStringKey {
 
 extension String {
     static func localizedString(for key: String, locale: Locale = .current) -> String {
-        
+
         let language = locale.languageCode
         let path = Bundle.main.path(forResource: language, ofType: "lproj")!
         let bundle = Bundle(path: path)!
