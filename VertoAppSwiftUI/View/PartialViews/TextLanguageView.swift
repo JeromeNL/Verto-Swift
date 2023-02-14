@@ -51,7 +51,9 @@ struct TextLanguageView {
                 }
             } label: {
                 HStack {
-                    Text(outputLanguageSelectorDisabled ? LocalizedStringKey("Improved").stringValue() : languageLocal.englishNameToLocal(englishLangName: selectedLanguage)).font(.title2).fontWeight(.bold)
+                    Text(getLanguageForPicker(selectedLanguage: selectedLanguage, outputLanguageSelectorDisabled: outputLanguageSelectorDisabled))
+                        .font(.title2)
+                        .fontWeight(.bold)
                     Image(systemName: "ellipsis.message")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -73,12 +75,29 @@ struct TextLanguageView {
             .background()
             .cornerRadius(15)
             .shadow(
-                color: Color.gray, radius: 5.0, x: 0, y: 5)
+                color: Color.gray,
+                radius: 5.0, x: 0, y: 5)
         }
         .padding(.top, 10)
     }
     
 
+}
+
+extension TextLanguageView{
+    func getLanguageForPicker(selectedLanguage: String, outputLanguageSelectorDisabled: Bool) -> String{
+       
+        if(outputLanguageSelectorDisabled){
+            return LocalizedStringKey("Improved").stringValue()
+        } else {
+            if(selectedLanguage != ""){
+                return languageLocal.englishNameToLocal(englishLangName: selectedLanguage)
+            } else{
+                 var language =  defaults.string(forKey: DefaultsKeys.nativeLanguage) ?? "N/A :("
+                return languageLocal.englishNameToLocal(englishLangName: language.capitalized)
+            }
+        }
+    }
 }
 
 
