@@ -1,10 +1,3 @@
-//
-//  FormalMakerView.swift
-//  VertoAppSwiftUI
-//
-//  Created by Joram Kwetters on 31/01/2023.
-//
-
 import SwiftUI
 
 struct FormalMakerView: View {
@@ -19,8 +12,6 @@ struct FormalMakerView: View {
     @State private var sheetHeight:CGFloat = 250
     @State private var showEasterEgg = false
     @State private var TitleClicks = 0
-    
-    
     
     var animation: Animation {
         Animation.linear
@@ -40,7 +31,6 @@ struct FormalMakerView: View {
                 .background(Color.blue)
                 .cornerRadius(10)
                 
-               
                 TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
                     .onSubmit {
                         send()
@@ -51,7 +41,6 @@ struct FormalMakerView: View {
                 Spacer()
                  OptionButtonView()
                      .padding(.bottom, 35)
-                
             }
         }
         .onAppear {
@@ -70,8 +59,6 @@ struct FormalMakerView: View {
             }
         }
     }
-    
-    
 }
 
 

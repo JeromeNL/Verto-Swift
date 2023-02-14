@@ -12,7 +12,6 @@ struct GeneralView: View {
         VStack {
             bottomMenuItemsGeneral
         }
-        
     }
 }
 
@@ -57,7 +56,7 @@ extension GeneralView{
                     Image(systemName: "book")
                     Text(formal)
                 }
-        }
+         }
     }
 }
 

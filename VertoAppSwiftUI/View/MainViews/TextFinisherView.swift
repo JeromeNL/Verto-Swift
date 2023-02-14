@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct TextFinisherView: View {
@@ -20,8 +19,6 @@ struct TextFinisherView: View {
                     Spacer()
                     //OptionsView()
                     SettingsView()
-                    
-              
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)

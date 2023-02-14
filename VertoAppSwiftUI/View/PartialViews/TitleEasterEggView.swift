@@ -1,15 +1,6 @@
-//
-//  TitleEasterEggView.swift
-//  VertoAppSwiftUI
-//
-//  Created by janique van den oever on 06/02/2023.
-//
-
 import SwiftUI
 
 struct TitleEasterEggView: View {
-    
-    
     @State private var TitleClicks = 0
     @State private var showEasterEgg2 = false
     var translateTitleText:LocalizedStringKey = "empty"
@@ -19,7 +10,6 @@ struct TitleEasterEggView: View {
     }
     
     var body: some View {
-            
         HStack {
             Button(action: {
                     TitleClicks += 1
@@ -28,7 +18,6 @@ struct TitleEasterEggView: View {
                     } else if(TitleClicks > 5){
                         TitleClicks = 1
                     }
-                    
                 }, label: {
                     Text(translateTitleText)
                         .font(.title)
@@ -54,8 +43,7 @@ struct TitleEasterEggView: View {
             })
             Spacer()
         }
-        }
-    
+    }
 }
 
 struct TitleEasterEggView_Previews: PreviewProvider {

@@ -1,10 +1,3 @@
-//
-//  LightSelecterView.swift
-//  VertoAppSwiftUI
-//
-//  Created by janique van den oever on 06/02/2023.
-//
-
 import SwiftUI
 
 struct LightSelecterView: View {
@@ -26,7 +19,6 @@ struct LightSelecterView: View {
                                 Text(light)
                                 Image(systemName: "lightbulb")
                             }
-                            
                         }
                         HStack {
                             Button {
@@ -46,7 +38,6 @@ struct LightSelecterView: View {
                                 Image(systemName: "iphone.gen3")
                             }
                         }
-                        
                     } label: {
                         HStack(){
                             Text(changeLightMode)
@@ -67,7 +58,6 @@ struct LightSelecterView: View {
                                 } else if(defaults.string(forKey: DefaultsKeys.lightMode) == "device" ){
                                     Image(systemName: "iphone.gen3")
                                 }
-                                
                             }
                         }
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -82,12 +72,5 @@ struct LightSelecterView: View {
             .frame(width: 170, height: 55)
             .background(Color("LightGraybackground"))
             .cornerRadius(10)
-        //Text("Text: " + defaults.string(forKey: DefaultsKeys.lightMode)!)
     }
 }
-
-//struct LightSelecterView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LightSelecterView()
-//    }
-//}

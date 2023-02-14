@@ -14,10 +14,7 @@ struct SynonymsView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    
                     TitleEasterEggView(displayTitle: "Synonyms")
-                    
-                    
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
@@ -30,7 +27,6 @@ struct SynonymsView: View {
                     }
 
                 Spacer()
-                
                 
                 let arrayOfStrings = translateOutput.components(separatedBy: ", ")
                 List{
@@ -62,7 +58,6 @@ struct SynonymsView: View {
             }
         }
     }
-    
 }
 
 

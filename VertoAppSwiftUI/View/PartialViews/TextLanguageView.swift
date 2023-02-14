@@ -1,14 +1,6 @@
-//
-//  TextLanguageView.swift
-//  VertoAppSwiftUI
-//
-//  Created by janique van den oever on 06/02/2023.
-//
-
 import SwiftUI
 
 struct TextLanguageView {
-    
     @Binding var translateInput1: String
     @Binding var translateOutput1: String
     @Binding var currentInputLanguage1: String
@@ -19,18 +11,14 @@ struct TextLanguageView {
     let dutch:LocalizedStringKey = "Dutch";
     let german:LocalizedStringKey = "German";
     let french:LocalizedStringKey = "French";
-    
     let defaults = UserDefaults.standard
-    
     let languageLocal = languageToLocal()
-    
     
     public func inputTextField(isEnabled: Bool, outputLanguageSelectorDisabled: Bool = false, selectedLanguage: String) -> some View {
         VStack(alignment: .leading) {
             Menu {
                 Button {
                     isEnabled ? (currentInputLanguage1 = "English") : (currentOutputLanguage1 = "English")
-                    
                 } label: {
                     Text(LocalizedStringKey("English").stringValue() + " 🇬🇧")
                 }
@@ -80,13 +68,10 @@ struct TextLanguageView {
         }
         .padding(.top, 10)
     }
-    
-
 }
 
 extension TextLanguageView{
     func getLanguageForPicker(selectedLanguage: String, outputLanguageSelectorDisabled: Bool) -> String{
-       
         if(outputLanguageSelectorDisabled){
             return LocalizedStringKey("Improved").stringValue()
         } else {
@@ -108,14 +93,12 @@ extension LocalizedStringKey {
 }
 
 extension String {
-    static func localizedString(for key: String,
-                                locale: Locale = .current) -> String {
+    static func localizedString(for key: String, locale: Locale = .current) -> String {
         
         let language = locale.languageCode
         let path = Bundle.main.path(forResource: language, ofType: "lproj")!
         let bundle = Bundle(path: path)!
         let localizedString = NSLocalizedString(key, bundle: bundle, comment: "")
-        
         return localizedString
     }
 }

@@ -17,19 +17,9 @@ struct languageToLocal{
     let defaults = UserDefaults.standard
     
     func englishNameToLocal(englishLangName: String) -> String{
-        if(englishLangName == "English"){
-            return LocalizedStringKey("English").stringValue()
-        } else if (englishLangName == "Dutch"){
-            return LocalizedStringKey("Dutch").stringValue()
-        } else if (englishLangName == "German"){
-            return LocalizedStringKey("German").stringValue()
-        } else if (englishLangName == "French"){
-           return LocalizedStringKey("French").stringValue()
-        }
-        return "N/A"
+        return LocalizedStringKey(englishLangName).stringValue()
     }
 }
-
 
 
 extension LocalizedStringKey {
@@ -39,9 +29,7 @@ extension LocalizedStringKey {
 }
 
 extension String {
-    static func localizedString3(for key: String,
-                                locale: Locale = .current) -> String {
-        
+    static func localizedString3(for key: String, locale: Locale = .current) -> String {
         let language = locale.languageCode
         let path = Bundle.main.path(forResource: language, ofType: "lproj")!
         let bundle = Bundle(path: path)!

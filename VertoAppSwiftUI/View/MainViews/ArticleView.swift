@@ -21,21 +21,17 @@ struct ArticleView: View {
                 .background(Color.blue)
                 .cornerRadius(10)
                 
-               
                 TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
                     .onSubmit {
                         send()
                     }
-
+                
                 Spacer()
                 Text(translateOutput).font(.largeTitle).fontWeight(.bold)
                 Spacer()
                 Spacer()
                 OptionButtonView()
                     .padding(.bottom, 35)
-                
-                
-               
             }
         }
         .onAppear {
@@ -54,7 +50,6 @@ struct ArticleView: View {
             }
         }
     }
-    
 }
 
 

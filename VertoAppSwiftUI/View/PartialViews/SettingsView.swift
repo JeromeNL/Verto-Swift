@@ -1,28 +1,19 @@
-
-
-
 import SwiftUI
 
 struct SettingsView: View {
     @State private var showSettingsSheet2 = false
+    @State var nativeLanguageBind = ""
+    @State var lightSelectorBinding = ""
     let sourceCode:LocalizedStringKey = "SourceCode"
     let logOut:LocalizedStringKey = "LogOut";
     let activeSince:LocalizedStringKey = "ActiveSince";
     let nativeLanguage:LocalizedStringKey = "NativeLanguage";
-    
     let defaults2 = UserDefaults.standard;
-    
-    @State var nativeLanguageBind = ""
-    @State var lightSelectorBinding = ""
-    
-    
     var animation: Animation {
         Animation.linear
     }
 
-
     var body: some View {
-        
             Button(action: {
                 showSettingsSheet2.toggle()
                 
@@ -61,7 +52,6 @@ struct SettingsView: View {
                                 }
                                 HStack {
                                     Text("@JeromeNL")
-                                    
                                 }
                             }
                            
@@ -92,7 +82,6 @@ struct SettingsView: View {
                                     } else{
                                         Text(nativeLanguageBind)
                                     }
-                                   
                                 }
                             }
                         }
@@ -120,9 +109,7 @@ struct SettingsView: View {
                                         Image(systemName: "text.justify")
                                     }
                                     .foregroundColor(.primary)
-                                   
                                 })
-                                
                             }
                             .frame(width: 170, height:55)
                             .background(Color("LightGraybackground"))
@@ -145,7 +132,6 @@ struct SettingsView: View {
                 .presentationDetents([.height(325)])
             })
         }
-        
     }
 
 

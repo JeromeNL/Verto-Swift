@@ -1,10 +1,3 @@
-//
-//  LanguagePickerView.swift
-//  VertoAppSwiftUI
-//
-//  Created by janique van den oever on 06/02/2023.
-//
-
 import SwiftUI
 
 struct LanguagePickerView: View {
@@ -43,7 +36,6 @@ struct LanguagePickerView: View {
                         defaults.set("french", forKey: DefaultsKeys.nativeLanguage)
                     } label: {
                         Text(LocalizedStringKey("French").stringValue() + " 🇫🇷")
-                        
                     }
                 } label: {
                     HStack(){
@@ -65,12 +57,6 @@ struct LanguagePickerView: View {
        
     }
 }
-
-//struct LanguagePickerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LanguagePickerView(myBindVar: )
-//    }
-//}
 
 extension LocalizedStringKey {
     var stringKey2: String? {

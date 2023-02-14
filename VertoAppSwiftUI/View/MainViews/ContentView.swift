@@ -9,7 +9,6 @@ struct ContentView: View {
     let sendButtonText:LocalizedStringKey = "SendButtonText"
     let typeHereText:LocalizedStringKey = "TypeHereText"
     
-
     var body: some View {
         VStack(alignment: .leading) {
            
