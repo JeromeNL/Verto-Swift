@@ -1,17 +1,9 @@
-//
-//  OptionsView.swift
-//  VertoAppSwiftUI
-//
-//  Created by janique van den oever on 06/02/2023.
-//
-
 import SwiftUI
 
 struct OptionsView: View {
     @State private var showMoreOptions = false
     @State private var showImprover = false
     var body: some View {
-        
             NavigationView {
                 ZStack {
                     Color.blue
@@ -22,18 +14,12 @@ struct OptionsView: View {
                             .toolbar{
                                 ToolbarItem(placement: .navigationBarTrailing) {
                                     Menu {
-                                                       
                                         Button(action: {
                                             print("IMPROVER")
                                             showMoreOptions.toggle()
-                                           
                                         }, label:{
                                             Label("Language Improver", systemImage: "plus.message.fill")
                                         })
-                                        .sheet(isPresented: $showImprover, content: {
-                                            Text("Improver")
-                                        }) .scrollDisabled(true)
-                                            .presentationDetents([.height(325)]);
                                         
                                         Button(action: {
                                             print("FORMAL")
@@ -55,15 +41,13 @@ struct OptionsView: View {
                                     .foregroundColor(.black)
                                 }
                             }
-                    }
+                      }
                 }
                 .frame(width: 50, height: 100)
                 .background(.blue)
             }
             .frame(width: 50, height: 40)
         }
-        
-        
     }
 
 

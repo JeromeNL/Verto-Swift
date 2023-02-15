@@ -11,13 +11,11 @@ struct OptionButtonView: View {
                 functionButtonItem(widthHeight: 80, icon: "mic")
                 functionButtonItem(widthHeight: 60, icon: "speaker.wave.2")
                     .padding(.horizontal, 10)
-                
             }
             .frame(height: 100)
             .frame(maxWidth: .infinity)
             .background(Color.white)
         }
-        
 
         private func functionButtonItem(widthHeight: Double, icon: String) -> some View{
             Button(action: {

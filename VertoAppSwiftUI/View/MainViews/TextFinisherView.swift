@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct TextFinisherView: View {
@@ -18,10 +17,8 @@ struct TextFinisherView: View {
                 HStack() {
                     TitleEasterEggView(displayTitle: "Finisher")
                     Spacer()
-                    OptionsView()
+                    //OptionsView()
                     SettingsView()
-                    
-              
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)

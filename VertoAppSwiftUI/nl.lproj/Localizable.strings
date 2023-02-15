@@ -7,4 +7,26 @@
 */
 
 
-"translateTitleText" = "Vertalen";
+"TranslateTitleText" = "Vertalen";
+"SendButtonText" = "Verstuur";
+"TypeHereText" = "Type hier..";
+"ChangeNativeText" = "Verander moedertaal";
+"ChangeLightMode" = "Verander modus";
+"SourceCode" = "Broncode";
+"LogOut" = "Uitloggen";
+"ActiveSince" = "Actief sinds:";
+"NativeLanguage" = "Moedertaal:";
+"Light" = "Licht";
+"Dark" = "Donker";
+"Device" = "Apparaat standaard";
+"Translate" = "Vertalen";
+"Article" = "Lidwoord";
+"Synonyms" = "Synoniem";
+"Improver" = "Verbeteraar";
+"Finisher" = "Afmaker";
+"Formal" = "Formeel";
+"Improved" = "Verbeterd";
+"English" = "Engels";
+"Dutch" = "Nederlands";
+"German" = "Duits";
+"French" = "Frans";

@@ -1,17 +1,10 @@
-//
-//  FormalMakerView.swift
-//  VertoAppSwiftUI
-//
-//  Created by Joram Kwetters on 31/01/2023.
-//
-
 import SwiftUI
 
 struct FormalMakerView: View {
     @State var translateInput: String = ""
     @State var translateOutput: String = ""
     @State var currentInputLanguage: String = "English"
-    @State var currentOutputLanguage: String = "German"
+    @State var currentOutputLanguage: String = "Improved"
     @ObservedObject var viewModel = ChatGptViewModel()
     @State private var showWelcomeView = false
     @State private var showMoreOptions = false
@@ -19,8 +12,6 @@ struct FormalMakerView: View {
     @State private var sheetHeight:CGFloat = 250
     @State private var showEasterEgg = false
     @State private var TitleClicks = 0
-    
-    
     
     var animation: Animation {
         Animation.linear
@@ -31,28 +22,25 @@ struct FormalMakerView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    TitleEasterEggView(displayTitle: "FormalMaker")
+                    TitleEasterEggView(displayTitle: "Formal")
                     Spacer()
-                    OptionsView()
+                    //OptionsView()
                     SettingsView()
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
                 .cornerRadius(10)
                 
-               
                 TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
                     .onSubmit {
                         send()
                     }
-
-                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
-                              
+                
+                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, outputLanguageSelectorDisabled: true, selectedLanguage: currentOutputLanguage)
            
                 Spacer()
                  OptionButtonView()
                      .padding(.bottom, 35)
-                
             }
         }
         .onAppear {
@@ -71,8 +59,6 @@ struct FormalMakerView: View {
             }
         }
     }
-    
-    
 }
 
 
