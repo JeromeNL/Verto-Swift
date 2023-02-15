@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  VertoAppSwiftUI
+
+  Created by Joram Kwetters on 06/02/2023.
+  
+*/
+
+
+"TranslateTitleText" = "Translate";
+"SendButtonText" = "Send";
+"TypeHereText" = "Type here..";
+"ChangeNativeText" = "Change Native Language";
+"ChangeLightMode" = "Change mode";
+"SourceCode" = "SourceCode";
+"LogOut" = "Log out";
+"ActiveSince" = "Active since:";
+"NativeLanguage" = "Native Language:";
+"Light" = "Light";
+"Dark" = "Dark";
+"Device" = "Device default";
+"Translate" = "Translate";
+"Article" = "Article";
+"Synonyms" = "Synonyms";
+"Improver" = "Improver";
+"Finisher" = "Finisher";
+"Formal" = "Formal";
+"Improved" = "Improved";
+"English" = "English";
+"Dutch" = "Dutch";
+"German" = "German";
+"French" = "French";
