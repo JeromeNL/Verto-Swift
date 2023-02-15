@@ -30,15 +30,6 @@
 		555189582991865B00EF4D1E /* TitleEasterEggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555189572991865B00EF4D1E /* TitleEasterEggView.swift */; };
 		5551895A2991873400EF4D1E /* OptionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555189592991873400EF4D1E /* OptionButtonView.swift */; };
 		5551895C299189D100EF4D1E /* TextLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551895B299189D100EF4D1E /* TextLanguageView.swift */; };
-		55B48CAE2999B142004FDBDF /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 55B48CAD2999B142004FDBDF /* CachedAsyncImage */; };
-		55B48CB12999B17E004FDBDF /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CAF2999B17E004FDBDF /* NewsView.swift */; };
-		55B48CB22999B17E004FDBDF /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CB02999B17E004FDBDF /* NewsArticle.swift */; };
-		55B48CB62999B463004FDBDF /* MainNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CB52999B463004FDBDF /* MainNewsView.swift */; };
-		55B48CB82999B707004FDBDF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CB72999B707004FDBDF /* APIClient.swift */; };
-		55B48CF32999CC22004FDBDF /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CF22999CC22004FDBDF /* ScanData.swift */; };
-		55B48CF52999CC54004FDBDF /* ImageAiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CF42999CC54004FDBDF /* ImageAiView.swift */; };
-		55B48CF72999CCBE004FDBDF /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CF62999CCBE004FDBDF /* ScannerView.swift */; };
-		55B48CF92999CD00004FDBDF /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CF82999CD00004FDBDF /* TextRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,14 +77,6 @@
 		555189572991865B00EF4D1E /* TitleEasterEggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleEasterEggView.swift; sourceTree = "<group>"; };
 		555189592991873400EF4D1E /* OptionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionButtonView.swift; sourceTree = "<group>"; };
 		5551895B299189D100EF4D1E /* TextLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLanguageView.swift; sourceTree = "<group>"; };
-		55B48CAF2999B17E004FDBDF /* NewsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsView.swift; path = "../../../../../../Downloads/SpaceNews-main/SpaceNews/Views/NewsView.swift"; sourceTree = "<group>"; };
-		55B48CB02999B17E004FDBDF /* NewsArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsArticle.swift; path = "../../../../../../Downloads/SpaceNews-main/SpaceNews/Views/NewsArticle.swift"; sourceTree = "<group>"; };
-		55B48CB52999B463004FDBDF /* MainNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsView.swift; sourceTree = "<group>"; };
-		55B48CB72999B707004FDBDF /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = "../../../../../Downloads/SpaceNews-main/SpaceNews/API/APIClient.swift"; sourceTree = "<group>"; };
-		55B48CF22999CC22004FDBDF /* ScanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
-		55B48CF42999CC54004FDBDF /* ImageAiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAiView.swift; sourceTree = "<group>"; };
-		55B48CF62999CCBE004FDBDF /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
-		55B48CF82999CD00004FDBDF /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +85,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C6A3891298944F800E94E64 /* OpenAISwift in Frameworks */,
-				55B48CAE2999B142004FDBDF /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,10 +108,8 @@
 		4C0444A929894BBC00DB498A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				55B48CF22999CC22004FDBDF /* ScanData.swift */,
 				4C6CDEE6299AEAEA0027D189 /* DefaultsKeys.swift */,
 				4C6CDEE8299B7FE10027D189 /* languageToLocal.swift */,
-
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,9 +167,7 @@
 		550DCFA92989A0CD0083BE1F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				55B48CB72999B707004FDBDF /* APIClient.swift */,
 				550DCFAA2989A0E50083BE1F /* ChatGptViewModel.swift */,
-				55B48CF82999CD00004FDBDF /* TextRecognizer.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -204,8 +182,6 @@
 				4C1B01D0298FBA9E00151D6E /* LanguageImproverView.swift */,
 				4C1B01D6298FBAEB00151D6E /* TextFinisherView.swift */,
 				4C14575D29905DB800FB72D2 /* FormalMakerView.swift */,
-				55B48CB52999B463004FDBDF /* MainNewsView.swift */,
-				55B48CF42999CC54004FDBDF /* ImageAiView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -213,9 +189,6 @@
 		5551894E29917F6000EF4D1E /* PartialViews */ = {
 			isa = PBXGroup;
 			children = (
-				55B48CF62999CCBE004FDBDF /* ScannerView.swift */,
-				55B48CB02999B17E004FDBDF /* NewsArticle.swift */,
-				55B48CAF2999B17E004FDBDF /* NewsView.swift */,
 				4C0444B2298987B700DB498A /* GeneralView.swift */,
 				5551894F2991800000EF4D1E /* SettingsView.swift */,
 				55518951299180E200EF4D1E /* LanguagePickerView.swift */,
@@ -246,7 +219,6 @@
 			name = VertoAppSwiftUI;
 			packageProductDependencies = (
 				4C6A3890298944F800E94E64 /* OpenAISwift */,
-				55B48CAD2999B142004FDBDF /* CachedAsyncImage */,
 			);
 			productName = VertoAppSwiftUI;
 			productReference = 4C6A38622989443500E94E64 /* VertoAppSwiftUI.app */;
@@ -323,7 +295,6 @@
 			mainGroup = 4C6A38592989443500E94E64;
 			packageReferences = (
 				4C6A388F298944F700E94E64 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
-				55B48CAC2999B142004FDBDF /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 4C6A38632989443500E94E64 /* Products */;
 			projectDirPath = "";
@@ -369,23 +340,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0444B1298969E000DB498A /* SynonymsView.swift in Sources */,
-				55B48CF52999CC54004FDBDF /* ImageAiView.swift in Sources */,
-				55B48CF92999CD00004FDBDF /* TextRecognizer.swift in Sources */,
 				4C6CDEE7299AEAEA0027D189 /* DefaultsKeys.swift in Sources */,
-
 				5551895A2991873400EF4D1E /* OptionButtonView.swift in Sources */,
 				4C0444AD29894CF600DB498A /* HomeView.swift in Sources */,
-				55B48CB12999B17E004FDBDF /* NewsView.swift in Sources */,
-				55B48CF32999CC22004FDBDF /* ScanData.swift in Sources */,
 				4C6A38682989443500E94E64 /* ContentView.swift in Sources */,
 				4C6CDEE9299B7FE10027D189 /* languageToLocal.swift in Sources */,
 				555189562991836300EF4D1E /* OptionsView.swift in Sources */,
-				55B48CB62999B463004FDBDF /* MainNewsView.swift in Sources */,
-				55B48CF72999CCBE004FDBDF /* ScannerView.swift in Sources */,
 				550DCFAB2989A0E50083BE1F /* ChatGptViewModel.swift in Sources */,
-				55B48CB82999B707004FDBDF /* APIClient.swift in Sources */,
 				55518952299180E200EF4D1E /* LanguagePickerView.swift in Sources */,
-				55B48CB22999B17E004FDBDF /* NewsArticle.swift in Sources */,
 				4C0444B3298987B700DB498A /* GeneralView.swift in Sources */,
 				4C14575E29905DB800FB72D2 /* FormalMakerView.swift in Sources */,
 				4C1B01D1298FBA9E00151D6E /* LanguageImproverView.swift in Sources */,
@@ -741,14 +703,6 @@
 				kind = branch;
 			};
 		};
-		55B48CAC2999B142004FDBDF /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -756,11 +710,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4C6A388F298944F700E94E64 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
 			productName = OpenAISwift;
-		};
-		55B48CAD2999B142004FDBDF /* CachedAsyncImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 55B48CAC2999B142004FDBDF /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
-			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
