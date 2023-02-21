@@ -7,11 +7,8 @@ struct VertoAppSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
-               //ImageAiView()
-    
                 GeneralView()
                     .preferredColorScheme((defaults.string(forKey: DefaultsKeys.lightMode) == "dark") ? .dark : .light)
-                //MainNewsView()
             }
         }
     }
