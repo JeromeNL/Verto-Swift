@@ -10,34 +10,40 @@ struct ContentView: View {
     let typeHereText:LocalizedStringKey = "TypeHereText"
     
     var body: some View {
-        VStack(alignment: .leading) {
-           
-            Text("ChatGPT")
-                .font(.title)
-                .fontWeight(.bold)
-            Divider()
-            ForEach(models, id: \.self) { string in
-                Text(string)
-            }
-
-            Spacer()
-
-            VStack {
-                Divider()
-                HStack {
-                    TextField(typeHereText, text: $text)
-                        .disableAutocorrection(true)
-                    Button(sendButtonText) {
-                        send()
+        ScrollView {
+            VStack{
+                VStack(alignment: .leading) {
+                    
+                    Text("ChatGPT")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Divider()
+                    ForEach(models, id: \.self) { string in
+                        Text(string)
+                    }
+                    Spacer()
+                }
+                Spacer()
+                
+                
+                VStack {
+                    Divider()
+                    HStack {
+                        TextField(typeHereText, text: $text)
+                            .disableAutocorrection(true)
+                        Button(sendButtonText) {
+                            send()
+                        }
                     }
                 }
             }
+            .onAppear {
+                viewModel.setup()
+            }
+            .padding()
         }
-        .onAppear {
-            viewModel.setup()
-        }
-        .padding()
     }
+    
 
     func send() {
         guard !text.trimmingCharacters(in: .whitespaces).isEmpty else {

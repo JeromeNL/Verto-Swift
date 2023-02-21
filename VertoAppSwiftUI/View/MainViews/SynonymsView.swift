@@ -10,42 +10,44 @@ struct SynonymsView: View {
     
 
     var body: some View {
-        ZStack {
-            Color("DefaultBackground")
-            VStack{
-                HStack() {
-                    TitleEasterEggView(displayTitle: "Synonyms")
-                    Spacer()
-                }
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .cornerRadius(10)
-                
-                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
-                    .onSubmit {
-                        send()
+        ScrollView {
+            ZStack {
+                Color("DefaultBackground")
+                VStack{
+                    HStack() {
+                        TitleEasterEggView(displayTitle: "Synonyms")
+                        Spacer()
                     }
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    
+                    TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
+                        .onSubmit {
+                            send()
+                        }
 
-                Spacer()
-                
-                let arrayOfStrings = translateOutput.components(separatedBy: ", ")
-                List{
-                    ForEach(arrayOfStrings, id: \.self) { tag in
-                        Text(tag.capitalized)
-                                }
+                    Spacer()
+                    
+                    let arrayOfStrings = translateOutput.components(separatedBy: ", ")
+                    List{
+                        ForEach(arrayOfStrings, id: \.self) { tag in
+                            Text(tag.capitalized)
+                                    }
+                    }
+                    .scrollContentBackground(.hidden)
+                  
+                    Spacer()
+                    Spacer()
+                    OptionButtonView()
+                        .padding(.bottom, 35)
                 }
-                .scrollContentBackground(.hidden)
-              
-                Spacer()
-                Spacer()
-                OptionButtonView()
-                    .padding(.bottom, 35)
             }
-        }
-        .onAppear {
-            viewModel.setup()
-        }
+            .onAppear {
+                viewModel.setup()
+            }
         .padding()
+        }
     }
     
     func send() {

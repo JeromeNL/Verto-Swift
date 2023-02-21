@@ -19,34 +19,36 @@ struct HomeView: View {
     }
 
     var body: some View {
-        ZStack {
-            Color("DefaultBackground")
-            VStack{
-                HStack() {
-                    TitleEasterEggView(displayTitle: "Translate")
-                    Spacer()
-                    SettingsView()
-                }
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .cornerRadius(10)
-               
-                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
-                    .onSubmit {
-                        send()
+        ScrollView {
+            ZStack {
+                Color("DefaultBackground")
+                VStack{
+                    HStack() {
+                        TitleEasterEggView(displayTitle: "Translate")
+                        Spacer()
+                        SettingsView()
                     }
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                   
+                    TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
+                        .onSubmit {
+                            send()
+                        }
 
-                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
-                              
-                Spacer()
-                OptionButtonView().body
-                    .padding(.bottom, 35)
+                    TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
+                                  
+                    Spacer()
+                    OptionButtonView().body
+                        .padding(.bottom, 35)
+                }
             }
-        }
-        .onAppear {
-            viewModel.setup()
-        }
+            .onAppear {
+                viewModel.setup()
+            }
         .padding()
+        }
     }
     
     func send() {
