@@ -8,6 +8,7 @@ struct GeneralView: View {
     let finisher:LocalizedStringKey = "Finisher"
     let formal:LocalizedStringKey = "Formal"
     let news:LocalizedStringKey = "news"
+    
     var body: some View {
         
         VStack {
