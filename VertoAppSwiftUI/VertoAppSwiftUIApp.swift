@@ -5,6 +5,7 @@ struct VertoAppSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
+               //ImageAiView()
                 GeneralView()
             }
         }
