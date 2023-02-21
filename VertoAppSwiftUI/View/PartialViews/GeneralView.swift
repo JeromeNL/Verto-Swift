@@ -44,7 +44,7 @@ extension GeneralView{
             }
             LanguageImproverView()
                 .tabItem{
-                    Image(systemName: "book")
+                    Image(systemName: "chart.bar.fill")
                     Text(improver)
                 }
             TextFinisherView()
