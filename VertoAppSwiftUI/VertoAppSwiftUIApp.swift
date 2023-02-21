@@ -6,7 +6,8 @@ struct VertoAppSwiftUIApp: App {
         WindowGroup {
             NavigationView{
                //ImageAiView()
-                GeneralView()
+                //GeneralView()
+                MainNewsView()
             }
         }
     }
