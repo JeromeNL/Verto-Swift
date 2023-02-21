@@ -7,6 +7,8 @@ struct GeneralView: View {
     let improver:LocalizedStringKey = "Improver"
     let finisher:LocalizedStringKey = "Finisher"
     let formal:LocalizedStringKey = "Formal"
+   
+   
     var body: some View {
         
         VStack {
@@ -16,7 +18,9 @@ struct GeneralView: View {
 }
 
 struct GeneralView_Previews: PreviewProvider {
+    
     static var previews: some View {
+      
         GeneralView()
     }
 }

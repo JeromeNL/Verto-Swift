@@ -7,6 +7,9 @@ struct LightSelecterView: View {
     let light:LocalizedStringKey = "Light"
     let dark:LocalizedStringKey = "Dark"
     let device:LocalizedStringKey = "Device"
+    let helper = ModeHelper();
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+
     var body: some View {
             HStack{
                 HStack{
@@ -15,6 +18,7 @@ struct LightSelecterView: View {
                             Button {
                                 self.lightSelectorBinding = "light"
                                 defaults.set("light", forKey: DefaultsKeys.lightMode)
+                                helper.overrideDisplayMode(colorScheme: colorScheme)
                             } label: {
                                 Text(light)
                                 Image(systemName: "lightbulb")
@@ -24,6 +28,7 @@ struct LightSelecterView: View {
                             Button {
                                 self.lightSelectorBinding = "dark"
                                 defaults.set("dark", forKey: DefaultsKeys.lightMode)
+                                helper.overrideDisplayMode(colorScheme: colorScheme)
                             } label: {
                                 Text(dark)
                                 Image(systemName: "lightbulb.fill")
@@ -33,6 +38,7 @@ struct LightSelecterView: View {
                             Button {
                                 self.lightSelectorBinding = "device"
                                 defaults.set("device", forKey: DefaultsKeys.lightMode)
+                                helper.overrideDisplayMode(colorScheme: colorScheme)
                             } label: {
                                 Text(device)
                                 Image(systemName: "iphone.gen3")
