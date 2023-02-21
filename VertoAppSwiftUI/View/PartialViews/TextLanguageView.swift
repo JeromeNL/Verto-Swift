@@ -79,7 +79,7 @@ extension TextLanguageView{
                 return languageLocal.englishNameToLocal(englishLangName: selectedLanguage)
             } else{
                 
-                return languageLocal.englishNameToLocal(englishLangName: defaults.string(forKey: DefaultsKeys.nativeLanguage)?.capitalized ?? "N/A :(")
+                return languageLocal.englishNameToLocal(englishLangName: defaults.string(forKey: DefaultsKeys.nativeLanguage)?.capitalized ?? selectedLanguage)
             }
         }
     }

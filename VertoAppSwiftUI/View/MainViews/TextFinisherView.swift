@@ -18,7 +18,7 @@ struct TextFinisherView: View {
                     TitleEasterEggView(displayTitle: "Finisher")
                     Spacer()
                     //OptionsView()
-                    SettingsView()
+                    //SettingsView()
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)

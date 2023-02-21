@@ -4,7 +4,7 @@ import SwiftUI
 struct HomeView: View {
     @State var translateInput: String = ""
     @State var translateOutput: String = ""
-    @State var currentInputLanguage: String = ""
+    @State var currentInputLanguage: String = "Dutch"
     @State var currentOutputLanguage: String = "German"
     @ObservedObject var viewModel = ChatGptViewModel()
     @State private var showWelcomeView = false

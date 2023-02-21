@@ -25,7 +25,7 @@ struct FormalMakerView: View {
                     TitleEasterEggView(displayTitle: "Formal")
                     Spacer()
                     //OptionsView()
-                    SettingsView()
+                    //SettingsView()
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)

@@ -26,7 +26,7 @@ struct LanguageImproverView: View {
                     TitleEasterEggView(displayTitle: "Improver")
                     Spacer()
                     //OptionsView()
-                    SettingsView()
+                    //SettingsView()
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
