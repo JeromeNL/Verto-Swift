@@ -7,6 +7,7 @@ struct GeneralView: View {
     let improver:LocalizedStringKey = "Improver"
     let finisher:LocalizedStringKey = "Finisher"
     let formal:LocalizedStringKey = "Formal"
+    let news:LocalizedStringKey = "news"
     var body: some View {
         
         VStack {
@@ -48,13 +49,18 @@ extension GeneralView{
                 }
             TextFinisherView()
                 .tabItem{
-                    Image(systemName: "book")
+                    Image(systemName: "play")
                     Text(finisher)
                 }
             FormalMakerView()
                 .tabItem{
-                    Image(systemName: "book")
+                    Image(systemName: "graduationcap")
                     Text(formal)
+                }
+            MainNewsView()
+                .tabItem{
+                    Image(systemName: "newspaper")
+                    Text(news)
                 }
          }
     }
