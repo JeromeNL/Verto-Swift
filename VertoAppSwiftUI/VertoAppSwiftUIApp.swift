@@ -6,7 +6,8 @@ struct VertoAppSwiftUIApp: App {
         WindowGroup {
             NavigationView{
                //ImageAiView()
-                GeneralView()
+                var swiftUISpeech = SwiftUISpeech()
+                HomeView().environmentObject(swiftUISpeech)
                 //MainNewsView()
             }
         }

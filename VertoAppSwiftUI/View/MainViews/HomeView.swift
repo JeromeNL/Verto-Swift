@@ -12,8 +12,11 @@ struct HomeView: View {
     @State private var showSettingsSheet = false
     @State private var sheetHeight:CGFloat = 250
     @State private var showEasterEgg = false
+    @EnvironmentObject var swiftUISpeech:SwiftUISpeech
     
   
+    
+    
     var animation: Animation {
         Animation.linear
     }
@@ -31,22 +34,49 @@ struct HomeView: View {
                 .background(Color.blue)
                 .cornerRadius(10)
                
-                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
+                
+                TextLanguageView(translateInput1: $translateInput , translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
                     .onSubmit {
                         send()
                     }
 
                 TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
-                              
+                          
+                
+                Text("\(swiftUISpeech.outputText)")// prints results to screen
+                    .font(.title)
+                    .bold().onTapGesture {
+                        translateInput = "\(swiftUISpeech.outputText)"
+                    }
+                
+                
+                swiftUISpeech.getButton()
+
+                
                 Spacer()
-                OptionButtonView().body
-                    .padding(.bottom, 35)
+
+                
+                
+                    
+                    
+                    
+                
+                
+                
+           
+                
+                
+                    
             }
         }
         .onAppear {
             viewModel.setup()
         }
         .padding()
+    }
+    
+    func setTranslation(){
+        translateInput = swiftUISpeech.outputText
     }
     
     func send() {
