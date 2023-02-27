@@ -565,6 +565,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VertoAppSwiftUI/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "VertoAppSwiftUI requires permission to scan files";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView.storyboard;
@@ -595,6 +596,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VertoAppSwiftUI/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "VertoAppSwiftUI requires permission to scan files";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView.storyboard;
