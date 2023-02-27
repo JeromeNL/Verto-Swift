@@ -63,6 +63,11 @@ extension GeneralView{
                     Image(systemName: "newspaper")
                     Text(news)
                 }
+            ImageAiView()
+                .tabItem{
+                    Image(systemName: "camera")
+                    Text("Image Detection")
+                }
          }
     }
 }
