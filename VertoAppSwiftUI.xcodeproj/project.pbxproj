@@ -37,11 +37,10 @@
 		555189582991865B00EF4D1E /* TitleEasterEggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555189572991865B00EF4D1E /* TitleEasterEggView.swift */; };
 		5551895A2991873400EF4D1E /* OptionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555189592991873400EF4D1E /* OptionButtonView.swift */; };
 		5551895C299189D100EF4D1E /* TextLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551895B299189D100EF4D1E /* TextLanguageView.swift */; };
-		55707FFC29A4F88800008529 /* SpeechButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55707FF929A4F88800008529 /* SpeechButton.swift */; };
-		55707FFD29A4F88800008529 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55707FFA29A4F88800008529 /* ContentView2.swift */; };
-		55707FFE29A4F88800008529 /* SwiftUI Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55707FFB29A4F88800008529 /* SwiftUI Speech.swift */; };
 		55B48CAE2999B142004FDBDF /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 55B48CAD2999B142004FDBDF /* CachedAsyncImage */; };
 		55B48CF72999CCBE004FDBDF /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CF62999CCBE004FDBDF /* ScannerView.swift */; };
+		55EFD5E529B21C640061F0EB /* TranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFD5E429B21C640061F0EB /* TranslateView.swift */; };
+		55EFD5E729B21CEF0061F0EB /* SwiftUI Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EFD5E629B21CEF0061F0EB /* SwiftUI Speech.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,10 +95,9 @@
 		555189572991865B00EF4D1E /* TitleEasterEggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleEasterEggView.swift; sourceTree = "<group>"; };
 		555189592991873400EF4D1E /* OptionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionButtonView.swift; sourceTree = "<group>"; };
 		5551895B299189D100EF4D1E /* TextLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLanguageView.swift; sourceTree = "<group>"; };
-		55707FF929A4F88800008529 /* SpeechButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechButton.swift; path = "../../../../../Downloads/SwiftUI-Speech-to-Text-master/Speech to Text/SpeechButton.swift"; sourceTree = "<group>"; };
-		55707FFA29A4F88800008529 /* ContentView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView2.swift; path = "../../../../../Downloads/SwiftUI-Speech-to-Text-master/Speech to Text/ContentView2.swift"; sourceTree = "<group>"; };
-		55707FFB29A4F88800008529 /* SwiftUI Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SwiftUI Speech.swift"; path = "../../../../../Downloads/SwiftUI-Speech-to-Text-master/Speech to Text/SwiftUI Speech.swift"; sourceTree = "<group>"; };
 		55B48CF62999CCBE004FDBDF /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		55EFD5E429B21C640061F0EB /* TranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateView.swift; sourceTree = "<group>"; };
+		55EFD5E629B21CEF0061F0EB /* SwiftUI Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI Speech.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +139,7 @@
 		4C09E94A29A4D51E003F5535 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55EFD5E629B21CEF0061F0EB /* SwiftUI Speech.swift */,
 				4C09E94B29A4D51E003F5535 /* ScanData.swift */,
 				4C09E94E29A4D547003F5535 /* DefaultsKeys.swift */,
 				4C09E94D29A4D547003F5535 /* languageToLocal.swift */,
@@ -169,7 +168,6 @@
 		4C6A38642989443500E94E64 /* VertoAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				55707FF829A4F87500008529 /* Speech To Text */,
 				4C09E94A29A4D51E003F5535 /* Model */,
 				5551894A299179F600EF4D1E /* Info.plist */,
 				550DCFA92989A0CD0083BE1F /* ViewModel */,
@@ -212,6 +210,7 @@
 				4C1B01D0298FBA9E00151D6E /* LanguageImproverView.swift */,
 				4C1B01D6298FBAEB00151D6E /* TextFinisherView.swift */,
 				4C14575D29905DB800FB72D2 /* FormalMakerView.swift */,
+				55EFD5E429B21C640061F0EB /* TranslateView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -232,16 +231,6 @@
 				5551895B299189D100EF4D1E /* TextLanguageView.swift */,
 			);
 			path = PartialViews;
-			sourceTree = "<group>";
-		};
-		55707FF829A4F87500008529 /* Speech To Text */ = {
-			isa = PBXGroup;
-			children = (
-				55707FFB29A4F88800008529 /* SwiftUI Speech.swift */,
-				55707FFA29A4F88800008529 /* ContentView2.swift */,
-				55707FF929A4F88800008529 /* SpeechButton.swift */,
-			);
-			path = "Speech To Text";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,7 +378,6 @@
 				5551895A2991873400EF4D1E /* OptionButtonView.swift in Sources */,
 				4C0444AD29894CF600DB498A /* HomeView.swift in Sources */,
 				4C09E94529A4CF66003F5535 /* NewsView.swift in Sources */,
-				55707FFC29A4F88800008529 /* SpeechButton.swift in Sources */,
 				4C6A38682989443500E94E64 /* ContentView.swift in Sources */,
 				4C09E95429A4D621003F5535 /* ImageAiView.swift in Sources */,
 				555189562991836300EF4D1E /* OptionsView.swift in Sources */,
@@ -402,16 +390,16 @@
 				4C09E95229A4D5E8003F5535 /* MainNewsView.swift in Sources */,
 				4C09E94C29A4D51E003F5535 /* ScanData.swift in Sources */,
 				4C14575E29905DB800FB72D2 /* FormalMakerView.swift in Sources */,
-				55707FFE29A4F88800008529 /* SwiftUI Speech.swift in Sources */,
+				55EFD5E729B21CEF0061F0EB /* SwiftUI Speech.swift in Sources */,
 				4C1B01D1298FBA9E00151D6E /* LanguageImproverView.swift in Sources */,
 				5551895C299189D100EF4D1E /* TextLanguageView.swift in Sources */,
 				4C09E95029A4D547003F5535 /* DefaultsKeys.swift in Sources */,
+				55EFD5E529B21C640061F0EB /* TranslateView.swift in Sources */,
 				555189582991865B00EF4D1E /* TitleEasterEggView.swift in Sources */,
 				4C1B01D7298FBAEB00151D6E /* TextFinisherView.swift in Sources */,
 				4C6A38662989443500E94E64 /* VertoAppSwiftUIApp.swift in Sources */,
 				4C0444AF298969D100DB498A /* ArticleView.swift in Sources */,
 				555189502991800000EF4D1E /* SettingsView.swift in Sources */,
-				55707FFD29A4F88800008529 /* ContentView2.swift in Sources */,
 				555189542991819300EF4D1E /* LightSelecterView.swift in Sources */,
 				4C09E94329A4CF19003F5535 /* APIClient.swift in Sources */,
 			);

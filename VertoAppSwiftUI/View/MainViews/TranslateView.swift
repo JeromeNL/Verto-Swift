@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct TranslateView: View {
     @State var translateInput: String = ""
     @State var translateOutput: String = ""
     @State var currentInputLanguage: String = ""
@@ -26,7 +26,7 @@ struct HomeView: View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                    TitleEasterEggView(displayTitle: "Speech")
+                    TitleEasterEggView(displayTitle: "Translate")
                     Spacer()
                     SettingsView()
                 }
@@ -34,17 +34,16 @@ struct HomeView: View {
                 .background(Color.blue)
                 .cornerRadius(10)
                
-                Spacer()
                 
-                Text("\(swiftUISpeech.outputText)")// prints results to screen
-                    .font(.title)
-                    .bold().onTapGesture {
-                        translateInput = "\(swiftUISpeech.outputText)"
+                TextLanguageView(translateInput1: $translateInput , translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
+                    .onSubmit {
+                        send()
                     }
 
-                swiftUISpeech.getButton()
+                TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
+                          
                 Spacer()
-   
+ 
             }
         }
         .onAppear {
@@ -70,7 +69,7 @@ struct HomeView: View {
 }
 
 
-struct HomeView_Previews: PreviewProvider {
+struct TranslateView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }
