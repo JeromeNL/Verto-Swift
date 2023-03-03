@@ -8,6 +8,7 @@ struct GeneralView: View {
     let finisher:LocalizedStringKey = "Finisher"
     let formal:LocalizedStringKey = "Formal"
     let news:LocalizedStringKey = "news"
+    let speech:LocalizedStringKey = "Speech"
     
     var body: some View {
         
@@ -31,8 +32,8 @@ extension GeneralView{
              var swiftUISpeech = SwiftUISpeech()
             HomeView().environmentObject(swiftUISpeech)
                 .tabItem{
-                    Image(systemName: "ellipsis.message.fill")
-                    Text(translate)
+                    Image(systemName: "mic")
+                    Text(speech)
                 }
             TranslateView()
                 .tabItem {
@@ -44,11 +45,11 @@ extension GeneralView{
                     Image(systemName: "arrowshape.turn.up.left.fill")
                     Text(article)
             }
-            SynonymsView()
-                .tabItem {
-                    Image(systemName: "book")
-                    Text(synonyms)
-            }
+//            SynonymsView()
+//                .tabItem {
+//                    Image(systemName: "book")
+//                    Text(synonyms)
+//            }
             LanguageImproverView()
                 .tabItem{
                     Image(systemName: "chart.bar.fill")

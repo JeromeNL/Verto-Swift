@@ -43,9 +43,12 @@ struct HomeView: View {
                     }
 
                 swiftUISpeech.getButton()
+                    .background(Color.primary)
+                    
                 Spacer()
    
             }
+            
         }
         .onAppear {
             viewModel.setup()
