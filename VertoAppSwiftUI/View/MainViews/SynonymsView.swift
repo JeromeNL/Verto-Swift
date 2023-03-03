@@ -39,8 +39,7 @@ struct SynonymsView: View {
                   
                     Spacer()
                     Spacer()
-                    OptionButtonView()
-                        .padding(.bottom, 35)
+                   
                 }
             }
             .onAppear {

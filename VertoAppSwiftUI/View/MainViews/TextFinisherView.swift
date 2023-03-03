@@ -31,8 +31,7 @@ struct TextFinisherView: View {
                         }
 
                    Spacer()
-                    OptionButtonView()
-                        .padding(.bottom, 35)
+                    
                 }
             }
             .onAppear {

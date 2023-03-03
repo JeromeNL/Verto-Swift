@@ -31,9 +31,7 @@ struct ArticleView: View {
                     Text(translateOutput).font(.largeTitle).fontWeight(.bold)
                     Spacer()
                     Spacer()
-                    OptionButtonView()
-                        .padding(.bottom, 35)
-                }
+                            }
             }
             .onAppear {
                 viewModel.setup()

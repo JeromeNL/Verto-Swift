@@ -41,8 +41,7 @@ var body: some View {
                     }
                    
                 }
-                optionButtons
-                    .padding(.bottom, 35)
+         
                 
             }
         }

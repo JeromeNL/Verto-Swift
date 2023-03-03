@@ -31,7 +31,7 @@ struct MainNewsView: View {
                 withAnimation(.easeIn(duration: 2)) {
                     opac = 1.0
                 }
-                OptionButtonView().padding(.bottom, 35)
+               
                 
             }
         }
