@@ -23,8 +23,11 @@ struct ContentView: View {
                     }
                     Spacer()
                 }
-                Spacer()
-                
+                .padding(.bottom, 550)
+            }
+            
+            .padding(.leading, 20)
+        }
                 
                 VStack {
                     Divider()
@@ -36,12 +39,14 @@ struct ContentView: View {
                         }
                     }
                 }
-            }
+        
+        .padding()
+            
             .onAppear {
                 viewModel.setup()
             }
-            .padding()
-        }
+        
+        
     }
     
 
