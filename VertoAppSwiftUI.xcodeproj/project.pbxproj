@@ -29,6 +29,8 @@
 		4C6A386A2989443600E94E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A38692989443600E94E64 /* Assets.xcassets */; };
 		4C6A386D2989443600E94E64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A386C2989443600E94E64 /* Preview Assets.xcassets */; };
 		4C6A3891298944F800E94E64 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4C6A3890298944F800E94E64 /* OpenAISwift */; };
+		4CC06D2829B21E65005A83A7 /* SwiftUI Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC06D2729B21E65005A83A7 /* SwiftUI Speech.swift */; };
+		4CC06D2A29B21FC9005A83A7 /* TranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC06D2929B21FC9005A83A7 /* TranslateView.swift */; };
 		550DCFAB2989A0E50083BE1F /* ChatGptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DCFAA2989A0E50083BE1F /* ChatGptViewModel.swift */; };
 		555189502991800000EF4D1E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551894F2991800000EF4D1E /* SettingsView.swift */; };
 		55518952299180E200EF4D1E /* LanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55518951299180E200EF4D1E /* LanguagePickerView.swift */; };
@@ -84,6 +86,8 @@
 		4C6A386C2989443600E94E64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C6A38722989443700E94E64 /* VertoAppSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VertoAppSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6A387C2989443700E94E64 /* VertoAppSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VertoAppSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC06D2729B21E65005A83A7 /* SwiftUI Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftUI Speech.swift"; sourceTree = "<group>"; };
+		4CC06D2929B21FC9005A83A7 /* TranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateView.swift; sourceTree = "<group>"; };
 		550DCFAA2989A0E50083BE1F /* ChatGptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptViewModel.swift; sourceTree = "<group>"; };
 		5551894A299179F600EF4D1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		5551894F2991800000EF4D1E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 			children = (
 				4C09E94B29A4D51E003F5535 /* ScanData.swift */,
 				4C09E94E29A4D547003F5535 /* DefaultsKeys.swift */,
+				4CC06D2729B21E65005A83A7 /* SwiftUI Speech.swift */,
 				4C09E94D29A4D547003F5535 /* languageToLocal.swift */,
 			);
 			path = Model;
@@ -205,6 +210,7 @@
 				4C1B01D0298FBA9E00151D6E /* LanguageImproverView.swift */,
 				4C1B01D6298FBAEB00151D6E /* TextFinisherView.swift */,
 				4C14575D29905DB800FB72D2 /* FormalMakerView.swift */,
+				4CC06D2929B21FC9005A83A7 /* TranslateView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -383,8 +389,10 @@
 				4C09E94929A4D463003F5535 /* TextRecognizer.swift in Sources */,
 				4C09E95229A4D5E8003F5535 /* MainNewsView.swift in Sources */,
 				4C09E94C29A4D51E003F5535 /* ScanData.swift in Sources */,
+				4CC06D2A29B21FC9005A83A7 /* TranslateView.swift in Sources */,
 				4C14575E29905DB800FB72D2 /* FormalMakerView.swift in Sources */,
 				4C1B01D1298FBA9E00151D6E /* LanguageImproverView.swift in Sources */,
+				4CC06D2829B21E65005A83A7 /* SwiftUI Speech.swift in Sources */,
 				5551895C299189D100EF4D1E /* TextLanguageView.swift in Sources */,
 				4C09E95029A4D547003F5535 /* DefaultsKeys.swift in Sources */,
 				555189582991865B00EF4D1E /* TitleEasterEggView.swift in Sources */,
@@ -566,6 +574,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VertoAppSwiftUI/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "VertoAppSwiftUI requires permission to scan files";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Usage of mic";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Usage of speech";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView.storyboard;
@@ -597,6 +607,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VertoAppSwiftUI/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "VertoAppSwiftUI requires permission to scan files";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Usage of mic";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Usage of speech";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView.storyboard;

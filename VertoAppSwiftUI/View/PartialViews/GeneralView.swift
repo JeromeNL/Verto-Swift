@@ -28,7 +28,13 @@ extension GeneralView{
     
     var bottomMenuItemsGeneral: some View {
         TabView {
-            HomeView()
+             var swiftUISpeech = SwiftUISpeech()
+            HomeView().environmentObject(swiftUISpeech)
+                .tabItem{
+                    Image(systemName: "ellipsis.message.fill")
+                    Text(translate)
+                }
+            TranslateView()
                 .tabItem {
                     Image(systemName: "ellipsis.message.fill")
                     Text(translate)
