@@ -7,6 +7,9 @@ struct GeneralView: View {
     let improver:LocalizedStringKey = "Improver"
     let finisher:LocalizedStringKey = "Finisher"
     let formal:LocalizedStringKey = "Formal"
+    let news:LocalizedStringKey = "news"
+    let speech:LocalizedStringKey = "Speech"
+    
     var body: some View {
         
         VStack {
@@ -26,7 +29,8 @@ extension GeneralView{
     
     var bottomMenuItemsGeneral: some View {
         TabView {
-            HomeView()
+              
+            TranslateView()
                 .tabItem {
                     Image(systemName: "ellipsis.message.fill")
                     Text(translate)
@@ -36,25 +40,30 @@ extension GeneralView{
                     Image(systemName: "arrowshape.turn.up.left.fill")
                     Text(article)
             }
-            SynonymsView()
-                .tabItem {
-                    Image(systemName: "book")
-                    Text(synonyms)
-            }
             LanguageImproverView()
                 .tabItem{
-                    Image(systemName: "book")
+                    Image(systemName: "chart.bar.fill")
                     Text(improver)
                 }
             TextFinisherView()
                 .tabItem{
-                    Image(systemName: "book")
+                    Image(systemName: "play")
                     Text(finisher)
                 }
             FormalMakerView()
                 .tabItem{
-                    Image(systemName: "book")
+                    Image(systemName: "graduationcap")
                     Text(formal)
+                }
+            MainNewsView()
+                .tabItem{
+                    Image(systemName: "newspaper")
+                    Text(news)
+                }
+            ImageAiView()
+                .tabItem{
+                    Image(systemName: "camera")
+                    Text("Image Detection")
                 }
          }
     }

@@ -5,7 +5,7 @@ struct SettingsView: View {
     @State var nativeLanguageBind = ""
     @State var lightSelectorBinding = ""
     let sourceCode:LocalizedStringKey = "SourceCode"
-    let logOut:LocalizedStringKey = "LogOut";
+    let reset:LocalizedStringKey = "Reset";
     let activeSince:LocalizedStringKey = "ActiveSince";
     let nativeLanguage:LocalizedStringKey = "NativeLanguage";
     let defaults2 = UserDefaults.standard;
@@ -88,7 +88,7 @@ struct SettingsView: View {
                         .frame(width: 170, height: 260)
                         .background(Color("LightGraybackground"))
                         .cornerRadius(10)
-                        .shadow(color: .gray, radius: 5, x: 3, y: 3)
+                        .shadow(color: Color("SettingsShadowColor"), radius: 5, x: 3, y: 3)
                        
                         
                         VStack{
@@ -98,34 +98,43 @@ struct SettingsView: View {
                             // DARK/LIGHT MODE
                             LightSelecterView(lightSelectorBinding: $lightSelectorBinding)
                             
+                            // Sourcecode link button
                             HStack{
                                 Button(action: {
-                                   
+                                    
                                 }, label: {
                                     Link(destination: URL(string: "https://github.com/jeromenl")!) {
                                         Text(sourceCode)
-                                           .font(.subheadline)
-                                           .fontWeight(.bold)
+                                            .font(.subheadline)
+                                            .fontWeight(.bold)
                                         Image(systemName: "text.justify")
                                     }
                                     .foregroundColor(.primary)
                                 })
+                                
                             }
                             .frame(width: 170, height:55)
                             .background(Color("LightGraybackground"))
                             .cornerRadius(10)
                             
+                            // Reset button
                             HStack{
-                                Text(logOut)
-                                    .font(.subheadline)
-                                   .fontWeight(.bold)
-                                Image(systemName: "rectangle.portrait.and.arrow.right")
-                            }
+                                Button(action: {
+                                    defaults2.set("dutch", forKey: DefaultsKeys.nativeLanguage)
+                                    defaults2.set("light", forKey: DefaultsKeys.lightMode)
+                                }, label: {
+                                    Image(systemName: "rectangle.portrait.and.arrow.right")
+                                    Text(reset)
+                                        .font(.subheadline)
+                                        .fontWeight(.bold)
+                                }
+                                )}
                             .frame(width: 170, height: 55)
                             .background(Color("LightGraybackground"))
                             .cornerRadius(10)
+                            .foregroundColor(.primary)
                         }
-                        .shadow(color: .gray, radius: 5, x: 3, y: 3)
+                        .shadow(color: Color("SettingsShadowColor"), radius: 5, x: 3, y: 3)
                     }
                 }
                 .scrollDisabled(true)

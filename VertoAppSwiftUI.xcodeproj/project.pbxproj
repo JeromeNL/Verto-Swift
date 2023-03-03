@@ -9,8 +9,16 @@
 /* Begin PBXBuildFile section */
 		4C0444AD29894CF600DB498A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0444AC29894CF600DB498A /* HomeView.swift */; };
 		4C0444AF298969D100DB498A /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0444AE298969D100DB498A /* ArticleView.swift */; };
-		4C0444B1298969E000DB498A /* SynonymsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0444B0298969E000DB498A /* SynonymsView.swift */; };
 		4C0444B3298987B700DB498A /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0444B2298987B700DB498A /* GeneralView.swift */; };
+		4C09E94329A4CF19003F5535 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09E94229A4CF18003F5535 /* APIClient.swift */; };
+		4C09E94529A4CF66003F5535 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09E94429A4CF66003F5535 /* NewsView.swift */; };
+		4C09E94729A4CF6A003F5535 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09E94629A4CF6A003F5535 /* NewsArticle.swift */; };
+		4C09E94929A4D463003F5535 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09E94829A4D463003F5535 /* TextRecognizer.swift */; };
+		4C09E94C29A4D51E003F5535 /* ScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09E94B29A4D51E003F5535 /* ScanData.swift */; };
+		4C09E94F29A4D547003F5535 /* languageToLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09E94D29A4D547003F5535 /* languageToLocal.swift */; };
+		4C09E95029A4D547003F5535 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09E94E29A4D547003F5535 /* DefaultsKeys.swift */; };
+		4C09E95229A4D5E8003F5535 /* MainNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09E95129A4D5E8003F5535 /* MainNewsView.swift */; };
+		4C09E95429A4D621003F5535 /* ImageAiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C09E95329A4D621003F5535 /* ImageAiView.swift */; };
 		4C14575E29905DB800FB72D2 /* FormalMakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C14575D29905DB800FB72D2 /* FormalMakerView.swift */; };
 		4C14576129910EF100FB72D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C14576329910EF100FB72D2 /* Localizable.strings */; };
 		4C1B01D1298FBA9E00151D6E /* LanguageImproverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1B01D0298FBA9E00151D6E /* LanguageImproverView.swift */; };
@@ -20,8 +28,8 @@
 		4C6A386A2989443600E94E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A38692989443600E94E64 /* Assets.xcassets */; };
 		4C6A386D2989443600E94E64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A386C2989443600E94E64 /* Preview Assets.xcassets */; };
 		4C6A3891298944F800E94E64 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4C6A3890298944F800E94E64 /* OpenAISwift */; };
-		4C6CDEE7299AEAEA0027D189 /* DefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6CDEE6299AEAEA0027D189 /* DefaultsKeys.swift */; };
-		4C6CDEE9299B7FE10027D189 /* languageToLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6CDEE8299B7FE10027D189 /* languageToLocal.swift */; };
+		4CC06D2829B21E65005A83A7 /* SwiftUI Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC06D2729B21E65005A83A7 /* SwiftUI Speech.swift */; };
+		4CC06D2A29B21FC9005A83A7 /* TranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC06D2929B21FC9005A83A7 /* TranslateView.swift */; };
 		550DCFAB2989A0E50083BE1F /* ChatGptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DCFAA2989A0E50083BE1F /* ChatGptViewModel.swift */; };
 		555189502991800000EF4D1E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551894F2991800000EF4D1E /* SettingsView.swift */; };
 		55518952299180E200EF4D1E /* LanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55518951299180E200EF4D1E /* LanguagePickerView.swift */; };
@@ -30,6 +38,8 @@
 		555189582991865B00EF4D1E /* TitleEasterEggView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555189572991865B00EF4D1E /* TitleEasterEggView.swift */; };
 		5551895A2991873400EF4D1E /* OptionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555189592991873400EF4D1E /* OptionButtonView.swift */; };
 		5551895C299189D100EF4D1E /* TextLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5551895B299189D100EF4D1E /* TextLanguageView.swift */; };
+		55B48CAE2999B142004FDBDF /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 55B48CAD2999B142004FDBDF /* CachedAsyncImage */; };
+		55B48CF72999CCBE004FDBDF /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B48CF62999CCBE004FDBDF /* ScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +62,16 @@
 /* Begin PBXFileReference section */
 		4C0444AC29894CF600DB498A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4C0444AE298969D100DB498A /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
-		4C0444B0298969E000DB498A /* SynonymsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynonymsView.swift; sourceTree = "<group>"; };
 		4C0444B2298987B700DB498A /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
+		4C09E94229A4CF18003F5535 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		4C09E94429A4CF66003F5535 /* NewsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		4C09E94629A4CF6A003F5535 /* NewsArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
+		4C09E94829A4D463003F5535 /* TextRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
+		4C09E94B29A4D51E003F5535 /* ScanData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanData.swift; sourceTree = "<group>"; };
+		4C09E94D29A4D547003F5535 /* languageToLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = languageToLocal.swift; sourceTree = "<group>"; };
+		4C09E94E29A4D547003F5535 /* DefaultsKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = "<group>"; };
+		4C09E95129A4D5E8003F5535 /* MainNewsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNewsView.swift; sourceTree = "<group>"; };
+		4C09E95329A4D621003F5535 /* ImageAiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAiView.swift; sourceTree = "<group>"; };
 		4C14575D29905DB800FB72D2 /* FormalMakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormalMakerView.swift; sourceTree = "<group>"; };
 		4C14576229910EF100FB72D2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C14576429910EFB00FB72D2 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -66,8 +84,8 @@
 		4C6A386C2989443600E94E64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C6A38722989443700E94E64 /* VertoAppSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VertoAppSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6A387C2989443700E94E64 /* VertoAppSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VertoAppSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C6CDEE6299AEAEA0027D189 /* DefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsKeys.swift; sourceTree = SOURCE_ROOT; };
-		4C6CDEE8299B7FE10027D189 /* languageToLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = languageToLocal.swift; sourceTree = SOURCE_ROOT; };
+		4CC06D2729B21E65005A83A7 /* SwiftUI Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftUI Speech.swift"; sourceTree = "<group>"; };
+		4CC06D2929B21FC9005A83A7 /* TranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateView.swift; sourceTree = "<group>"; };
 		550DCFAA2989A0E50083BE1F /* ChatGptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptViewModel.swift; sourceTree = "<group>"; };
 		5551894A299179F600EF4D1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		5551894F2991800000EF4D1E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -77,6 +95,7 @@
 		555189572991865B00EF4D1E /* TitleEasterEggView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleEasterEggView.swift; sourceTree = "<group>"; };
 		555189592991873400EF4D1E /* OptionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionButtonView.swift; sourceTree = "<group>"; };
 		5551895B299189D100EF4D1E /* TextLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLanguageView.swift; sourceTree = "<group>"; };
+		55B48CF62999CCBE004FDBDF /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C6A3891298944F800E94E64 /* OpenAISwift in Frameworks */,
+				55B48CAE2999B142004FDBDF /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,15 +125,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C0444A929894BBC00DB498A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4C6CDEE6299AEAEA0027D189 /* DefaultsKeys.swift */,
-				4C6CDEE8299B7FE10027D189 /* languageToLocal.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		4C0444AA29894BC800DB498A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +132,17 @@
 				5551894D29917F1400EF4D1E /* MainViews */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4C09E94A29A4D51E003F5535 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C09E94B29A4D51E003F5535 /* ScanData.swift */,
+				4C09E94E29A4D547003F5535 /* DefaultsKeys.swift */,
+				4CC06D2729B21E65005A83A7 /* SwiftUI Speech.swift */,
+				4C09E94D29A4D547003F5535 /* languageToLocal.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4C6A38592989443500E94E64 = {
@@ -144,9 +166,9 @@
 		4C6A38642989443500E94E64 /* VertoAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				4C09E94A29A4D51E003F5535 /* Model */,
 				5551894A299179F600EF4D1E /* Info.plist */,
 				550DCFA92989A0CD0083BE1F /* ViewModel */,
-				4C0444A929894BBC00DB498A /* Model */,
 				4C0444AA29894BC800DB498A /* View */,
 				4C6A38652989443500E94E64 /* VertoAppSwiftUIApp.swift */,
 				4C14576329910EF100FB72D2 /* Localizable.strings */,
@@ -167,6 +189,8 @@
 		550DCFA92989A0CD0083BE1F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4C09E94829A4D463003F5535 /* TextRecognizer.swift */,
+				4C09E94229A4CF18003F5535 /* APIClient.swift */,
 				550DCFAA2989A0E50083BE1F /* ChatGptViewModel.swift */,
 			);
 			path = ViewModel;
@@ -175,13 +199,15 @@
 		5551894D29917F1400EF4D1E /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				4C09E95329A4D621003F5535 /* ImageAiView.swift */,
+				4C09E95129A4D5E8003F5535 /* MainNewsView.swift */,
 				4C6A38672989443500E94E64 /* ContentView.swift */,
 				4C0444AC29894CF600DB498A /* HomeView.swift */,
 				4C0444AE298969D100DB498A /* ArticleView.swift */,
-				4C0444B0298969E000DB498A /* SynonymsView.swift */,
 				4C1B01D0298FBA9E00151D6E /* LanguageImproverView.swift */,
 				4C1B01D6298FBAEB00151D6E /* TextFinisherView.swift */,
 				4C14575D29905DB800FB72D2 /* FormalMakerView.swift */,
+				4CC06D2929B21FC9005A83A7 /* TranslateView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -189,6 +215,9 @@
 		5551894E29917F6000EF4D1E /* PartialViews */ = {
 			isa = PBXGroup;
 			children = (
+				4C09E94629A4CF6A003F5535 /* NewsArticle.swift */,
+				4C09E94429A4CF66003F5535 /* NewsView.swift */,
+				55B48CF62999CCBE004FDBDF /* ScannerView.swift */,
 				4C0444B2298987B700DB498A /* GeneralView.swift */,
 				5551894F2991800000EF4D1E /* SettingsView.swift */,
 				55518951299180E200EF4D1E /* LanguagePickerView.swift */,
@@ -219,6 +248,7 @@
 			name = VertoAppSwiftUI;
 			packageProductDependencies = (
 				4C6A3890298944F800E94E64 /* OpenAISwift */,
+				55B48CAD2999B142004FDBDF /* CachedAsyncImage */,
 			);
 			productName = VertoAppSwiftUI;
 			productReference = 4C6A38622989443500E94E64 /* VertoAppSwiftUI.app */;
@@ -295,6 +325,7 @@
 			mainGroup = 4C6A38592989443500E94E64;
 			packageReferences = (
 				4C6A388F298944F700E94E64 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				55B48CAC2999B142004FDBDF /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 4C6A38632989443500E94E64 /* Products */;
 			projectDirPath = "";
@@ -339,25 +370,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C0444B1298969E000DB498A /* SynonymsView.swift in Sources */,
-				4C6CDEE7299AEAEA0027D189 /* DefaultsKeys.swift in Sources */,
+				4C09E94F29A4D547003F5535 /* languageToLocal.swift in Sources */,
 				5551895A2991873400EF4D1E /* OptionButtonView.swift in Sources */,
 				4C0444AD29894CF600DB498A /* HomeView.swift in Sources */,
+				4C09E94529A4CF66003F5535 /* NewsView.swift in Sources */,
 				4C6A38682989443500E94E64 /* ContentView.swift in Sources */,
-				4C6CDEE9299B7FE10027D189 /* languageToLocal.swift in Sources */,
+				4C09E95429A4D621003F5535 /* ImageAiView.swift in Sources */,
 				555189562991836300EF4D1E /* OptionsView.swift in Sources */,
+				55B48CF72999CCBE004FDBDF /* ScannerView.swift in Sources */,
+				4C09E94729A4CF6A003F5535 /* NewsArticle.swift in Sources */,
 				550DCFAB2989A0E50083BE1F /* ChatGptViewModel.swift in Sources */,
 				55518952299180E200EF4D1E /* LanguagePickerView.swift in Sources */,
 				4C0444B3298987B700DB498A /* GeneralView.swift in Sources */,
+				4C09E94929A4D463003F5535 /* TextRecognizer.swift in Sources */,
+				4C09E95229A4D5E8003F5535 /* MainNewsView.swift in Sources */,
+				4C09E94C29A4D51E003F5535 /* ScanData.swift in Sources */,
+				4CC06D2A29B21FC9005A83A7 /* TranslateView.swift in Sources */,
 				4C14575E29905DB800FB72D2 /* FormalMakerView.swift in Sources */,
 				4C1B01D1298FBA9E00151D6E /* LanguageImproverView.swift in Sources */,
+				4CC06D2829B21E65005A83A7 /* SwiftUI Speech.swift in Sources */,
 				5551895C299189D100EF4D1E /* TextLanguageView.swift in Sources */,
+				4C09E95029A4D547003F5535 /* DefaultsKeys.swift in Sources */,
 				555189582991865B00EF4D1E /* TitleEasterEggView.swift in Sources */,
 				4C1B01D7298FBAEB00151D6E /* TextFinisherView.swift in Sources */,
 				4C6A38662989443500E94E64 /* VertoAppSwiftUIApp.swift in Sources */,
 				4C0444AF298969D100DB498A /* ArticleView.swift in Sources */,
 				555189502991800000EF4D1E /* SettingsView.swift in Sources */,
 				555189542991819300EF4D1E /* LightSelecterView.swift in Sources */,
+				4C09E94329A4CF19003F5535 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,10 +565,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VertoAppSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = 3DM5372VZ5;
+				DEVELOPMENT_TEAM = 235Q5A33V6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VertoAppSwiftUI/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "VertoAppSwiftUI requires permission to scan files";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Usage of mic";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Usage of speech";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView.storyboard;
@@ -559,6 +602,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VertoAppSwiftUI/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "VertoAppSwiftUI requires permission to scan files";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Usage of mic";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Usage of speech";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView.storyboard;
@@ -703,6 +749,14 @@
 				kind = branch;
 			};
 		};
+		55B48CAC2999B142004FDBDF /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -710,6 +764,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4C6A388F298944F700E94E64 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
 			productName = OpenAISwift;
+		};
+		55B48CAD2999B142004FDBDF /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55B48CAC2999B142004FDBDF /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

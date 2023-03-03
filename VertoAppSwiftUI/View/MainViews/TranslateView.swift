@@ -1,13 +1,22 @@
 
 import SwiftUI
 
-struct SynonymsView: View {
+struct TranslateView: View {
     @State var translateInput: String = ""
     @State var translateOutput: String = ""
-    @State var currentInputLanguage: String = "English"
+    @State var currentInputLanguage: String = ""
     @State var currentOutputLanguage: String = "German"
     @ObservedObject var viewModel = ChatGptViewModel()
+    @State private var showWelcomeView = false
+    @State private var showMoreOptions = false
+    @State private var showSettingsSheet = false
+    @State private var sheetHeight:CGFloat = 250
+    @State private var showEasterEgg = false
     
+  
+    var animation: Animation {
+        Animation.linear
+    }
 
     var body: some View {
         ScrollView {
@@ -15,31 +24,23 @@ struct SynonymsView: View {
                 Color("DefaultBackground")
                 VStack{
                     HStack() {
-                        TitleEasterEggView(displayTitle: "Synonyms")
+                        TitleEasterEggView(displayTitle: "Translate")
                         Spacer()
+                        SettingsView()
                     }
                     .frame(maxWidth: .infinity)
                     .background(Color.blue)
                     .cornerRadius(10)
-                    
+                   
                     TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: true, selectedLanguage: currentInputLanguage)
                         .onSubmit {
                             send()
                         }
 
+                    TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
+                                  
                     Spacer()
-                    
-                    let arrayOfStrings = translateOutput.components(separatedBy: ", ")
-                    List{
-                        ForEach(arrayOfStrings, id: \.self) { tag in
-                            Text(tag.capitalized)
-                                    }
-                    }
-                    .scrollContentBackground(.hidden)
                   
-                    Spacer()
-                    Spacer()
-                   
                 }
             }
             .onAppear {
@@ -53,7 +54,7 @@ struct SynonymsView: View {
         guard !translateInput.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
         }
-        viewModel.send(text: "Give 3 relevant synonyms for the " + currentInputLanguage + " word " + translateInput + ". Give the synonyms comma separated without other information in " + currentInputLanguage) { response in
+        viewModel.send(text: "Translate "+translateInput+" from "+currentInputLanguage+" to "+currentOutputLanguage) { response in
             DispatchQueue.main.async {
                 translateOutput = response
             }
@@ -62,13 +63,9 @@ struct SynonymsView: View {
 }
 
 
-struct SynonymsView_Previews: PreviewProvider {
+struct TranslateView_Previews: PreviewProvider {
     static var previews: some View {
-        SynonymsView()
+        HomeView()
     }
 }
-
-
-
-    
   
