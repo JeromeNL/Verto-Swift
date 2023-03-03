@@ -24,7 +24,7 @@ struct NewsArticle: View {
                             .transition(.opacity)
                     } else {
                         HStack {
-                            // Insert your placeholder here
+                          
                         }
                     }
                 }

@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct ArticleView: View {
@@ -8,7 +7,6 @@ struct ArticleView: View {
     @State var currentOutputLanguage: String = "German"
     @ObservedObject var viewModel = ChatGptViewModel()
     
-
     var body: some View {
         ScrollView {
             ZStack {

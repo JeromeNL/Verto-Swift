@@ -9,7 +9,6 @@ struct OptionButtonView: View {
     
     var body: some View {
             HStack{
-               
                 functionButtonItem(widthHeight: 80, icon: "mic")
             }
             .frame(height: 100)
@@ -19,14 +18,12 @@ struct OptionButtonView: View {
 
         private func functionButtonItem(widthHeight: Double, icon: String) -> some View{
             Button(action: {
-                // Button
-                    if(self.swiftUISpeech.getSpeechStatus() == "Denied - Close the App"){// checks status of auth if no auth pop up error
+                    if(self.swiftUISpeech.getSpeechStatus() == "Denied - Close the App"){
                         self.actionPop.toggle()
                     }else{
                         withAnimation(.spring(response: 0.4, dampingFraction: 0.3, blendDuration: 0.3)){self.swiftUISpeech.isRecording.toggle()}// button animation
                         self.swiftUISpeech.isRecording ? self.swiftUISpeech.startRecording() : self.swiftUISpeech.stopRecording()
                     }
-
             }, label: {
                 ZStack {
                     Circle()

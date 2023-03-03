@@ -29,12 +29,7 @@ extension GeneralView{
     
     var bottomMenuItemsGeneral: some View {
         TabView {
-             var swiftUISpeech = SwiftUISpeech()
-            HomeView().environmentObject(swiftUISpeech)
-                .tabItem{
-                    Image(systemName: "mic")
-                    Text(speech)
-                }
+              
             TranslateView()
                 .tabItem {
                     Image(systemName: "ellipsis.message.fill")
@@ -45,11 +40,6 @@ extension GeneralView{
                     Image(systemName: "arrowshape.turn.up.left.fill")
                     Text(article)
             }
-//            SynonymsView()
-//                .tabItem {
-//                    Image(systemName: "book")
-//                    Text(synonyms)
-//            }
             LanguageImproverView()
                 .tabItem{
                     Image(systemName: "chart.bar.fill")

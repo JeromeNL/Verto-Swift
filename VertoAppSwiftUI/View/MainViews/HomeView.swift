@@ -13,14 +13,11 @@ struct HomeView: View {
     @State private var sheetHeight:CGFloat = 250
     @State private var showEasterEgg = false
     @EnvironmentObject var swiftUISpeech:SwiftUISpeech
-    
-  
-    
-    
     var animation: Animation {
         Animation.linear
     }
 
+    
     var body: some View {
         ZStack {
             Color("DefaultBackground")
@@ -46,7 +43,6 @@ struct HomeView: View {
                     .background(Color.primary)
                     
                 Spacer()
-   
             }
             
         }

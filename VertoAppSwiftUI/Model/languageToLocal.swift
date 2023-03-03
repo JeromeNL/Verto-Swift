@@ -19,7 +19,6 @@ struct languageToLocal{
     }
 }
 
-
 extension LocalizedStringKey {
     var stringKey3: String? {
         Mirror(reflecting: self).children.first(where: { $0.label == "key" })?.value as? String

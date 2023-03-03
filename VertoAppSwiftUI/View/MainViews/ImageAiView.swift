@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct ImageAiView: View {
@@ -25,7 +24,6 @@ var body: some View {
                 
                 NavigationView{
                     VStack{
-                        // Toon Lijst Van Ingescande Strings
                         if texts.count > 0{
                             List{
                                 ForEach(texts){text in NavigationLink(destination:ScrollView{Text(text.content)},

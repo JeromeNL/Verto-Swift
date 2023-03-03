@@ -26,8 +26,6 @@ struct LanguageImproverView: View {
                     HStack() {
                         TitleEasterEggView(displayTitle: "Improver")
                         Spacer()
-                        //OptionsView()
-                        //SettingsView()
                     }
                     .frame(maxWidth: .infinity)
                     .background(Color.blue)

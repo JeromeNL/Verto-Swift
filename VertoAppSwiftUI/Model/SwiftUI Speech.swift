@@ -1,5 +1,3 @@
-
-
 import Speech
 import SwiftUI
 import Foundation
@@ -8,6 +6,7 @@ public class SwiftUISpeech: ObservableObject{
     init(){
         
         //Requests auth from User
+        
         SFSpeechRecognizer.requestAuthorization{ authStatus in
             OperationQueue.main.addOperation {
                 switch authStatus {
@@ -27,18 +26,21 @@ public class SwiftUISpeech: ObservableObject{
                         break
                 }
             }
-        }// end of auth request
+        }
+        
+        // end of auth request
         
         recognitionTask?.cancel()
         self.recognitionTask = nil
-
     }
     
     func getButton()->OptionButtonView{ // returns the button
         return button
-    }// end of get button
+    }
     
-    func startRecording(){// starts the recording sequence
+    // end of get button
+    
+    func startRecording(){      // starts the recording sequence
         
         // restarts the text
         outputText = "";

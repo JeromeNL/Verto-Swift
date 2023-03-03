@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct MainNewsView: View {
@@ -31,17 +30,11 @@ struct MainNewsView: View {
                 withAnimation(.easeIn(duration: 2)) {
                     opac = 1.0
                 }
-               
-                
             }
         }
      
         }
-     
-    
-    
-  
-    
+
 }
 
 

@@ -63,7 +63,7 @@ struct TextLanguageView {
             .background()
             .cornerRadius(15)
             .shadow(
-                color: Color.gray,
+                color: Color.blue,
                 radius: 5.0, x: 0, y: 5)
         }
         .padding(.top, 10)

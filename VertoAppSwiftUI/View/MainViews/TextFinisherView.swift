@@ -29,9 +29,7 @@ struct TextFinisherView: View {
                         .onSubmit {
                             send()
                         }
-
-                   Spacer()
-                    
+                   Spacer()                    
                 }
             }
             .onAppear {

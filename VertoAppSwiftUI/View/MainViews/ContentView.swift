@@ -49,7 +49,6 @@ struct ContentView: View {
         
     }
     
-
     func send() {
         guard !text.trimmingCharacters(in: .whitespaces).isEmpty else {
             return
