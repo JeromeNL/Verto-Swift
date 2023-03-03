@@ -88,7 +88,7 @@ struct SettingsView: View {
                         .frame(width: 170, height: 260)
                         .background(Color("LightGraybackground"))
                         .cornerRadius(10)
-                        .shadow(color: .gray, radius: 5, x: 3, y: 3)
+                        .shadow(color: Color("SettingsShadowColor"), radius: 5, x: 3, y: 3)
                        
                         
                         VStack{
@@ -134,7 +134,7 @@ struct SettingsView: View {
                             .cornerRadius(10)
                             .foregroundColor(.primary)
                         }
-                        .shadow(color: .gray, radius: 5, x: 3, y: 3)
+                        .shadow(color: Color("SettingsShadowColor"), radius: 5, x: 3, y: 3)
                     }
                 }
                 .scrollDisabled(true)
