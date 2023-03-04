@@ -1,4 +1,3 @@
-
 import SwiftUI
 import CachedAsyncImage
 
@@ -39,7 +38,6 @@ struct NewsArticle: View {
                 .padding(8)
         }
     }
-    
 }
 
 struct NewsArticle_Previews: PreviewProvider {

@@ -1,7 +1,6 @@
 import OpenAISwift
 import SwiftUI
 
-
 struct ContentView: View {
     @ObservedObject var viewModel = ChatGptViewModel()
     @State var text = ""
@@ -13,7 +12,6 @@ struct ContentView: View {
         ScrollView {
             VStack{
                 VStack(alignment: .leading) {
-                    
                     Text("ChatGPT")
                         .font(.title)
                         .fontWeight(.bold)
@@ -25,7 +23,6 @@ struct ContentView: View {
                 }
                 .padding(.bottom, 550)
             }
-            
             .padding(.leading, 20)
         }
                 
@@ -39,14 +36,10 @@ struct ContentView: View {
                         }
                     }
                 }
-        
         .padding()
-            
             .onAppear {
                 viewModel.setup()
             }
-        
-        
     }
     
     func send() {

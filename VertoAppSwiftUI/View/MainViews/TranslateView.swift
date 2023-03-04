@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct TranslateView: View {
@@ -40,7 +39,6 @@ struct TranslateView: View {
                     TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, selectedLanguage: currentOutputLanguage)
                                   
                     Spacer()
-                  
                 }
             }
             .onAppear {

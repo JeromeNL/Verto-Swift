@@ -15,7 +15,6 @@ struct languageToLocal{
     
     func stringToLocalLanguage(englishName: String) -> String{
         return Mirror(reflecting: self).children.first(where: { $0.label == "key" })?.value as? String ?? ""
-        
     }
 }
 
@@ -26,8 +25,7 @@ extension LocalizedStringKey {
 }
 
 extension String {
-    static func localizedString3(for key: String,
-locale: Locale = .current) -> String {
+    static func localizedString3(for key: String, locale: Locale = .current) -> String {
         
         let language = locale.languageCode
         let path = Bundle.main.path(forResource: language, ofType: "lproj")!

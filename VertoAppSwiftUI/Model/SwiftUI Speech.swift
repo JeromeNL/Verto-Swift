@@ -4,9 +4,7 @@ import Foundation
 
 public class SwiftUISpeech: ObservableObject{
     init(){
-        
         //Requests auth from User
-        
         SFSpeechRecognizer.requestAuthorization{ authStatus in
             OperationQueue.main.addOperation {
                 switch authStatus {
@@ -27,9 +25,8 @@ public class SwiftUISpeech: ObservableObject{
                 }
             }
         }
-        
+    
         // end of auth request
-        
         recognitionTask?.cancel()
         self.recognitionTask = nil
     }
@@ -39,7 +36,6 @@ public class SwiftUISpeech: ObservableObject{
     }
     
     // end of get button
-    
     func startRecording(){      // starts the recording sequence
         
         // restarts the text
@@ -140,6 +136,4 @@ public class SwiftUISpeech: ObservableObject{
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     public var outputText:String = "";
-    
-    
 }

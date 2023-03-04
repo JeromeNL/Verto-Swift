@@ -29,7 +29,6 @@ extension GeneralView{
     
     var bottomMenuItemsGeneral: some View {
         TabView {
-              
             TranslateView()
                 .tabItem {
                     Image(systemName: "ellipsis.message.fill")

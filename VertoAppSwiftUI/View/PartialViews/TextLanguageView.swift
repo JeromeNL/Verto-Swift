@@ -62,12 +62,8 @@ struct TextLanguageView {
             .frame(width: 350, height: 175, alignment: .top)
             .background()
             .cornerRadius(15)
-            
-            
             .shadow(
-
                 color: Color("DefaultShadowColor"),
-
                 radius: 5.0, x: 0, y: 5)
         }
         .padding(.top, 10)
@@ -82,7 +78,6 @@ extension TextLanguageView{
             if(selectedLanguage != ""){
                 return languageLocal.englishNameToLocal(englishLangName: selectedLanguage)
             } else{
-                
                 return languageLocal.englishNameToLocal(englishLangName: defaults.string(forKey: DefaultsKeys.nativeLanguage)?.capitalized ?? selectedLanguage)
             }
         }

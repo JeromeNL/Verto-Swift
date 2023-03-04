@@ -54,7 +54,6 @@ struct LanguagePickerView: View {
             .frame(width: 170, height: 55)
             .background(Color("LightGraybackground"))
             .cornerRadius(10)
-       
     }
 }
 

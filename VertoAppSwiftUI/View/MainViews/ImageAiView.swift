@@ -9,14 +9,12 @@ var body: some View {
             Color("DefaultBackground")
             VStack{
                 HStack() {
-                
                     Text("ImageAis")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.primary)
                         .padding(5)
                         .padding(.leading, 10)
-                    
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
@@ -37,14 +35,8 @@ var body: some View {
                             Text("No scan yet").font(.title)
                         }
                     }
-                   
                 }
-         
-                
             }
-        }
-        .onAppear {
-        
         }
         .padding()
     }

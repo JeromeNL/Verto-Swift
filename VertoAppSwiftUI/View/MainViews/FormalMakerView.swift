@@ -25,8 +25,6 @@ struct FormalMakerView: View {
                     HStack() {
                         TitleEasterEggView(displayTitle: "Formal")
                         Spacer()
-                        //OptionsView()
-                        //SettingsView()
                     }
                     .frame(maxWidth: .infinity)
                     .background(Color.blue)
@@ -40,7 +38,6 @@ struct FormalMakerView: View {
                     TextLanguageView(translateInput1: $translateInput, translateOutput1: $translateOutput, currentInputLanguage1: $currentInputLanguage, currentOutputLanguage1: $currentOutputLanguage).inputTextField(isEnabled: false, outputLanguageSelectorDisabled: true, selectedLanguage: currentOutputLanguage)
                
                     Spacer()
-                    
                 }
             }
             .onAppear {

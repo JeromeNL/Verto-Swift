@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct HomeView: View {
@@ -17,7 +16,6 @@ struct HomeView: View {
         Animation.linear
     }
 
-    
     var body: some View {
         ZStack {
             Color("DefaultBackground")
@@ -43,8 +41,7 @@ struct HomeView: View {
                     .background(Color.primary)
                     
                 Spacer()
-            }
-            
+            } 
         }
         .onAppear {
             viewModel.setup()
