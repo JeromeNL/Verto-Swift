@@ -86,6 +86,7 @@
 		4C6A387C2989443700E94E64 /* VertoAppSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VertoAppSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC06D2729B21E65005A83A7 /* SwiftUI Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftUI Speech.swift"; sourceTree = "<group>"; };
 		4CC06D2929B21FC9005A83A7 /* TranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateView.swift; sourceTree = "<group>"; };
+		4CD6BFFE29B3890200DC0E6F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		550DCFAA2989A0E50083BE1F /* ChatGptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptViewModel.swift; sourceTree = "<group>"; };
 		5551894A299179F600EF4D1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		5551894F2991800000EF4D1E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -321,6 +322,7 @@
 				en,
 				Base,
 				nl,
+				de,
 			);
 			mainGroup = 4C6A38592989443500E94E64;
 			packageReferences = (
@@ -436,6 +438,7 @@
 			children = (
 				4C14576229910EF100FB72D2 /* en */,
 				4C14576429910EFB00FB72D2 /* nl */,
+				4CD6BFFE29B3890200DC0E6F /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
