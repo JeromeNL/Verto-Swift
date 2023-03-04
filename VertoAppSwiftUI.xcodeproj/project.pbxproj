@@ -28,6 +28,7 @@
 		4C6A386A2989443600E94E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A38692989443600E94E64 /* Assets.xcassets */; };
 		4C6A386D2989443600E94E64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C6A386C2989443600E94E64 /* Preview Assets.xcassets */; };
 		4C6A3891298944F800E94E64 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4C6A3890298944F800E94E64 /* OpenAISwift */; };
+		4CB6FCFF29B3DC6A006EF904 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB6FCFE29B3DC6A006EF904 /* Launch Screen.storyboard */; };
 		4CC06D2829B21E65005A83A7 /* SwiftUI Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC06D2729B21E65005A83A7 /* SwiftUI Speech.swift */; };
 		4CC06D2A29B21FC9005A83A7 /* TranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC06D2929B21FC9005A83A7 /* TranslateView.swift */; };
 		550DCFAB2989A0E50083BE1F /* ChatGptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550DCFAA2989A0E50083BE1F /* ChatGptViewModel.swift */; };
@@ -84,6 +85,7 @@
 		4C6A386C2989443600E94E64 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4C6A38722989443700E94E64 /* VertoAppSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VertoAppSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6A387C2989443700E94E64 /* VertoAppSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VertoAppSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CB6FCFE29B3DC6A006EF904 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4CC06D2729B21E65005A83A7 /* SwiftUI Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwiftUI Speech.swift"; sourceTree = "<group>"; };
 		4CC06D2929B21FC9005A83A7 /* TranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateView.swift; sourceTree = "<group>"; };
 		4CD6BFFE29B3890200DC0E6F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		4C6A38592989443500E94E64 = {
 			isa = PBXGroup;
 			children = (
+				4CB6FCFE29B3DC6A006EF904 /* Launch Screen.storyboard */,
 				4C6A38642989443500E94E64 /* VertoAppSwiftUI */,
 				4C6A38632989443500E94E64 /* Products */,
 			);
@@ -347,6 +350,7 @@
 			files = (
 				4C6A386D2989443600E94E64 /* Preview Assets.xcassets in Resources */,
 				4C14576129910EF100FB72D2 /* Localizable.strings in Resources */,
+				4CB6FCFF29B3DC6A006EF904 /* Launch Screen.storyboard in Resources */,
 				4C6A386A2989443600E94E64 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,7 +581,7 @@
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Usage of speech";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -610,7 +614,7 @@
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Usage of speech";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreenView.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
