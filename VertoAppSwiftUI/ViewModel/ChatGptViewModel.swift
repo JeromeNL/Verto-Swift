@@ -7,7 +7,7 @@ final class ChatGptViewModel: ObservableObject {
     private var client: OpenAISwift?
 
     func setup() {
-        client = OpenAISwift(authToken: "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")
+        client = OpenAISwift(authToken: "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")
     }
 
     func send(text: String,
