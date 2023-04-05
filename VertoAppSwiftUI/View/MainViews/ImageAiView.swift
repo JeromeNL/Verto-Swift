@@ -34,6 +34,9 @@ var body: some View {
                         else{
                             Text("No scan yet").font(.title)
                         }
+                        Spacer()
+                        optionButtons
+                        
                     }
                 }
             }
@@ -64,15 +67,10 @@ struct ImageAiView_Previews: PreviewProvider {
                 }.sheet(isPresented: $showScannerSheet, content: {
                     self.makeScannerView()
                 })
-            
-            functionButtonItem(widthHeight: 80, icon: "mic")
-            functionButtonItem(widthHeight: 60, icon: "speaker.wave.2")
-                .padding(.horizontal, 10)
-            
         }
         .frame(height: 100)
         .frame(maxWidth: .infinity)
-        .background(Color.white)
+        .background(Color("LightGraybackground"))
     }
     
     private func functionButtonItem(widthHeight: Double, icon: String) -> some View{
